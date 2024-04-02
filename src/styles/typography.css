@@ -1,37 +1,36 @@
-.font-heading-1 {
-	font-family: "Nunito Sans";
+.typography-heading-1 {
+	font-family: 'tt-ricordi-nobili';
 	font-weight: 700;
 	font-size: 64px;
 	text-decoration: none;
-	letter-spacing: -2%;
 }
 
-.font-heading-2 {
-	font-family: "Nunito";
+.typography-heading-2 {
+	font-family: 'Nunito';
 	font-weight: 700;
 	font-size: 40px;
 	text-decoration: none;
 	letter-spacing: -2%;
 }
 
-.font-heading-3 {
-	font-family: "Nunito";
+.typography-heading-3 {
+	font-family: 'Nunito';
 	font-weight: 700;
 	font-size: 24px;
 	text-decoration: none;
 	letter-spacing: -2%;
 }
 
-.font-subtitle {
-	font-family: "Nunito";
+.typography-subtitle {
+	font-family: 'Nunito';
 	font-weight: 500;
 	font-size: 24px;
 	text-decoration: none;
 	letter-spacing: 0px;
 }
 
-.font-body {
-	font-family: "Nunito";
+.typography-body {
+	font-family: 'Nunito';
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 140%;
@@ -39,16 +38,16 @@
 	letter-spacing: 0px;
 }
 
-.font-bold {
-	font-family: "Nunito";
+.typography-bold {
+	font-family: 'Nunito';
 	font-weight: 700;
 	font-size: 16px;
 	text-decoration: none;
 	letter-spacing: 0px;
 }
 
-.font-small {
-	font-family: "Nunito";
+.typography-small {
+	font-family: 'Nunito';
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 140%;
@@ -56,24 +55,24 @@
 	letter-spacing: 0px;
 }
 
-.font-pretitle {
-	font-family: "Nunito";
+.typography-pretitle {
+	font-family: 'Nunito';
 	font-weight: 700;
 	font-size: 12px;
 	text-decoration: none;
 	letter-spacing: 3%;
 }
 
-.font-button {
-	font-family: "Nunito";
+.typography-button {
+	font-family: 'Nunito';
 	font-weight: 700;
 	font-size: 16px;
 	text-decoration: none;
 	letter-spacing: 4%;
 }
 
-.font-link {
-	font-family: "Nunito";
+.typography-link {
+	font-family: 'Nunito';
 	font-weight: 700;
 	font-size: 16px;
 	text-decoration: underline;

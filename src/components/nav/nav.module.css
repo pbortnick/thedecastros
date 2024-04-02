@@ -1,0 +1,13 @@
+.nav {
+	display: flex;
+	width: 100vw;
+	background-color: var(--color-nav);
+	height: 62px;
+	align-items: center;
+	justify-content: center;
+}
+
+.navList {
+	display: flex;
+	gap: var(--spacing-04);
+}
