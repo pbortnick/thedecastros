@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 import s from './nav.module.css'
 
@@ -16,9 +17,9 @@ const MenubarDemo = () => {
 			<NavigationMenu.Root>
 				<NavigationMenu.List className={s.navList}>
 					{PAGES.map((page) => (
-						<NavigationMenu.Link href={page.href} key={page.name}>
+						<Link href={page.href} key={page.name}>
 							{page.name}
-						</NavigationMenu.Link>
+						</Link>
 					))}
 				</NavigationMenu.List>
 			</NavigationMenu.Root>

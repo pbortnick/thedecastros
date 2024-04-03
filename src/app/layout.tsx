@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Public_Sans } from 'next/font/google'
 import '../styles/style.css'
 import Nav from '@/components/nav'
 
-const inter = Inter({ subsets: ['latin'] })
+const publicSans = Public_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body>
+			<body className={publicSans.className}>
 				<Nav />
 				{children}
 			</body>
