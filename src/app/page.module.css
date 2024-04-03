@@ -42,6 +42,12 @@
 	left: -6%;
 	rotate: -8deg;
 
+	@media (max-width: 767px) {
+		height: 20%;
+		left: -10px;
+		top: 64%;
+	}
+
 	@media (min-width: 999px) {
 		display: none;
 	}
@@ -51,9 +57,14 @@
 	height: 50%;
 	width: auto;
 	position: absolute;
-	bottom: 30%;
-	right: 0;
+	top: 20%;
+	right: -16px;
 	rotate: -10deg;
+
+	@media (max-width: 767px) {
+		height: 30%;
+		bottom: 52%;
+	}
 
 	@media (min-width: 999px) {
 		display: none;
