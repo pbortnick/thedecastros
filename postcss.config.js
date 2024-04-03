@@ -25,8 +25,8 @@ const baseConfig = {
 					'custom-media-queries': {
 						'--small': '(max-width: 767px)',
 						'--small-up': '(min-width: 0px)',
-						'--medium': '(min-width: 896px) and (max-width: 1119px)',
-						'--medium-up': '(min-width: 896px)',
+						'--medium': '(min-width: 768px) and (max-width: 1119px)',
+						'--medium-up': '(min-width: 768px)',
 						'--large': '(min-width: 1120px)',
 					},
 					'custom-properties': false,
