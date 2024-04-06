@@ -18,7 +18,10 @@ const PAGES = [
 	{ name: 'Gallery', href: '/gallery' },
 	{ name: 'Schedule', href: '/schedule' },
 	{ name: 'FAQs', href: '/faqs' },
-	{ name: 'Registry', href: '/registry' },
+	{
+		name: 'Registry',
+		href: 'https://www.zola.com/registry/jasonandpamela2025',
+	},
 ]
 
 const MenubarDemo = () => {

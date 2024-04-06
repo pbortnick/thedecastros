@@ -5,6 +5,20 @@
 	text-decoration: none;
 }
 
+.page-heading {
+	font-family: 'tt-ricordi-nobili';
+	font-size: 8rem;
+	font-weight: 400;
+
+	@media (max-width: 999px) {
+		font-size: 6rem;
+	}
+
+	@media (max-width: 767px) {
+		font-size: 4rem;
+	}
+}
+
 .typography-heading-2 {
 	font-family: 'Nunito';
 	font-weight: 700;
