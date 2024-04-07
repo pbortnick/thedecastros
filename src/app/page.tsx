@@ -7,8 +7,7 @@ import s from './page.module.css'
 export default function Home() {
 	return (
 		<main className={s.main}>
-			<div className={s.content}>
-				<Image
+			{/* <Image
 					src={homeBg}
 					className={s.bgImage}
 					height={612}
@@ -28,13 +27,12 @@ export default function Home() {
 					height={611}
 					width={262}
 					alt=""
-				/>
-				<h1 className={s.heading}>
-					Jason
-					<br />&<br />
-					Pamela
-				</h1>
-			</div>
+				/> */}
+			<h1 className={s.heading}>
+				Jason
+				<br />&<br />
+				Pamela
+			</h1>
 		</main>
 	)
 }

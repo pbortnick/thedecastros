@@ -6,21 +6,40 @@
 }
 
 .page-heading {
+	text-align: center;
 	font-family: 'tt-ricordi-nobili';
+	line-height: 10rem;
 	font-size: 8rem;
 	font-weight: 400;
 
 	@media (max-width: 999px) {
+		line-height: 8rem;
 		font-size: 6rem;
 	}
 
 	@media (max-width: 767px) {
+		line-height: 6rem;
 		font-size: 4rem;
 	}
 }
 
+.page-heading-med {
+	text-align: center;
+	font-family: 'tt-ricordi-nobili';
+	font-size: 6rem;
+	font-weight: 400;
+	line-height: 6rem;
+
+	@media (max-width: 999px) {
+		font-size: 4rem;
+	}
+
+	@media (max-width: 767px) {
+		font-size: 3rem;
+	}
+}
+
 .typography-heading-2 {
-	font-family: 'Nunito';
 	font-weight: 700;
 	font-size: 40px;
 	text-decoration: none;
@@ -28,7 +47,6 @@
 }
 
 .typography-heading-3 {
-	font-family: 'Nunito';
 	font-weight: 700;
 	font-size: 24px;
 	text-decoration: none;
@@ -36,15 +54,21 @@
 }
 
 .typography-subtitle {
-	font-family: 'Nunito';
 	font-weight: 500;
 	font-size: 24px;
 	text-decoration: none;
 	letter-spacing: 0px;
 }
 
+.typography-body-large {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 140%;
+	text-decoration: none;
+	letter-spacing: 0px;
+}
+
 .typography-body {
-	font-family: 'Nunito';
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 140%;
@@ -53,7 +77,6 @@
 }
 
 .typography-bold {
-	font-family: 'Nunito';
 	font-weight: 700;
 	font-size: 16px;
 	text-decoration: none;
@@ -61,7 +84,6 @@
 }
 
 .typography-small {
-	font-family: 'Nunito';
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 140%;
@@ -70,7 +92,6 @@
 }
 
 .typography-pretitle {
-	font-family: 'Nunito';
 	font-weight: 700;
 	font-size: 12px;
 	text-decoration: none;
@@ -78,7 +99,6 @@
 }
 
 .typography-button {
-	font-family: 'Nunito';
 	font-weight: 700;
 	font-size: 16px;
 	text-decoration: none;
@@ -86,7 +106,6 @@
 }
 
 .typography-link {
-	font-family: 'Nunito';
 	font-weight: 700;
 	font-size: 16px;
 	text-decoration: underline;

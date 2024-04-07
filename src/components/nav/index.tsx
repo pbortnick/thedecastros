@@ -17,7 +17,7 @@ const PAGES = [
 	{ name: 'Home', href: '/' },
 	{ name: 'Gallery', href: '/gallery' },
 	{ name: 'Schedule', href: '/schedule' },
-	{ name: 'FAQs', href: '/faqs' },
+	{ name: 'FAQs', href: '/faq' },
 	{
 		name: 'Registry',
 		href: 'https://www.zola.com/registry/jasonandpamela2025',
@@ -47,7 +47,7 @@ const MenubarDemo = () => {
 
 			<DropdownMenu.Root>
 				<DropdownMenu.Trigger asChild className={s.mobileNav}>
-					<button className="IconButton" aria-label="Toggle nav">
+					<button className={s.iconButton} aria-label="Toggle nav">
 						<HamburgerMenuIcon />
 					</button>
 				</DropdownMenu.Trigger>

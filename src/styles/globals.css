@@ -3,6 +3,10 @@
 	--page-height: calc(100vh - var(--nav-height));
 }
 
+.page-container {
+	margin-top: var(--nav-height);
+}
+
 button,
 .button-link {
 	padding: 0.5rem 1rem;

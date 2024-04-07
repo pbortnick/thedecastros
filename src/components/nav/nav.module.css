@@ -15,29 +15,19 @@
 }
 
 .nav {
+	composes: typography-body-large from global;
 	display: flex;
 	width: 100vw;
 	height: 62px;
 	align-items: center;
-	justify-content: center;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 2;
+	justify-content: flex-end;
 	padding: 0 24px;
-
-	@media (max-width: 769px) {
-		justify-content: flex-end;
-	}
+	color: var(--accent-dark);
 }
 
 .navList {
 	display: flex;
-	gap: var(--spacing-04);
-
-	@media (max-width: 768px) {
-		gap: var(--spacing-02);
-	}
+	gap: var(--spacing-03);
 }
 
 .link {
@@ -48,10 +38,14 @@
 	&::after {
 		content: '';
 		position: absolute;
-		bottom: -8px;
+		bottom: -1px;
 		left: -3px;
 		width: calc(100% + 6px);
 		height: 2px;
-		background-color: var(--color-accent-3);
+		background-color: var(--accent-dark);
 	}
+}
+
+.iconButton {
+	cursor: pointer;
 }
