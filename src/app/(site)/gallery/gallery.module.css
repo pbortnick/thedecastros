@@ -27,6 +27,7 @@
 .hero {
 	display: grid;
 	position: relative;
+
 	&::after {
 		content: '';
 		position: absolute;
@@ -40,6 +41,7 @@
 }
 
 .heroImage {
+	max-height: 400px;
 	grid-area: 1 / 1;
 	width: 100%;
 	border-radius: 20px;
@@ -62,6 +64,18 @@
 	composes: page-heading from global;
 	font-weight: 600;
 	color: var(--color-secondary-3);
+}
+
+.sectionHeadingWrapper {
+	margin-top: var(--spacing-02);
+	margin-bottom: var(--spacing-02);
+	background-color: var(--site-background-color);
+	display: flex;
+	width: fit-content;
+}
+
+.sectionHeading {
+	composes: typography-heading-2 from global;
 }
 
 .gallery {

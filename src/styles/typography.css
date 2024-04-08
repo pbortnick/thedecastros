@@ -40,10 +40,10 @@
 }
 
 .typography-heading-2 {
+	font-family: 'tt-ricordi-nobili';
 	font-weight: 700;
 	font-size: 40px;
 	text-decoration: none;
-	letter-spacing: -2%;
 }
 
 .typography-heading-3 {

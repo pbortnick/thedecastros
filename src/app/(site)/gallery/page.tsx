@@ -2,52 +2,40 @@
 
 import { Cross2Icon } from '@radix-ui/react-icons'
 import * as Dialog from '@radix-ui/react-dialog'
-import * as GalleryImages from './images'
+import * as EngagementGallery from './images/engagement'
+import * as RelationshipGallery from './images/relationship'
 import { useCallback, useEffect, useState } from 'react'
 import s from './gallery.module.css'
-import hero from './images/hero.jpeg'
-import Image, { StaticImageData } from 'next/image'
-import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
+import hero from './images/hero.jpg'
+import Image from 'next/image'
 
-const images = Object.values(GalleryImages)
-
-// const chunkedGallery = images.reduce((resultArray, item) => {
-// 	if (!resultArray[0] || resultArray[0].length < 4) {
-// 		if (!resultArray[0]) {
-// 			resultArray[0] = []
-// 		}
-// 		resultArray[0].push(item)
-// 	} else if (!resultArray[1] || resultArray[1].length < 5) {
-// 		if (!resultArray[1]) {
-// 			resultArray[1] = []
-// 		}
-// 		resultArray[1].push(item)
-// 	} else if (!resultArray[2] || resultArray[2].length < 4) {
-// 		if (!resultArray[2]) {
-// 			resultArray[2] = []
-// 		}
-// 		resultArray[2].push(item)
-// 	}
-
-// 	return resultArray
-// }, [] as StaticImageData[][])
+const images = {
+	engagement: Object.values(EngagementGallery),
+	relationship: Object.values(RelationshipGallery),
+}
 
 const GalleryPage = () => {
-	const [lightBoxIsOpen, setLightBoxIsOpen] = useState(false)
+	const [lightBoxIsOpen, setLightBoxIsOpen] = useState<
+		'relationship' | 'engagement' | null
+	>(null)
 	const [activeIndex, setActiveIndex] = useState(0)
 
 	const handleKeyDown = useCallback(
 		(event: KeyboardEvent) => {
-			if (lightBoxIsOpen) {
+			if (!!lightBoxIsOpen) {
 				if (event.key === 'ArrowRight') {
 					setActiveIndex(
-						activeIndex === images.length - 1 ? 0 : activeIndex + 1,
+						activeIndex === images[lightBoxIsOpen].length - 1
+							? 0
+							: activeIndex + 1,
 					)
 				}
 
 				if (event.key === 'ArrowLeft') {
 					setActiveIndex(
-						activeIndex === 0 ? images.length - 1 : activeIndex - 1,
+						activeIndex === 0
+							? images[lightBoxIsOpen].length - 1
+							: activeIndex - 1,
 					)
 				}
 			}
@@ -77,32 +65,43 @@ const GalleryPage = () => {
 						<h1 className={s.heroTitle}>Gallery</h1>
 					</div>
 				</div>
-				<Dialog.Root onOpenChange={(isOpen) => setLightBoxIsOpen(isOpen)}>
+				<Dialog.Root>
+					<div className={s.sectionHeadingWrapper}>
+						<h2 className={s.sectionHeading}>The Proposal</h2>
+					</div>
 					<div className={s.gallery}>
 						<div className={s.galleryGridContainer}>
 							<div className={s.galleryGridSection}>
-								{/* {chunkedGallery.map((chunk, chunkIndex) => (
-								<div className={s.galleryGridSection}>
-									{chunk.map((image, index) => (
-										<Dialog.Trigger
-											asChild
-											onClick={() => {
-												const prevChunkLength =
-													chunkIndex === 0
-														? 0
-														: chunkedGallery[chunkIndex - 1].length
-												setActiveIndex(prevChunkLength + index)
-											}}
-										>
-											<div className={s.galleryGridItem} key={index}>
-												<Image {...image} alt="" className={s.galleryImage} />
-											</div>
-										</Dialog.Trigger>
-									))}
-								</div>
-							))} */}
-								{images.map((image, index) => (
-									<Dialog.Trigger asChild onClick={() => setActiveIndex(index)}>
+								{images.engagement.map((image, index) => (
+									<Dialog.Trigger
+										asChild
+										onClick={() => {
+											setLightBoxIsOpen('engagement')
+											setActiveIndex(index)
+										}}
+									>
+										<div className={s.galleryGridItem} key={index}>
+											<Image {...image} alt="" className={s.galleryImage} />
+										</div>
+									</Dialog.Trigger>
+								))}
+							</div>
+						</div>
+					</div>
+					<div className={s.sectionHeadingWrapper}>
+						<h2 className={s.sectionHeading}>The Relationship</h2>
+					</div>
+					<div className={s.gallery}>
+						<div className={s.galleryGridContainer}>
+							<div className={s.galleryGridSection}>
+								{images.relationship.map((image, index) => (
+									<Dialog.Trigger
+										asChild
+										onClick={() => {
+											setLightBoxIsOpen('relationship')
+											setActiveIndex(index)
+										}}
+									>
 										<div className={s.galleryGridItem} key={index}>
 											<Image {...image} alt="" className={s.galleryImage} />
 										</div>
@@ -113,18 +112,20 @@ const GalleryPage = () => {
 					</div>
 					<Dialog.Portal>
 						<Dialog.Overlay className={s.dialogOverlay} />
-						<Dialog.Content className={s.dialogContent}>
-							<Image
-								{...images[activeIndex]}
-								alt=""
-								className={s.dialogImage}
-							/>
-							<Dialog.Close asChild>
-								<button className={s.iconButton} aria-label="Close">
-									<Cross2Icon />
-								</button>
-							</Dialog.Close>
-						</Dialog.Content>
+						{lightBoxIsOpen && (
+							<Dialog.Content className={s.dialogContent}>
+								<Image
+									{...images[lightBoxIsOpen][activeIndex]}
+									alt=""
+									className={s.dialogImage}
+								/>
+								<Dialog.Close asChild>
+									<button className={s.iconButton} aria-label="Close">
+										<Cross2Icon />
+									</button>
+								</Dialog.Close>
+							</Dialog.Content>
+						)}
 					</Dialog.Portal>
 				</Dialog.Root>
 			</div>
