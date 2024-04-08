@@ -1,4 +1,4 @@
-import PageHeading from '@/components/page-heading'
+import PageHeading from 'components/page-heading'
 
 const DetailsPage = () => {
 	return (

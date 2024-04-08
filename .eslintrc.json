@@ -1,12 +1,8 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
-		"prettier"
-  ],
-  "plugins": ["@typescript-eslint"],
-  "rules": {
-    "quotes": ["error", "single"],
-    "prefer-const": "error"
-  }
+	"extends": ["plugin:@typescript-eslint/recommended", "prettier"],
+	"plugins": ["@typescript-eslint"],
+	"rules": {
+		"quotes": ["error", "single"],
+		"prefer-const": "error"
+	}
 }
