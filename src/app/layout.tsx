@@ -1,11 +1,11 @@
 import Image from 'next/image'
-import pageBackgroundBorderLeft from './images/page-border-bottom-left.svg'
-import pageBackgroundBorderRight from './images/page-border-bottom-right.svg'
+import pageBackgroundBorderLeft from '~images/page-border-bottom-left.svg'
+import pageBackgroundBorderRight from '~images/page-border-bottom-right.svg'
 import type { Metadata } from 'next'
 import { Bebas_Neue } from 'next/font/google'
 import '../styles/style.css'
 import s from './site.module.css'
-import Nav from '@/components/nav'
+import Nav from 'components/nav'
 import classNames from 'classnames'
 
 const bebasNeue = Bebas_Neue({

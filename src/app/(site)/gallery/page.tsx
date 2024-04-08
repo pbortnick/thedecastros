@@ -2,23 +2,30 @@
 
 import { Cross2Icon } from '@radix-ui/react-icons'
 import * as Dialog from '@radix-ui/react-dialog'
-import * as EngagementGallery from './images/engagement'
+import * as ProposalGallery from './images/proposal'
 import * as RelationshipGallery from './images/relationship'
 import { useCallback, useEffect, useState } from 'react'
 import s from './gallery.module.css'
-import hero from './images/hero.jpg'
+import hero from '~images/gallery/hero.jpg'
 import Image from 'next/image'
-
+import { useMediumUp } from 'hooks/use-media-query'
 const images = {
-	engagement: Object.values(EngagementGallery),
+	proposal: Object.values(ProposalGallery),
 	relationship: Object.values(RelationshipGallery),
 }
 
 const GalleryPage = () => {
 	const [lightBoxIsOpen, setLightBoxIsOpen] = useState<
-		'relationship' | 'engagement' | null
+		'relationship' | 'proposal' | null
 	>(null)
 	const [activeIndex, setActiveIndex] = useState(0)
+	const isMediumUp = useMediumUp()
+
+	useEffect(() => {
+		if (!isMediumUp && !!lightBoxIsOpen) {
+			setLightBoxIsOpen(null)
+		}
+	}, [isMediumUp])
 
 	const handleKeyDown = useCallback(
 		(event: KeyboardEvent) => {
@@ -60,6 +67,7 @@ const GalleryPage = () => {
 						alt="Jason proposing to Pam on beach"
 						className={s.heroImage}
 						priority
+						placeholder="blur"
 					/>
 					<div className={s.heroText}>
 						<h1 className={s.heroTitle}>Gallery</h1>
@@ -72,16 +80,23 @@ const GalleryPage = () => {
 					<div className={s.gallery}>
 						<div className={s.galleryGridContainer}>
 							<div className={s.galleryGridSection}>
-								{images.engagement.map((image, index) => (
+								{images.proposal.map((image, index) => (
 									<Dialog.Trigger
 										asChild
 										onClick={() => {
-											setLightBoxIsOpen('engagement')
-											setActiveIndex(index)
+											if (isMediumUp) {
+												setLightBoxIsOpen('proposal')
+												setActiveIndex(index)
+											}
 										}}
 									>
 										<div className={s.galleryGridItem} key={index}>
-											<Image {...image} alt="" className={s.galleryImage} />
+											<Image
+												{...image}
+												alt=""
+												className={s.galleryImage}
+												placeholder="blur"
+											/>
 										</div>
 									</Dialog.Trigger>
 								))}
@@ -98,8 +113,10 @@ const GalleryPage = () => {
 									<Dialog.Trigger
 										asChild
 										onClick={() => {
-											setLightBoxIsOpen('relationship')
-											setActiveIndex(index)
+											if (isMediumUp) {
+												setLightBoxIsOpen('relationship')
+												setActiveIndex(index)
+											}
 										}}
 									>
 										<div className={s.galleryGridItem} key={index}>
@@ -112,7 +129,7 @@ const GalleryPage = () => {
 					</div>
 					<Dialog.Portal>
 						<Dialog.Overlay className={s.dialogOverlay} />
-						{lightBoxIsOpen && (
+						{lightBoxIsOpen && isMediumUp && (
 							<Dialog.Content className={s.dialogContent}>
 								<Image
 									{...images[lightBoxIsOpen][activeIndex]}

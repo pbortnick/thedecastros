@@ -91,16 +91,12 @@
 	text-align: center;
 }
 
-.lightboxButton {
-	position: absolute;
-	inset: 0;
-	outline: none;
-	cursor: pointer;
-}
-
 .galleryGridItem {
 	position: relative;
-	cursor: pointer;
+
+	@media (min-width: 768px) {
+		cursor: pointer;
+	}
 }
 
 .galleryGridSection {
@@ -109,7 +105,7 @@
 	grid-template-columns: 1fr;
 
 	@media (min-width: 768px) {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
 
 		/* &:nth-of-type(5n + 1) {
 			& .galleryGridItem:first-of-type {
