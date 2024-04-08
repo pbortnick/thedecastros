@@ -7,9 +7,6 @@ import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 import {
 	HamburgerMenuIcon,
-	DotFilledIcon,
-	CheckIcon,
-	ChevronRightIcon,
 	ExternalLinkIcon,
 } from '@radix-ui/react-icons'
 import s from './nav.module.css'
