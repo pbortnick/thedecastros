@@ -9,13 +9,18 @@ import s from './gallery.module.css'
 import hero from '~images/gallery/hero.jpg'
 import Image from 'next/image'
 import { useMediumUp } from 'hooks/use-media-query'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+	openGraph: {
+		url: 'https://thedecastro.com/gallery',
+	},
+}
 
 const images = {
 	proposal: Object.values(ProposalGallery),
 	relationship: Object.values(RelationshipGallery),
 }
-
-console.log(images.relationship[0])
 
 type GalleryName = 'proposal' | 'relationship'
 

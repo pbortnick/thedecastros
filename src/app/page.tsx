@@ -1,4 +1,11 @@
 import s from './page.module.css'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+	openGraph: {
+		url: 'https://thedecastro.com',
+	},
+}
 
 export default function Home() {
 	return (
