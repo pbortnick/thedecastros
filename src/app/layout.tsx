@@ -16,6 +16,20 @@ const bebasNeue = Bebas_Neue({
 export const metadata: Metadata = {
 	title: 'Jason & Pamela 2025',
 	description: "Jason Decastro & Pamela Bortnick's wedding website",
+	openGraph: {
+		siteName: 'Jason & Pamela 2025',
+		title: 'Jason & Pamela 2025',
+		description: "Jason Decastro & Pamela Bortnick's wedding website",
+		type: 'website',
+		locale: 'en_US',
+		images: [
+			{
+				url: '/social.jpg',
+				width: 3268,
+				height: 4060,
+			},
+		],
+	},
 }
 
 export default function RootLayout({
