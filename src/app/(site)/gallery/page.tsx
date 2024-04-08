@@ -127,9 +127,9 @@ const GalleryPage = () => {
 							</div>
 						</div>
 					</div>
-					<Dialog.Portal>
-						<Dialog.Overlay className={s.dialogOverlay} />
-						{lightBoxIsOpen && isMediumUp && (
+					{lightBoxIsOpen && isMediumUp && (
+						<Dialog.Portal>
+							<Dialog.Overlay className={s.dialogOverlay} />
 							<Dialog.Content className={s.dialogContent}>
 								<Image
 									{...images[lightBoxIsOpen][activeIndex]}
@@ -142,8 +142,8 @@ const GalleryPage = () => {
 									</button>
 								</Dialog.Close>
 							</Dialog.Content>
-						)}
-					</Dialog.Portal>
+						</Dialog.Portal>
+					)}
 				</Dialog.Root>
 			</div>
 		</main>

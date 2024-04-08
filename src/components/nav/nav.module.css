@@ -25,6 +25,9 @@
 	justify-content: flex-end;
 	padding: 0 24px;
 	color: var(--accent-dark);
+	background: var(--site-background-color);
+	position: sticky;
+	top: 0;
 }
 
 .navList {

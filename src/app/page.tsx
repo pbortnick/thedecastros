@@ -5,7 +5,7 @@ export default function Home() {
 		<main className={s.main}>
 			<div className={s.heading}>
 				<h1 className="page-heading">Jason & Pamela</h1>
-				<p className="typography-body-large">Date & Location coming soon</p>
+				<p className="typography-body-large">Date & venue coming soon</p>
 			</div>
 		</main>
 	)

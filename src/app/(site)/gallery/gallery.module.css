@@ -67,8 +67,8 @@
 }
 
 .sectionHeadingWrapper {
-	margin-top: var(--spacing-02);
-	margin-bottom: var(--spacing-02);
+	margin-top: var(--spacing-06);
+	margin-bottom: var(--spacing-03);
 	background-color: var(--site-background-color);
 	display: flex;
 	width: fit-content;
@@ -91,7 +91,7 @@
 	text-align: center;
 }
 
-.galleryGridItem {
+.galleryGrid {
 	position: relative;
 
 	@media (min-width: 768px) {

@@ -9,7 +9,6 @@ import proposal8 from '~images/gallery/MKP_0774.jpg'
 import proposal9 from '~images/gallery/MKP_0789.jpg'
 import proposal10 from '~images/gallery/MKP_0793.jpg'
 import proposal11 from '~images/gallery/MKP_0802.jpg'
-import proposal12 from '~images/gallery/MKP_0836.jpg'
 import proposal13 from '~images/gallery/MKP_0870.jpg'
 import proposal14 from '~images/gallery/MKP_0897.jpg'
 import proposal15 from '~images/gallery/MKP_0921.jpg'
@@ -33,7 +32,6 @@ export {
 	proposal9,
 	proposal10,
 	proposal11,
-	proposal12,
 	proposal13,
 	proposal14,
 	proposal15,
