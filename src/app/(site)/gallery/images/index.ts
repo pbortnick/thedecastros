@@ -7,6 +7,13 @@ import gallery6 from './gallery-6.jpeg'
 import gallery7 from './gallery-7.jpeg'
 import gallery8 from './gallery-8.jpeg'
 import gallery9 from './gallery-9.jpeg'
+import gallery10 from './gallery-10.jpeg'
+import gallery11 from './gallery-11.jpeg'
+import gallery12 from './gallery-12.jpeg'
+import gallery13 from './gallery-13.jpeg'
+import gallery14 from './gallery-14.jpeg'
+import gallery15 from './gallery-15.jpeg'
+import gallery16 from './gallery-16.jpeg'
 
 export {
 	gallery1,
@@ -18,4 +25,11 @@ export {
 	gallery7,
 	gallery8,
 	gallery9,
+	gallery10,
+	gallery11,
+	gallery12,
+	gallery13,
+	gallery14,
+	gallery15,
+	gallery16,
 }

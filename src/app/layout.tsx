@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import pageBackgroundBorderLeft from './images/page-border-bottom-left.svg'
+import pageBackgroundBorderRight from './images/page-border-bottom-right.svg'
 import type { Metadata } from 'next'
 import { Bebas_Neue } from 'next/font/google'
 import '../styles/style.css'
@@ -25,6 +28,14 @@ export default function RootLayout({
 			<body className={classNames(bebasNeue.className, s.site)}>
 				<Nav />
 				{children}
+				<div className={s.borderImages}>
+					<div className={s.borderLeft}>
+						<Image {...pageBackgroundBorderLeft} alt="" />
+					</div>
+					<div className={s.borderRight}>
+						<Image {...pageBackgroundBorderRight} alt="" />
+					</div>
+				</div>
 			</body>
 		</html>
 	)

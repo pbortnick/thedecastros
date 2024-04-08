@@ -1,0 +1,13 @@
+.content {
+	composes: container from global;
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-05);
+	align-items: center;
+	justify-content: center;
+	padding-top: var(--spacing-08);
+}
+
+.pageHeading {
+	composes: page-heading-med from global;
+}

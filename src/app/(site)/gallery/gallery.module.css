@@ -1,7 +1,8 @@
-.galleryPage {
-	padding-top: calc(var(--nav-height) + var(--spacing-03));
-	background-color: var(--color-primary-3);
-	padding-bottom: var(--spacing-10);
+.main {
+	height: var(--page-height);
+	width: 100%;
+	position: relative;
+	z-index: 1;
 }
 
 .image {
@@ -47,6 +48,7 @@
 }
 
 .heroText {
+	color: var(--light-accent);
 	z-index: 1;
 	grid-area: 1 / 1;
 	height: 100%;
@@ -95,20 +97,20 @@
 	@media (min-width: 768px) {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 
-		&:nth-of-type(5n + 1) {
+		/* &:nth-of-type(5n + 1) {
 			& .galleryGridItem:first-of-type {
 				grid-area: 1/1/4/3;
 			}
 			& .galleryGridItem:nth-child(4) {
 				grid-area: 2/3/2/5;
 			}
-		}
-		&:nth-of-type(5n + 2) {
+		} */
+		/* &:nth-of-type(5n + 2) {
 			& .galleryGridItem:last-of-type {
 				grid-area: 1/3/3/5;
 			}
-		}
-		&:nth-of-type(5n + 4) {
+		} */
+		/* &:nth-of-type(5n + 4) {
 			& .galleryGridItem:last-of-type {
 				grid-area: 1/2/4/5;
 			}
@@ -117,20 +119,20 @@
 			& .galleryGridItem:last-of-type {
 				grid-area: 1/1/3/3;
 			}
-		}
+		} */
 	}
 
 	@media (min-width: 1000px) {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 
-		&:nth-of-type(5n + 1) {
+		/* &:nth-of-type(5n + 1) {
 			& .galleryGridItem:first-of-type {
 				grid-area: 1/1/4/4;
 			}
 			& .galleryGridItem:nth-child(4) {
 				grid-area: auto;
 			}
-		}
+		} */
 	}
 }
 
@@ -143,10 +145,13 @@
 }
 
 .dialogImage {
-	object-fit: contain;
+	object-fit: cover;
 	border-radius: 12px;
-	max-height: 100%;
+	max-height: calc(100% - 48px);
+	max-width: calc(100vw - 48px);
 	width: auto;
+	overflow: hidden;
+	display: flex;
 }
 
 .dialogOverlay {
@@ -157,24 +162,28 @@
 }
 
 .dialogContent {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
 	z-index: 1;
 	border-radius: 6px;
 	box-shadow:
 		hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
 		hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
 	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: auto;
+	top: 0;
+	left: 0;
+	width: 100vw;
 	animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
-	height: calc(100% - 24px);
+	height: 100vh;
 }
 .dialogContent:focus {
 	outline: none;
 }
 
 .iconButton {
+	background: var(--light-accent);
 	font-family: inherit;
 	border-radius: 12px;
 	height: 25px;
@@ -182,23 +191,18 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	color: var(--color-primary);
+	color: var(--accent-dark);
 	position: absolute;
-	top: 1px;
-	right: 1px;
+	top: 24px;
+	right: 24px;
 	padding: 0;
 	cursor: pointer;
-	border: 1px solid var(--color-primary);
-	background: var(--color-primary-1);
+	box-shadow: 0 0 0 2px var(--accent-dark);
 
 	& svg,
 	& path {
-		fill: var(--color-accent-3);
+		fill: var(--accent-dark);
 	}
-}
-
-.iconButton:focus {
-	box-shadow: 0 0 0 2px var(--color-primary);
 }
 
 @keyframes overlayShow {

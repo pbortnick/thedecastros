@@ -11,26 +11,26 @@ import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
 
 const images = Object.values(GalleryImages)
 
-const chunkedGallery = images.reduce((resultArray, item) => {
-	if (!resultArray[0] || resultArray[0].length < 4) {
-		if (!resultArray[0]) {
-			resultArray[0] = []
-		}
-		resultArray[0].push(item)
-	} else if (!resultArray[1] || resultArray[1].length < 5) {
-		if (!resultArray[1]) {
-			resultArray[1] = []
-		}
-		resultArray[1].push(item)
-	} else if (!resultArray[2] || resultArray[2].length < 4) {
-		if (!resultArray[2]) {
-			resultArray[2] = []
-		}
-		resultArray[2].push(item)
-	}
+// const chunkedGallery = images.reduce((resultArray, item) => {
+// 	if (!resultArray[0] || resultArray[0].length < 4) {
+// 		if (!resultArray[0]) {
+// 			resultArray[0] = []
+// 		}
+// 		resultArray[0].push(item)
+// 	} else if (!resultArray[1] || resultArray[1].length < 5) {
+// 		if (!resultArray[1]) {
+// 			resultArray[1] = []
+// 		}
+// 		resultArray[1].push(item)
+// 	} else if (!resultArray[2] || resultArray[2].length < 4) {
+// 		if (!resultArray[2]) {
+// 			resultArray[2] = []
+// 		}
+// 		resultArray[2].push(item)
+// 	}
 
-	return resultArray
-}, [] as StaticImageData[][])
+// 	return resultArray
+// }, [] as StaticImageData[][])
 
 const GalleryPage = () => {
 	const [lightBoxIsOpen, setLightBoxIsOpen] = useState(false)
@@ -64,22 +64,24 @@ const GalleryPage = () => {
 	}, [lightBoxIsOpen, activeIndex])
 
 	return (
-		<Dialog.Root onOpenChange={(isOpen) => setLightBoxIsOpen(isOpen)}>
-			<main className={s.galleryPage}>
-				<div className={s.content}>
-					<div className={s.hero}>
-						<Image
-							{...hero}
-							alt="Jason proposing to Pam on beach"
-							className={s.heroImage}
-						/>
-						<div className={s.heroText}>
-							<h1 className={s.heroTitle}>Gallery</h1>
-						</div>
+		<main className={s.main}>
+			<div className={s.content}>
+				<div className={s.hero}>
+					<Image
+						{...hero}
+						alt="Jason proposing to Pam on beach"
+						className={s.heroImage}
+						priority
+					/>
+					<div className={s.heroText}>
+						<h1 className={s.heroTitle}>Gallery</h1>
 					</div>
+				</div>
+				<Dialog.Root onOpenChange={(isOpen) => setLightBoxIsOpen(isOpen)}>
 					<div className={s.gallery}>
 						<div className={s.galleryGridContainer}>
-							{chunkedGallery.map((chunk, chunkIndex) => (
+							<div className={s.galleryGridSection}>
+								{/* {chunkedGallery.map((chunk, chunkIndex) => (
 								<div className={s.galleryGridSection}>
 									{chunk.map((image, index) => (
 										<Dialog.Trigger
@@ -98,23 +100,35 @@ const GalleryPage = () => {
 										</Dialog.Trigger>
 									))}
 								</div>
-							))}
+							))} */}
+								{images.map((image, index) => (
+									<Dialog.Trigger asChild onClick={() => setActiveIndex(index)}>
+										<div className={s.galleryGridItem} key={index}>
+											<Image {...image} alt="" className={s.galleryImage} />
+										</div>
+									</Dialog.Trigger>
+								))}
+							</div>
 						</div>
 					</div>
-				</div>
-			</main>
-			<Dialog.Portal>
-				<Dialog.Overlay className={s.dialogOverlay} />
-				<Dialog.Content className={s.dialogContent}>
-					<Image {...images[activeIndex]} alt="" className={s.dialogImage} />
-					<Dialog.Close asChild>
-						<button className={s.iconButton} aria-label="Close">
-							<Cross2Icon />
-						</button>
-					</Dialog.Close>
-				</Dialog.Content>
-			</Dialog.Portal>
-		</Dialog.Root>
+					<Dialog.Portal>
+						<Dialog.Overlay className={s.dialogOverlay} />
+						<Dialog.Content className={s.dialogContent}>
+							<Image
+								{...images[activeIndex]}
+								alt=""
+								className={s.dialogImage}
+							/>
+							<Dialog.Close asChild>
+								<button className={s.iconButton} aria-label="Close">
+									<Cross2Icon />
+								</button>
+							</Dialog.Close>
+						</Dialog.Content>
+					</Dialog.Portal>
+				</Dialog.Root>
+			</div>
+		</main>
 	)
 }
 

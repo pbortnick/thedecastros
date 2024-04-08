@@ -10,6 +10,7 @@ import {
 	DotFilledIcon,
 	CheckIcon,
 	ChevronRightIcon,
+	ExternalLinkIcon,
 } from '@radix-ui/react-icons'
 import s from './nav.module.css'
 
@@ -17,11 +18,11 @@ const PAGES = [
 	{ name: 'Home', href: '/' },
 	{ name: 'Gallery', href: '/gallery' },
 	{ name: 'Schedule', href: '/schedule' },
-	{ name: 'FAQs', href: '/faq' },
-	{
-		name: 'Registry',
-		href: 'https://www.zola.com/registry/jasonandpamela2025',
-	},
+	{ name: 'Details', href: '/details' },
+	// {
+	// 	name: 'Registry',
+	// 	href: 'https://www.zola.com/registry/jasonandpamela2025',
+	// },
 ]
 
 const MenubarDemo = () => {
@@ -42,6 +43,15 @@ const MenubarDemo = () => {
 							{page.name}
 						</Link>
 					))}
+					<Link
+						className={s.externalLink}
+						href="https://www.zola.com/registry/jasonandpamela2025"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Registry
+						<ExternalLinkIcon style={{ height: 12, width: 12 }} />
+					</Link>
 				</NavigationMenu.List>
 			</NavigationMenu.Root>
 
@@ -60,6 +70,17 @@ const MenubarDemo = () => {
 								</Link>
 							</DropdownMenu.Item>
 						))}
+						<DropdownMenu.Item>
+							<Link
+								className={s.externalLink}
+								href="https://www.zola.com/registry/jasonandpamela2025"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Registry
+								<ExternalLinkIcon />
+							</Link>
+						</DropdownMenu.Item>
 					</DropdownMenu.Content>
 				</DropdownMenu.Portal>
 			</DropdownMenu.Root>
