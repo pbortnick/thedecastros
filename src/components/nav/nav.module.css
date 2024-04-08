@@ -85,6 +85,12 @@
 	height: 30px;
 	cursor: pointer;
 	padding: 2px;
+	color: var(--color-accent-3);
+	background: var(--light-accent);
+	border: 1px solid var(--color-accent-3);
+	border-radius: 50px;
+	display: flex;
+	transition: box-shadow 0.15s ease-in;
 
 	& svg {
 		width: 100%;

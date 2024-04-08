@@ -28,7 +28,7 @@
 	font-family: 'tt-ricordi-nobili';
 	font-size: 6rem;
 	font-weight: 400;
-	line-height: 6rem;
+	line-height: 110%;
 
 	@media (max-width: 999px) {
 		font-size: 4rem;
