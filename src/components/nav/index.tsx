@@ -5,10 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
-import {
-	HamburgerMenuIcon,
-	ExternalLinkIcon,
-} from '@radix-ui/react-icons'
+import { HamburgerMenuIcon, ExternalLinkIcon } from '@radix-ui/react-icons'
 import s from './nav.module.css'
 
 const PAGES = [
@@ -29,26 +26,29 @@ const MenubarDemo = () => {
 			<NavigationMenu.Root className={s.desktopNav}>
 				<NavigationMenu.List className={s.navList}>
 					{PAGES.map((page) => (
-						<Link
-							href={page.href}
-							key={page.name}
-							className={classNames(
-								s.link,
-								page.href === currentPath && s.isActive,
-							)}
-						>
-							{page.name}
-						</Link>
+						<NavigationMenu.Item key={page.name}>
+							<Link
+								href={page.href}
+								className={classNames(
+									s.link,
+									page.href === currentPath && s.isActive,
+								)}
+							>
+								{page.name}
+							</Link>
+						</NavigationMenu.Item>
 					))}
-					<Link
-						className={s.externalLink}
-						href="https://www.zola.com/registry/jasonandpamela2025"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Registry
-						<ExternalLinkIcon style={{ height: 12, width: 12 }} />
-					</Link>
+					<NavigationMenu.Item>
+						<Link
+							className={s.externalLink}
+							href="https://www.zola.com/registry/jasonandpamela2025"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Registry
+							<ExternalLinkIcon style={{ height: 12, width: 12 }} />
+						</Link>
+					</NavigationMenu.Item>
 				</NavigationMenu.List>
 			</NavigationMenu.Root>
 

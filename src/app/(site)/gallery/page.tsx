@@ -9,30 +9,36 @@ import s from './gallery.module.css'
 import hero from '~images/gallery/hero.jpg'
 import Image from 'next/image'
 import { useMediumUp } from 'hooks/use-media-query'
+
 const images = {
 	proposal: Object.values(ProposalGallery),
 	relationship: Object.values(RelationshipGallery),
 }
 
+console.log(images.relationship[0])
+
+type GalleryName = 'proposal' | 'relationship'
+
 const GalleryPage = () => {
-	const [lightBoxIsOpen, setLightBoxIsOpen] = useState<
+	const [open, setOpen] = useState<boolean>(false)
+	const [activeGallery, setActiveGallery] = useState<
 		'relationship' | 'proposal' | null
 	>(null)
 	const [activeIndex, setActiveIndex] = useState(0)
 	const isMediumUp = useMediumUp()
 
 	useEffect(() => {
-		if (!isMediumUp && !!lightBoxIsOpen) {
-			setLightBoxIsOpen(null)
+		if (!isMediumUp && !!open) {
+			setOpen(false)
 		}
 	}, [isMediumUp])
 
 	const handleKeyDown = useCallback(
 		(event: KeyboardEvent) => {
-			if (!!lightBoxIsOpen) {
+			if (!!activeGallery) {
 				if (event.key === 'ArrowRight') {
 					setActiveIndex(
-						activeIndex === images[lightBoxIsOpen].length - 1
+						activeIndex === images[activeGallery].length - 1
 							? 0
 							: activeIndex + 1,
 					)
@@ -41,13 +47,13 @@ const GalleryPage = () => {
 				if (event.key === 'ArrowLeft') {
 					setActiveIndex(
 						activeIndex === 0
-							? images[lightBoxIsOpen].length - 1
+							? images[activeGallery].length - 1
 							: activeIndex - 1,
 					)
 				}
 			}
 		},
-		[lightBoxIsOpen, activeIndex],
+		[open, activeIndex],
 	)
 
 	useEffect(() => {
@@ -56,7 +62,17 @@ const GalleryPage = () => {
 		return () => {
 			window.removeEventListener('keydown', handleKeyDown)
 		}
-	}, [lightBoxIsOpen, activeIndex])
+	}, [open, activeIndex])
+
+	const handleTrigger = useCallback(
+		(galleryName: 'proposal' | 'relationship', index: number) => {
+			if (isMediumUp) {
+				setActiveGallery(galleryName)
+				setActiveIndex(index)
+			}
+		},
+		[isMediumUp],
+	)
 
 	return (
 		<main className={s.main}>
@@ -73,66 +89,35 @@ const GalleryPage = () => {
 						<h1 className={s.heroTitle}>Gallery</h1>
 					</div>
 				</div>
-				<Dialog.Root>
-					<div className={s.sectionHeadingWrapper}>
-						<h2 className={s.sectionHeading}>The Proposal</h2>
-					</div>
-					<div className={s.gallery}>
-						<div className={s.galleryGridContainer}>
-							<div className={s.galleryGridSection}>
-								{images.proposal.map((image, index) => (
-									<Dialog.Trigger
-										asChild
-										onClick={() => {
-											if (isMediumUp) {
-												setLightBoxIsOpen('proposal')
-												setActiveIndex(index)
-											}
-										}}
-									>
-										<div className={s.galleryGridItem} key={index}>
-											<Image
-												{...image}
-												alt=""
-												className={s.galleryImage}
-												placeholder="blur"
-											/>
-										</div>
-									</Dialog.Trigger>
-								))}
-							</div>
-						</div>
-					</div>
-					<div className={s.sectionHeadingWrapper}>
-						<h2 className={s.sectionHeading}>The Relationship</h2>
-					</div>
-					<div className={s.gallery}>
-						<div className={s.galleryGridContainer}>
-							<div className={s.galleryGridSection}>
-								{images.relationship.map((image, index) => (
-									<Dialog.Trigger
-										asChild
-										onClick={() => {
-											if (isMediumUp) {
-												setLightBoxIsOpen('relationship')
-												setActiveIndex(index)
-											}
-										}}
-									>
-										<div className={s.galleryGridItem} key={index}>
-											<Image {...image} alt="" className={s.galleryImage} />
-										</div>
-									</Dialog.Trigger>
-								))}
-							</div>
-						</div>
-					</div>
-					{lightBoxIsOpen && isMediumUp && (
+				<Dialog.Root
+					open={open}
+					onOpenChange={() => {
+						if (isMediumUp) {
+							if (open) {
+								setActiveGallery(null)
+								setActiveIndex(0)
+							}
+
+							setOpen(!open)
+						}
+					}}
+				>
+					<GallerySection
+						title="The Proposal"
+						onClick={handleTrigger}
+						galleryName="proposal"
+					/>
+					<GallerySection
+						title="The Relationship"
+						onClick={handleTrigger}
+						galleryName="relationship"
+					/>
+					{open && activeGallery && isMediumUp && (
 						<Dialog.Portal>
 							<Dialog.Overlay className={s.dialogOverlay} />
 							<Dialog.Content className={s.dialogContent}>
 								<Image
-									{...images[lightBoxIsOpen][activeIndex]}
+									{...images[activeGallery][activeIndex]}
 									alt=""
 									className={s.dialogImage}
 								/>
@@ -149,5 +134,46 @@ const GalleryPage = () => {
 		</main>
 	)
 }
+
+interface GallerySectionProps {
+	title: string
+	galleryName: GalleryName
+	onClick: (galleryName: GalleryName, index: number) => void
+}
+
+const GallerySection = ({
+	title,
+	galleryName,
+	onClick,
+}: GallerySectionProps) => (
+	<>
+		<div className={s.sectionHeadingWrapper}>
+			<h2 className={s.sectionHeading}>{title}</h2>
+		</div>
+		<div className={s.gallery}>
+			<div className={s.galleryGridContainer}>
+				<div className={s.galleryGridSection}>
+					{images[galleryName].map((image, index) => (
+						<Dialog.Trigger className={s.galleryGridItem} key={index} asChild>
+							<div
+								role="button"
+								onClick={() => onClick(galleryName, index)}
+								className={s.galleryGridItem}
+								title='Click to view image in full screen mode'
+							>
+								<Image
+									{...image}
+									alt=""
+									className={s.galleryImage}
+									placeholder="blur"
+								/>
+							</div>
+						</Dialog.Trigger>
+					))}
+				</div>
+			</div>
+		</div>
+	</>
+)
 
 export default GalleryPage

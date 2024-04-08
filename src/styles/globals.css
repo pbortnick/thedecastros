@@ -7,7 +7,6 @@
 	margin-top: var(--nav-height);
 }
 
-button,
 .button-link {
 	padding: 0.5rem 1rem;
 	color: var(--color-accent-3);

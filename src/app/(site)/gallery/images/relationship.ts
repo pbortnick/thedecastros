@@ -1,4 +1,3 @@
-import gallery1 from '~images/gallery/gallery-1.jpeg'
 import gallery2 from '~images/gallery/gallery-2.jpeg'
 import gallery3 from '~images/gallery/gallery-3.jpeg'
 import gallery4 from '~images/gallery/gallery-4.jpeg'
@@ -16,7 +15,6 @@ import gallery15 from '~images/gallery/gallery-15.jpeg'
 import gallery16 from '~images/gallery/gallery-16.jpeg'
 
 export {
-	gallery1,
 	gallery2,
 	gallery3,
 	gallery4,
