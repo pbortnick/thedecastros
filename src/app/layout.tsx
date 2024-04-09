@@ -24,9 +24,10 @@ export const metadata: Metadata = {
 		locale: 'en_US',
 		images: [
 			{
-				url: 'images/social.jpg',
+				url: 'https://thedecastros.com/images/social.jpg',
 				width: 3268,
 				height: 4060,
+				alt: 'Jason Decastro & Pamela Bortnick\'s wedding website',
 			},
 		],
 	},
