@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://thedecastros.vercel.app/
+
+# Sitemaps
+Sitemap: https://thedecastros.vercel.app/sitemap.xml
