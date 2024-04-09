@@ -7,7 +7,6 @@ export const metadata: Metadata = {
 	},
 }
 
-
 const DetailsPage = () => {
 	return (
 		<main>
