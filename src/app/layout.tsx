@@ -7,6 +7,7 @@ import '../styles/style.css'
 import s from './site.module.css'
 import Nav from 'components/nav'
 import classNames from 'classnames'
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
 
 const bebasNeue = Bebas_Neue({
 	weight: '400',
@@ -50,6 +51,9 @@ export default function RootLayout({
 						<Image {...pageBackgroundBorderRight} alt="" />
 					</div>
 				</div>
+				<VisuallyHidden>
+					<h2>Jason Decastro & Pamela Bortnick's wedding website</h2>
+				</VisuallyHidden>
 			</body>
 		</html>
 	)
