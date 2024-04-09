@@ -62,14 +62,14 @@ const MenubarDemo = () => {
 					<DropdownMenu.Content className={s.dropdownContent} sideOffset={5}>
 						{PAGES.map((page) => (
 							<DropdownMenu.Item key={page.name}>
-								<Link href={page.href} className={s.link}>
+								<Link href={page.href} className={s.mobileLink}>
 									{page.name}
 								</Link>
 							</DropdownMenu.Item>
 						))}
 						<DropdownMenu.Item>
 							<Link
-								className={s.externalLink}
+								className={classNames(s.mobileLink, s.externalLink)}
 								href="https://www.zola.com/registry/jasonandpamela2025"
 								target="_blank"
 								rel="noopener noreferrer"
