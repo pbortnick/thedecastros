@@ -14,6 +14,10 @@
 	gap: var(--spacing-08);
 	text-transform: uppercase;
 
+	& h1 {
+		background: var(--light-accent);
+	}
+
 	@media (min-width: 768px) {
 		max-width: 600px;
 		padding-top: 10%;
