@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image, { type ImageProps } from 'next/image'
 import GalleryContent from './components/gallery-content'
 import type { Metadata } from 'next'
 import s from './gallery.module.css'
@@ -10,11 +10,13 @@ export const metadata: Metadata = {
 	},
 }
 
-function formatImageKitFile(file: ImageKitFile) {
+function formatImageKitFile(file: ImageKitFile): ImageProps {
 	return {
-		...file,
 		src: file.url,
 		blurDataURL: `${file.url}?tr=bl-6`,
+		width: file.width,
+		height: file.height,
+		alt: file.name,
 	}
 }
 

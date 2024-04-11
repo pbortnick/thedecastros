@@ -1,7 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
-import Image from 'next/image'
+import Image, { type ImageProps } from 'next/image'
 import { Cross2Icon } from '@radix-ui/react-icons'
 import * as Dialog from '@radix-ui/react-dialog'
 import { useMediumUp } from 'hooks/use-media-query'
@@ -11,8 +11,8 @@ import s from './style.module.css'
 type GalleryName = 'proposal' | 'relationship'
 
 interface GalleryContentProps {
-	proposal: Array<ImageKitFile & { src: string }>
-	relationship: Array<ImageKitFile & { src: string }>
+	proposal: Array<ImageProps>
+	relationship: Array<ImageProps>
 }
 
 const GalleryContent = (images: GalleryContentProps) => {

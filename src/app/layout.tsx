@@ -46,10 +46,20 @@ export default function RootLayout({
 				{children}
 				<div className={s.borderImages}>
 					<div className={s.borderLeft}>
-						<Image {...pageBackgroundBorderLeft} alt="" />
+						<Image
+							src={pageBackgroundBorderLeft.src}
+							width={pageBackgroundBorderLeft.width}
+							height={pageBackgroundBorderLeft.height}
+							alt=""
+						/>
 					</div>
 					<div className={s.borderRight}>
-						<Image {...pageBackgroundBorderRight} alt="" />
+						<Image
+							src={pageBackgroundBorderRight.src}
+							width={pageBackgroundBorderRight.width}
+							height={pageBackgroundBorderRight.height}
+							alt=""
+						/>
 					</div>
 				</div>
 				<Analytics />
