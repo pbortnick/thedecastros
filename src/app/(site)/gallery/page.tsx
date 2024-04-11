@@ -21,6 +21,7 @@ function formatImageKitFile(file: ImageKitFile): ImageProps {
 }
 
 async function getData() {
+	console.log(process.env.IMAGEKIT_PRIVATE_KEY)
 	const res = await fetch('https://api.imagekit.io/v1/files', {
 		headers: {
 			Authorization: `Basic ${Buffer.from(
