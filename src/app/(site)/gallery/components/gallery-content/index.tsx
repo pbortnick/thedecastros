@@ -5,7 +5,6 @@ import Image, { type ImageProps } from 'next/image'
 import { Cross2Icon } from '@radix-ui/react-icons'
 import * as Dialog from '@radix-ui/react-dialog'
 import { useMediumUp } from 'hooks/use-media-query'
-import type { ImageKitFile } from '../../types'
 import s from './style.module.css'
 
 type GalleryName = 'proposal' | 'relationship'
@@ -120,7 +119,7 @@ const GalleryContent = (images: GalleryContentProps) => {
 interface GallerySectionProps {
 	title: string
 	galleryName: GalleryName
-	gallery: Array<ImageKitFile & { src: string }>
+	gallery: Array<ImageProps>
 	onClick: (galleryName: GalleryName, index: number) => void
 }
 
