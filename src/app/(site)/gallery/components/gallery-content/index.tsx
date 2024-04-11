@@ -1,22 +1,21 @@
 'use client'
 
-import { Cross2Icon } from '@radix-ui/react-icons'
-import * as Dialog from '@radix-ui/react-dialog'
-import * as ProposalGallery from '../../images/proposal'
-import * as RelationshipGallery from '../../images/relationship'
 import { useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
+import { Cross2Icon } from '@radix-ui/react-icons'
+import * as Dialog from '@radix-ui/react-dialog'
 import { useMediumUp } from 'hooks/use-media-query'
+import type { ImageKitFile } from '../../types'
 import s from './style.module.css'
-
-const images = {
-	proposal: Object.values(ProposalGallery),
-	relationship: Object.values(RelationshipGallery),
-}
 
 type GalleryName = 'proposal' | 'relationship'
 
-const GalleryContent = () => {
+interface GalleryContentProps {
+	proposal: Array<ImageKitFile & { src: string }>
+	relationship: Array<ImageKitFile & { src: string }>
+}
+
+const GalleryContent = (images: GalleryContentProps) => {
 	const [open, setOpen] = useState<boolean>(false)
 	const [activeGallery, setActiveGallery] = useState<
 		'relationship' | 'proposal' | null
@@ -89,11 +88,13 @@ const GalleryContent = () => {
 				title="The Proposal"
 				onClick={handleTrigger}
 				galleryName="proposal"
+				gallery={images.proposal}
 			/>
 			<GallerySection
 				title="The Relationship"
 				onClick={handleTrigger}
 				galleryName="relationship"
+				gallery={images.relationship}
 			/>
 			{open && activeGallery && isMediumUp && (
 				<Dialog.Portal>
@@ -119,12 +120,14 @@ const GalleryContent = () => {
 interface GallerySectionProps {
 	title: string
 	galleryName: GalleryName
+	gallery: Array<ImageKitFile & { src: string }>
 	onClick: (galleryName: GalleryName, index: number) => void
 }
 
 const GallerySection = ({
 	title,
 	galleryName,
+	gallery,
 	onClick,
 }: GallerySectionProps) => (
 	<>
@@ -134,7 +137,7 @@ const GallerySection = ({
 		<div className={s.gallery}>
 			<div className={s.galleryGridContainer}>
 				<div className={s.galleryGridSection}>
-					{images[galleryName].map((image, index) => (
+					{gallery.map((image, index) => (
 						<Dialog.Trigger className={s.galleryGridItem} key={index} asChild>
 							<div
 								role="button"
