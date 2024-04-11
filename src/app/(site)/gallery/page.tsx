@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 function formatImageKitFile(file: ImageKitFile): ImageProps {
 	return {
 		src: file.url,
-		blurDataURL: `${file.url}?tr=bl-6`,
 		width: file.width,
 		height: file.height,
 		alt: file.name,
@@ -68,7 +67,6 @@ const GalleryPage = async () => {
 							alt="Jason proposing to Pam on beach"
 							className={s.heroImage}
 							priority
-							placeholder="blur"
 						/>
 					)}
 					<div className={s.heroText}>

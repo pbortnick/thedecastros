@@ -148,7 +148,6 @@ const GallerySection = ({
 									{...image}
 									alt=""
 									className={s.galleryImage}
-									placeholder="blur"
 								/>
 							</div>
 						</Dialog.Trigger>
