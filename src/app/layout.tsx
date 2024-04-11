@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import Image from 'next/image'
 import pageBackgroundBorderLeft from '~images/page-border-bottom-left.svg'
 import pageBackgroundBorderRight from '~images/page-border-bottom-right.svg'
@@ -51,6 +52,7 @@ export default function RootLayout({
 						<Image {...pageBackgroundBorderRight} alt="" />
 					</div>
 				</div>
+				<Analytics />
 			</body>
 		</html>
 	)
