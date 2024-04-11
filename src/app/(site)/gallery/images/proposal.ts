@@ -17,7 +17,7 @@ import proposal17 from '~images/gallery/MKP_0943.jpg'
 import proposal18 from '~images/gallery/MKP_0972.jpg'
 import proposal19 from '~images/gallery/MKP_0976.jpg'
 import proposal20 from '~images/gallery/MKP_0979.jpg'
-import proposal21 from '~images/gallery/MKP_0990.jpg'
+// import proposal21 from '~images/gallery/MKP_0990.jpg'
 import proposal22 from '~images/gallery/MKP_1009.jpg'
 
 export {
@@ -40,6 +40,6 @@ export {
 	proposal18,
 	proposal19,
 	proposal20,
-	proposal21,
+	// proposal21,
 	proposal22,
 }
