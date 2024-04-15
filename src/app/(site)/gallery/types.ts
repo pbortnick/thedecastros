@@ -24,8 +24,7 @@ export interface ImageKitFile {
 	size: number
 	hasAlpha: boolean
 	customMetadata: {
-		brand: string
-		color: string
+		alt?: string
 	}
 	createdAt: string
 	updatedAt: string

@@ -15,7 +15,7 @@ function formatImageKitFile(file: ImageKitFile): ImageProps {
 		src: file.url,
 		width: file.width,
 		height: file.height,
-		alt: file.name,
+		alt: file.customMetadata?.alt ?? '',
 	}
 }
 
