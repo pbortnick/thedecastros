@@ -98,11 +98,12 @@ const GalleryContent = (images: GalleryContentProps) => {
 			{open && activeGallery && isMediumUp && (
 				<Dialog.Portal>
 					<Dialog.Overlay className={s.dialogOverlay} />
-					<Dialog.Content className={s.dialogContent}>
+					<Dialog.Content className={s.dialogContent} onClick={() => setOpen(false)}>
 						<Image
 							{...images[activeGallery][activeIndex]}
 							alt=""
 							className={s.dialogImage}
+							onClick={(event) => event.stopPropagation()}
 						/>
 						<Dialog.Close asChild>
 							<button className={s.iconButton} aria-label="Close">

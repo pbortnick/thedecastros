@@ -123,6 +123,7 @@
 	width: auto;
 	overflow: hidden;
 	display: flex;
+	z-index: 11;
 }
 
 .dialogOverlay {
@@ -156,6 +157,7 @@
 }
 
 .iconButton {
+	z-index: 12;
 	background: var(--light-accent);
 	font-family: inherit;
 	border-radius: 12px;

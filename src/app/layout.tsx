@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import Image from 'next/image'
 import pageBackgroundBorderLeft from '~images/page-border-bottom-left.svg'
 import pageBackgroundBorderRight from '~images/page-border-bottom-right.svg'
@@ -62,6 +63,7 @@ export default function RootLayout({
 						/>
 					</div>
 				</div>
+				<SpeedInsights />
 				<Analytics />
 			</body>
 		</html>
