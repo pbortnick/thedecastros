@@ -1,8 +1,10 @@
 import Image, { type ImageProps } from 'next/image'
 import GalleryContent from './components/gallery-content'
 import type { Metadata } from 'next'
+import type { ImageKitFile } from './types'
 import s from './gallery.module.css'
-import { ImageKitFile } from './types'
+
+export const revalidate = 1800
 
 export const metadata: Metadata = {
 	openGraph: {
