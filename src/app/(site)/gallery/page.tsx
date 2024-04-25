@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import type { ImageKitFile } from './types'
 import s from './gallery.module.css'
 
-export const revalidate = 1800
+export const revalidate = 86400
 
 export const metadata: Metadata = {
 	openGraph: {
