@@ -11,9 +11,9 @@ export default function Home() {
 	return (
 		<main className={s.main}>
 			<div className={s.heading}>
-				<h1 className="page-heading">Jason & Pamela</h1>
+				<h1 className="page-heading">Pamela & Jason</h1>
 				<h2 style={{ display: 'none' }}>
-					Jason Decastro & Pamela Bortnick's wedding website
+					Pamela Bortnick & Jason Decastro's wedding website
 				</h2>
 				<p className="typography-body-large">Date & venue coming soon</p>
 			</div>
