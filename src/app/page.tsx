@@ -15,7 +15,11 @@ export default function Home() {
 				<h2 style={{ display: 'none' }}>
 					Pamela Bortnick & Jason Decastro's wedding website
 				</h2>
-				<p className="typography-body-large">Date & venue coming soon</p>
+				<div className={s.details}>
+					<p className="typography-body-large">The Barn at Fallingwater</p>
+					<p className="typography-body-large">Mill Run, PA</p>
+					<p className="typography-body-large">Spring 2025</p>
+				</div>
 			</div>
 		</main>
 	)
