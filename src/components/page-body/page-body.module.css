@@ -1,0 +1,10 @@
+.root {
+	margin-top: var(--spacing-06);
+	display: flex;
+	gap: var(--spacing-03);
+}
+
+.pageBodyText {
+	composes: typography-body-large from global;
+	margin: 0 auto;
+}

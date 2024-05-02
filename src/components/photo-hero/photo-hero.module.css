@@ -1,14 +1,3 @@
-.main {
-	height: var(--page-height);
-	width: 100%;
-	position: relative;
-	z-index: 1;
-}
-
-.content {
-	composes: container from global;
-}
-
 .hero {
 	display: grid;
 	position: relative;
