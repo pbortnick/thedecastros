@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
-import { HamburgerMenuIcon, ExternalLinkIcon } from '@radix-ui/react-icons'
 import s from './nav.module.css'
 
 const PAGES = [
@@ -46,7 +45,10 @@ const MenubarDemo = () => {
 							rel="noopener noreferrer"
 						>
 							Registry
-							<ExternalLinkIcon style={{ height: 12, width: 12 }} />
+							<i
+								className="pi pi-external-link"
+								style={{ fontSize: 16, marginLeft: 4, marginTop: 6 }}
+							/>
 						</Link>
 					</NavigationMenu.Item>
 				</NavigationMenu.List>
@@ -55,7 +57,10 @@ const MenubarDemo = () => {
 			<DropdownMenu.Root>
 				<DropdownMenu.Trigger asChild className={s.mobileNav}>
 					<button className={s.iconButton} aria-label="Toggle nav">
-						<HamburgerMenuIcon />
+						<i
+							className="pi pi-bars"
+							style={{ fontSize: 16, marginLeft: 4, marginTop: 6 }}
+						/>
 					</button>
 				</DropdownMenu.Trigger>
 				<DropdownMenu.Portal>
@@ -75,7 +80,10 @@ const MenubarDemo = () => {
 								rel="noopener noreferrer"
 							>
 								Registry
-								<ExternalLinkIcon />
+								<i
+									className="pi pi-external-link"
+									style={{ fontSize: 16, marginLeft: 4, marginTop: 6 }}
+								/>
 							</Link>
 						</DropdownMenu.Item>
 					</DropdownMenu.Content>

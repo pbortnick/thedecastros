@@ -9,8 +9,10 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"cSpell.words": [
+		"Afterparty",
 		"CLOUDINARY",
 		"IMAGEKIT",
+		"primeicons",
 		"pswp"
 	]
 }

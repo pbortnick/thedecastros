@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import Image, { type ImageProps } from 'next/image'
-import { Cross2Icon } from '@radix-ui/react-icons'
 import * as Dialog from '@radix-ui/react-dialog'
 import { useMediumUp } from 'hooks/use-media-query'
 import s from './style.module.css'
@@ -98,7 +97,10 @@ const GalleryContent = (images: GalleryContentProps) => {
 			{open && activeGallery && isMediumUp && (
 				<Dialog.Portal>
 					<Dialog.Overlay className={s.dialogOverlay} />
-					<Dialog.Content className={s.dialogContent} onClick={() => setOpen(false)}>
+					<Dialog.Content
+						className={s.dialogContent}
+						onClick={() => setOpen(false)}
+					>
 						<Image
 							{...images[activeGallery][activeIndex]}
 							alt=""
@@ -107,7 +109,7 @@ const GalleryContent = (images: GalleryContentProps) => {
 						/>
 						<Dialog.Close asChild>
 							<button className={s.iconButton} aria-label="Close">
-								<Cross2Icon />
+								<i className="pi pi-times" />
 							</button>
 						</Dialog.Close>
 					</Dialog.Content>
@@ -145,11 +147,7 @@ const GallerySection = ({
 								className={s.galleryGridItem}
 								title="Click to view image in full screen mode"
 							>
-								<Image
-									{...image}
-									alt=""
-									className={s.galleryImage}
-								/>
+								<Image {...image} alt="" className={s.galleryImage} />
 							</div>
 						</Dialog.Trigger>
 					))}

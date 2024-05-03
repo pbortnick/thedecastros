@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
 	openGraph: {
-		url: 'https://thedecastro.com/details',
+		url: 'https://thedecastro.com/things-to-do',
 	},
 }
 
@@ -18,7 +18,7 @@ const DetailsPage = () => {
 					height: 508,
 					alt: 'Wide image of Fallingwater',
 				}}
-				title="Details"
+				title="Things to do"
 			/>
 			<PageBody />
 		</>

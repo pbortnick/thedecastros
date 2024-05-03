@@ -9,11 +9,13 @@ import '../styles/style.css'
 import s from './site.module.css'
 import Nav from 'components/nav'
 import classNames from 'classnames'
+import 'primeicons/primeicons.css';
 
 const bebasNeue = Bebas_Neue({
 	weight: '400',
 	subsets: ['latin'],
 })
+
 
 export const metadata: Metadata = {
 	title: 'Pamela & Jason 2025',

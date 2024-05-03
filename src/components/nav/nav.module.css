@@ -67,18 +67,7 @@
 }
 
 .externalLink {
-	& svg {
-		margin-top: 3px;
-		margin-left: 3px;
-	}
-
-	@media (min-width: 769px) {
-		display: flex;
-
-		& svg {
-			margin-top: 4px;
-		}
-	}
+	display: flex;
 }
 
 .isActive {
