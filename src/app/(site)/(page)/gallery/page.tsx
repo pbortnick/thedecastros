@@ -2,7 +2,7 @@ import type { ImageProps } from 'next/image'
 import PhotoHero from 'components/photo-hero'
 import GalleryContent from './components/gallery-content'
 import type { Metadata } from 'next'
-import type { ImageKitFile } from './types'
+import { ImageKitFile } from 'lib/format-imagekit-file'
 
 export const revalidate = 86400
 
