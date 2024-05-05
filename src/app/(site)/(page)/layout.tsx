@@ -5,9 +5,5 @@ export default function PageLayout({
 }: Readonly<{
 	children: React.ReactNode
 }>) {
-	return (
-		<main className={s.main}>
-			<div className={s.content}>{children}</div>
-		</main>
-	)
+	return <main className={s.main}>{children}</main>
 }

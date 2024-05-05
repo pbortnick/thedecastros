@@ -1,4 +1,5 @@
 .root {
+	composes: container from global;
 	margin-top: var(--spacing-06);
 	display: flex;
 	gap: var(--spacing-03);

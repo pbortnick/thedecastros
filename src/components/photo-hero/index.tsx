@@ -7,15 +7,17 @@ interface PhotoHeroProps {
 }
 
 const PhotoHero = ({ image, title }: PhotoHeroProps) => (
-	<div className={s.hero}>
-		<Image
-			{...image}
-			alt="Jason proposing to Pam on beach"
-			className={s.heroImage}
-			priority
-		/>
-		<div className={s.heroText}>
-			<h1 className={s.heroTitle}>{title}</h1>
+	<div className={s.root}>
+		<div className={s.hero}>
+			<Image
+				{...image}
+				alt="Jason proposing to Pam on beach"
+				className={s.heroImage}
+				priority
+			/>
+			<div className={s.heroText}>
+				<h1 className={s.heroTitle}>{title}</h1>
+			</div>
 		</div>
 	</div>
 )

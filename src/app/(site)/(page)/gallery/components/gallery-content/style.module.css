@@ -17,6 +17,7 @@
 
 
 .sectionHeadingWrapper {
+	composes: container from global;
 	margin-top: var(--spacing-06);
 	margin-bottom: var(--spacing-03);
 	background-color: var(--site-background-color);
@@ -29,6 +30,7 @@
 }
 
 .gallery {
+	composes: container from global;
 	width: 100%;
 	max-width: 100%;
 }

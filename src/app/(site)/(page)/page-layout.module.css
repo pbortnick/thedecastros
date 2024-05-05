@@ -4,7 +4,3 @@
 	position: relative;
 	z-index: 1;
 }
-
-.content {
-	composes: container from global;
-}

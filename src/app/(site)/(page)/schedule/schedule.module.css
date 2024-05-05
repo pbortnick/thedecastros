@@ -4,7 +4,7 @@
 	width: 100%;
 	gap: var(--spacing-04);
 	color: var(--light-accent);
-	padding-bottom: var(--spacing-10);
+	margin-bottom: var(--spacing-10);
 }
 
 .scheduleDataItem {
