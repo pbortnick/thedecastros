@@ -19,20 +19,24 @@ export const scheduleData: Array<{ day: string; items: Array<ScheduleData> }> =
 			day: 'Friday',
 			items: [
 				{
-					id: 'welcome_event',
-					title: 'Welcome event at ',
-					titleLink: {
-						link: 'https://www.treetopsrestaurant.net',
-						text: 'Treetops Restaurant',
-					},
-					time: '6pm - 8pm',
-					address: {
-						text: '187 Evergreen Lane, Acme Pa 15610',
-						link: 'https://maps.app.goo.gl/DWRwFEDQMkNNqgyz7',
-					},
-					details:
-						'Keeping in theme with the weekend, we will kick off the weekend at Treetops restaurant located in Polymouth Park, home to 4 Frank Lloyd Wright homes',
+					id: 'welcome',
+					title: 'Welcome event - more details soon',
 				},
+				// {
+				// 	id: 'welcome_event',
+				// 	title: 'Welcome event at ',
+				// 	titleLink: {
+				// 		link: 'https://www.treetopsrestaurant.net',
+				// 		text: 'Treetops Restaurant',
+				// 	},
+				// 	time: '6pm - 8pm',
+				// 	address: {
+				// 		text: '187 Evergreen Lane, Acme Pa 15610',
+				// 		link: 'https://maps.app.goo.gl/DWRwFEDQMkNNqgyz7',
+				// 	},
+				// 	details:
+				// 		'Keeping in theme with the weekend, we will kick off the weekend at Treetops restaurant located in Polymouth Park, home to 4 Frank Lloyd Wright homes',
+				// },
 			],
 		},
 		{
@@ -50,8 +54,8 @@ export const scheduleData: Array<{ day: string; items: Array<ScheduleData> }> =
 						text: '1491 Mill Run Road, Mill Run, PA 15464',
 						link: 'https://maps.app.goo.gl/Zut1RfyGQH1Yvoc2A',
 					},
-					details:
-						'We will schedule our guests in groups to get a private tour of the grounds',
+					// details:
+					// 'We will schedule our guests in groups to get a private tour of the Fallingwater house',
 				},
 				{
 					id: 'main_event',
@@ -79,7 +83,7 @@ export const scheduleData: Array<{ day: string; items: Array<ScheduleData> }> =
 						text: '209 W Main St, Ligonier, PA 15658',
 						link: 'https://maps.app.goo.gl/PS6PrRZgs7LJAu4j6',
 					},
-					details: 'Unlimited bowling and open bar',
+					details: 'Nothing like drunk bowling',
 				},
 			],
 		},

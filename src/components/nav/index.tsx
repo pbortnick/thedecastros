@@ -4,14 +4,14 @@ import classNames from 'classnames'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
-// import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 import s from './nav.module.css'
 
 const PAGES = [
 	{ name: 'Home', href: '/' },
 	{ name: 'Gallery', href: '/gallery' },
 	{ name: 'Schedule', href: '/schedule' },
-	{ name: 'Details', href: '/details' },
+	{ name: 'Travel', href: '/travel' },
+	{ name: 'Attractions', href: '/attractions' },
 ]
 
 const MenubarDemo = () => {
