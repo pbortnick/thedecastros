@@ -19,7 +19,7 @@ export const scheduleData: Array<{ day: string; items: Array<ScheduleData> }> =
 			day: 'Friday',
 			items: [
 				{
-					id: 'welcome',
+					id: 'welcome_dep',
 					title: 'Welcome event - more details soon',
 				},
 				// {
@@ -83,7 +83,7 @@ export const scheduleData: Array<{ day: string; items: Array<ScheduleData> }> =
 						text: '209 W Main St, Ligonier, PA 15658',
 						link: 'https://maps.app.goo.gl/PS6PrRZgs7LJAu4j6',
 					},
-					details: 'Nothing like drunk bowling',
+					details: 'Nothing like drunk bowling in party attire',
 				},
 			],
 		},
