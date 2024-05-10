@@ -18,7 +18,7 @@ export default function Home() {
 				<div className={s.details}>
 					<p className="typography-body-large">The Barn at Fallingwater</p>
 					<p className="typography-body-large">Mill Run, PA</p>
-					<p className="typography-body-large">Spring 2025</p>
+					<p className="typography-body-large">May 17, 2025</p>
 				</div>
 			</div>
 		</main>
