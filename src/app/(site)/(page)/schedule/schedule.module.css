@@ -1,0 +1,97 @@
+.body {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: var(--spacing-04);
+	color: var(--light-accent);
+	margin-bottom: var(--spacing-10);
+}
+
+.scheduleDataItem {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: var(--spacing-04);
+}
+
+.dayHeading {
+	display: flex;
+	justify-content: center;
+}
+
+.dayHeadingText {
+	color: var(--accent);
+	background-color: var(--site-background-color);
+	composes: typography-heading-1 from global;
+	border-top: 2px solid var(--accent);
+}
+
+.items {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--accent-dark);
+	border-radius: 6px;
+	padding: var(--spacing-08) var(--spacing-04);
+	gap: var(--spacing-08);
+}
+
+.item {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-02);
+	align-items: center;
+	text-align: center;
+}
+
+.heading {
+	grid-column: 1 / span 4;
+}
+
+.title {
+	composes: typography-heading-3 from global;
+	grid-column: 1 / -1;
+	text-align: center;
+}
+
+.image {
+	width: 100%;
+	height: auto;
+	max-height: 550px;
+	object-fit: cover;
+
+	@media (min-width: 767px) {
+		width: 68%;
+	}
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-01);
+	justify-content: center;
+	grid-column: 6 / -1;
+	max-width: 700px;
+}
+
+.details {
+	margin-top: var(--spacing-01);
+}
+
+.address, .time {
+	display: flex;
+	margin: 0 auto;
+	align-items: center;
+	width: fit-content;
+	gap: var(--spacing-01);
+}
+
+.addressLink, .titleLink {
+	composes: transition-link from global;
+}
+
+.titleLink {
+	& span {
+		text-decoration-color: var(--light-accent);
+	}
+}

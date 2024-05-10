@@ -1,3 +1,5 @@
+import type { ImageProps } from 'next/image'
+
 export interface ImageKitFile {
 	fileId: string
 	type: string
@@ -28,4 +30,13 @@ export interface ImageKitFile {
 	}
 	createdAt: string
 	updatedAt: string
+}
+
+export function formatImageKitFile(file: ImageKitFile): ImageProps {
+	return {
+		src: file.url,
+		width: file.width,
+		height: file.height,
+		alt: file.customMetadata?.alt ?? '',
+	}
 }

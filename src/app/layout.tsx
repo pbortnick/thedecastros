@@ -9,18 +9,20 @@ import '../styles/style.css'
 import s from './site.module.css'
 import Nav from 'components/nav'
 import classNames from 'classnames'
+import 'primeicons/primeicons.css';
 
 const bebasNeue = Bebas_Neue({
 	weight: '400',
 	subsets: ['latin'],
 })
 
+
 export const metadata: Metadata = {
-	title: 'Jason & Pamela 2025',
+	title: 'Pamela & Jason 2025',
 	description: 'Jason Decastro & Pamela Bortnick\'s wedding website',
 	openGraph: {
-		siteName: 'Jason & Pamela 2025',
-		title: 'Jason & Pamela 2025',
+		siteName: 'Pamela & Jason 2025',
+		title: 'Pamela & Jason 2025',
 		description: 'Jason Decastro & Pamela Bortnick\'s wedding website',
 		type: 'website',
 		locale: 'en_US',

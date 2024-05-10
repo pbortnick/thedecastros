@@ -2,7 +2,7 @@
 	"extends": ["plugin:@typescript-eslint/recommended", "prettier"],
 	"plugins": ["@typescript-eslint"],
 	"rules": {
-		"quotes": ["error", "single"],
+		"quotes": [1, "single"],
 		"prefer-const": "error"
 	}
 }
