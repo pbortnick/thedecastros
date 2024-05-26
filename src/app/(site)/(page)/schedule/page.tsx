@@ -1,14 +1,15 @@
-import Image from 'next/image'
+import Image, { ImageProps } from 'next/image'
 import { Montserrat } from 'next/font/google'
 import parse from 'html-react-parser'
 import PageBody from 'components/page-body'
 import PhotoHero from 'components/photo-hero'
 import { formatImageKitFile } from 'lib/format-imagekit-file'
-import { scheduleData } from './schedule-data'
-import type { ImageKitFile } from 'lib/format-imagekit-file'
+import classNames from 'classnames'
+import getClientQuery from 'gql-client'
+import { ScheduleDocument, ScheduleQuery } from 'gql/graphql'
+import fetchImages from 'lib/fetch-images'
 import type { Metadata } from 'next'
 import s from './schedule.module.css'
-import classNames from 'classnames'
 
 const montserrat = Montserrat({
 	weight: '400',
@@ -17,44 +18,37 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
 	openGraph: {
-		url: 'https://thedecastro.com/things-to-do',
+		url: 'https://thedecastro.com/schedule',
 	},
 }
 
 async function getData() {
-	const res = await fetch('https://api.imagekit.io/v1/files', {
-		headers: {
-			Authorization: `Basic ${Buffer.from(
-				`${process.env.IMAGEKIT_PRIVATE_KEY}:`,
-			).toString('base64')}`,
-		},
+	const { data } = await getClientQuery({
+		query: ScheduleDocument,
 	})
 
-	if (!res.ok) {
-		// This will activate the closest `error.js` Error Boundary
+	if (!data) {
 		throw new Error('Failed to fetch data')
 	}
 
-	const imageData: Array<ImageKitFile> = await res.json()
+	const imageData = await fetchImages()
 
-	const hero = imageData.find((file) => file.filePath.includes('hero'))
-
-	if (!hero) {
-		throw new Error('Failed to fetch data')
-	}
-
-	const scheduleImages = imageData
-		.filter((file) => file.filePath.startsWith('/schedule'))
-		.map((file) => formatImageKitFile(file))
-
-	return scheduleData.map(({ day, items }) => ({
+	return data.scheduleDays.map(({ day, schedules }) => ({
 		day,
-		items: items.map((item) => ({
-			...item,
-			image: scheduleImages.find(
-				({ src }) => typeof src === 'string' && src.includes(item.id),
-			),
-		})),
+		items: schedules.map(({ imageId, ...rest }) => {
+			const scheduleItem: ScheduleQuery['scheduleDays'][number]['schedules'][number] & {
+				image?: ImageProps
+			} = rest
+
+			if (imageId) {
+				const image = imageData.find(({ fileId }) => fileId === imageId)
+				if (image) {
+					scheduleItem.image = formatImageKitFile(image)
+				}
+			}
+
+			return scheduleItem
+		}),
 	}))
 }
 
@@ -81,14 +75,23 @@ const SchedulePage = async () => {
 							</div>
 							<div className={s.items}>
 								{items.map(
-									({ title, titleLink, time, details, address, image }) => (
+									({
+										title,
+										titleLinkText,
+										titleLinkUrl,
+										time,
+										details,
+										addressText,
+										addressLink,
+										image,
+									}) => (
 										<div className={s.item}>
 											<h3 className={s.title}>
 												{title}
 												<>
-													{titleLink && (
-														<a href={titleLink.link} className={s.titleLink}>
-															<span>{titleLink.text}</span>
+													{titleLinkText && titleLinkUrl && (
+														<a href={titleLinkUrl} className={s.titleLink}>
+															<span>{titleLinkText}</span>
 														</a>
 													)}
 												</>
@@ -102,12 +105,12 @@ const SchedulePage = async () => {
 														<span>{time}</span>
 													</p>
 												)}
-												{address && (
+												{addressText && addressLink && (
 													<p className={s.address}>
 														<i className="pi pi-map" />
-														<a className={s.addressLink} href={address.link}>
+														<a className={s.addressLink} href={addressLink}>
 															<span className={s.addressText}>
-																{address.text}
+																{addressText}
 															</span>
 														</a>
 													</p>

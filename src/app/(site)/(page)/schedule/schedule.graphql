@@ -1,13 +1,15 @@
 query Schedule {
-  schedule_day {
+  scheduleDays: schedule_day(order_by: {Sort: asc}) {
     day
     schedules {
       title
+			details
       titleLinkUrl
       titleLinkText
       time
       addressLink
       addressText
+			imageId
     }
   }
 }

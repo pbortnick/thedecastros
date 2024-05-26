@@ -1,12 +1,17 @@
-import { CodegenConfig } from '@graphql-codegen/cli'
+import dotenv from 'dotenv'
+import type { CodegenConfig } from '@graphql-codegen/cli'
+
+dotenv.config({
+	path: './.env.local',
+	override: true,
+})
 
 const config: CodegenConfig = {
 	schema: [
 		{
-			'https://maximum-muskrat-91.hasura.app/v1/graphql': {
+			[process.env.HASURA_URL as string]: {
 				headers: {
-					'x-hasura-admin-secret':
-						'MnMAgKxVZGKVBzJOjO0R2e5ObZwf605im0MwOzBiXBYTsiXFGWBByH602IAEpqRT',
+					'x-hasura-admin-secret': process.env.HASURA_SECRET as string,
 				},
 			},
 		},
@@ -15,8 +20,12 @@ const config: CodegenConfig = {
 	generates: {
 		'./src/gql/': {
 			preset: 'client',
+			presetConfig: {
+				gqlTagName: 'gql',
+			},
 		},
 	},
+	ignoreNoDocuments: true,
 }
 
 export default config
