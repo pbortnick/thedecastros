@@ -22,6 +22,11 @@ export const metadata: Metadata = {
 	},
 }
 
+type ScheduleItemType =
+	ScheduleQuery['scheduleDays'][number]['schedules'][number] & {
+		image?: ImageProps
+	}
+
 async function getData() {
 	const { data } = await getClientQuery({
 		query: ScheduleDocument,
@@ -36,9 +41,7 @@ async function getData() {
 	return data.scheduleDays.map(({ day, schedules }) => ({
 		day,
 		items: schedules.map(({ imageId, ...rest }) => {
-			const scheduleItem: ScheduleQuery['scheduleDays'][number]['schedules'][number] & {
-				image?: ImageProps
-			} = rest
+			const scheduleItem: ScheduleItemType = rest
 
 			if (imageId) {
 				const image = imageData.find(({ fileId }) => fileId === imageId)
@@ -74,61 +77,59 @@ const SchedulePage = async () => {
 								<h2 className={s.dayHeadingText}>{day}</h2>
 							</div>
 							<div className={s.items}>
-								{items.map(
-									({
-										title,
-										titleLinkText,
-										titleLinkUrl,
-										time,
-										details,
-										addressText,
-										addressLink,
-										image,
-									}) => (
-										<div className={s.item}>
-											<h3 className={s.title}>
-												{title}
-												<>
-													{titleLinkText && titleLinkUrl && (
-														<a href={titleLinkUrl} className={s.titleLink}>
-															<span>{titleLinkText}</span>
-														</a>
-													)}
-												</>
-											</h3>
-											<div
-												className={classNames(montserrat.className, s.content)}
-											>
-												{time && (
-													<p className={s.time}>
-														<i className="pi pi-clock" />
-														<span>{time}</span>
-													</p>
-												)}
-												{addressText && addressLink && (
-													<p className={s.address}>
-														<i className="pi pi-map" />
-														<a className={s.addressLink} href={addressLink}>
-															<span className={s.addressText}>
-																{addressText}
-															</span>
-														</a>
-													</p>
-												)}
-												{details && (
-													<p className={s.details}>{parse(details)}</p>
-												)}
-											</div>
-											{image && <Image {...image} className={s.image} />}
-										</div>
-									),
-								)}
+								{items.map((item) => (
+									<ScheduleItem {...item} />
+								))}
 							</div>
 						</div>
 					))}
 				</div>
 			</PageBody>
 		</>
+	)
+}
+
+function ScheduleItem({
+	title,
+	titleLinkText,
+	titleLinkUrl,
+	time,
+	details,
+	addressText,
+	addressLink,
+	image,
+}: ScheduleItemType) {
+	return (
+		<div className={s.item}>
+			<h3 className={s.title}>
+				{title}
+				<>
+					{titleLinkText && titleLinkUrl && (
+						<a href={titleLinkUrl} className={s.titleLink}>
+							<span>{titleLinkText}</span>
+						</a>
+					)}
+				</>
+			</h3>
+			<div className={classNames(montserrat.className, s.content)}>
+				{time && (
+					<p className={s.time}>
+						<i className="pi pi-clock" />
+						<span>{time}</span>
+					</p>
+				)}
+				{addressText && addressLink && (
+					<p className={s.address}>
+						<i className="pi pi-map" />
+						<a className={s.addressLink} href={addressLink}>
+							<span className={s.addressText}>{addressText}</span>
+						</a>
+					</p>
+				)}
+				{details && <p className={s.details}>{parse(details)}</p>}
+			</div>
+			{image && <Image {...image} className={s.image} />}
+		</div>
 	)
 }
 
