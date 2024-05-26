@@ -1,0 +1,18 @@
+query Schedule {
+	hero(where: { title: { _eq: "Schedule" } }) {
+		...heroFields
+	}
+	scheduleDays: schedule_day(order_by: { Sort: asc }) {
+		day
+		schedules {
+			title
+			details
+			titleLinkUrl
+			titleLinkText
+			time
+			addressLink
+			addressText
+			imageId
+		}
+	}
+}

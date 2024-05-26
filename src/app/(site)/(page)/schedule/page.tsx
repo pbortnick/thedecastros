@@ -1,14 +1,15 @@
-import Image from 'next/image'
+import Image, { ImageProps } from 'next/image'
 import { Montserrat } from 'next/font/google'
 import parse from 'html-react-parser'
 import PageBody from 'components/page-body'
 import PhotoHero from 'components/photo-hero'
 import { formatImageKitFile } from 'lib/format-imagekit-file'
-import { scheduleData } from './schedule-data'
-import type { ImageKitFile } from 'lib/format-imagekit-file'
+import classNames from 'classnames'
+import getClientQuery from 'gql-client'
+import { ScheduleDocument, ScheduleQuery } from 'gql/types'
+import fetchImages from 'lib/fetch-images'
 import type { Metadata } from 'next'
 import s from './schedule.module.css'
-import classNames from 'classnames'
 
 const montserrat = Montserrat({
 	weight: '400',
@@ -17,115 +18,127 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
 	openGraph: {
-		url: 'https://thedecastro.com/things-to-do',
+		url: 'https://thedecastro.com/schedule',
 	},
 }
 
+type ScheduleItemType =
+	ScheduleQuery['scheduleDays'][number]['schedules'][number] & {
+		image?: ImageProps
+	}
+
 async function getData() {
-	const res = await fetch('https://api.imagekit.io/v1/files', {
-		headers: {
-			Authorization: `Basic ${Buffer.from(
-				`${process.env.IMAGEKIT_PRIVATE_KEY}:`,
-			).toString('base64')}`,
-		},
+	const { data } = await getClientQuery({
+		query: ScheduleDocument,
 	})
 
-	if (!res.ok) {
-		// This will activate the closest `error.js` Error Boundary
+	if (!data || !data.scheduleDays || !data.hero || !data.hero[0]) {
 		throw new Error('Failed to fetch data')
 	}
 
-	const imageData: Array<ImageKitFile> = await res.json()
+	const { scheduleDays, hero } = data
 
-	const hero = imageData.find((file) => file.filePath.includes('hero'))
+	const imageData = await fetchImages()
 
-	if (!hero) {
-		throw new Error('Failed to fetch data')
-	}
-
-	const scheduleImages = imageData
-		.filter((file) => file.filePath.startsWith('/schedule'))
-		.map((file) => formatImageKitFile(file))
-
-	return scheduleData.map(({ day, items }) => ({
+	const scheduleData = scheduleDays.map(({ day, schedules }) => ({
 		day,
-		items: items.map((item) => ({
-			...item,
-			image: scheduleImages.find(
-				({ src }) => typeof src === 'string' && src.includes(item.id),
-			),
-		})),
+		items: schedules.map(({ imageId, ...rest }) => {
+			const scheduleItem: ScheduleItemType = rest
+
+			if (imageId) {
+				const image = imageData.find(({ fileId }) => fileId === imageId)
+				if (image) {
+					scheduleItem.image = formatImageKitFile(image)
+				}
+			}
+
+			return scheduleItem
+		}),
 	}))
+
+	const heroData = {
+		image: {
+			src: hero[0].src,
+			alt: hero[0].alt,
+			width: hero[0].width,
+			height: hero[0].height,
+		},
+		title: hero[0].title,
+	}
+
+	return {
+		schedule: scheduleData,
+		hero: heroData,
+	}
 }
 
 const SchedulePage = async () => {
-	const data = await getData()
+	const { hero, schedule } = await getData()
 
 	return (
 		<>
-			<PhotoHero
-				image={{
-					src: 'https://ik.imagekit.io/1m3aqn3vb/schedule-hero.jpeg?updatedAt=1714687196127',
-					width: 649,
-					height: 433,
-					alt: 'The Barn at Fallingwater',
-				}}
-				title="Schedule"
-			/>
+			<PhotoHero {...hero} />
 			<PageBody>
 				<div className={s.body}>
-					{data.map(({ day, items }) => (
+					{schedule.map(({ day, items }) => (
 						<div className={s.scheduleDataItem}>
 							<div className={s.dayHeading}>
 								<h2 className={s.dayHeadingText}>{day}</h2>
 							</div>
 							<div className={s.items}>
-								{items.map(
-									({ title, titleLink, time, details, address, image }) => (
-										<div className={s.item}>
-											<h3 className={s.title}>
-												{title}
-												<>
-													{titleLink && (
-														<a href={titleLink.link} className={s.titleLink}>
-															<span>{titleLink.text}</span>
-														</a>
-													)}
-												</>
-											</h3>
-											<div
-												className={classNames(montserrat.className, s.content)}
-											>
-												{time && (
-													<p className={s.time}>
-														<i className="pi pi-clock" />
-														<span>{time}</span>
-													</p>
-												)}
-												{address && (
-													<p className={s.address}>
-														<i className="pi pi-map" />
-														<a className={s.addressLink} href={address.link}>
-															<span className={s.addressText}>
-																{address.text}
-															</span>
-														</a>
-													</p>
-												)}
-												{details && (
-													<p className={s.details}>{parse(details)}</p>
-												)}
-											</div>
-											{image && <Image {...image} className={s.image} />}
-										</div>
-									),
-								)}
+								{items.map((item) => (
+									<ScheduleItem {...item} />
+								))}
 							</div>
 						</div>
 					))}
 				</div>
 			</PageBody>
 		</>
+	)
+}
+
+function ScheduleItem({
+	title,
+	titleLinkText,
+	titleLinkUrl,
+	time,
+	details,
+	addressText,
+	addressLink,
+	image,
+}: ScheduleItemType) {
+	return (
+		<div className={s.item}>
+			<h3 className={s.title}>
+				{title}
+				<>
+					{titleLinkText && titleLinkUrl && (
+						<a href={titleLinkUrl} className={s.titleLink}>
+							<span>{titleLinkText}</span>
+						</a>
+					)}
+				</>
+			</h3>
+			<div className={classNames(montserrat.className, s.content)}>
+				{time && (
+					<p className={s.time}>
+						<i className="pi pi-clock" />
+						<span>{time}</span>
+					</p>
+				)}
+				{addressText && addressLink && (
+					<p className={s.address}>
+						<i className="pi pi-map" />
+						<a className={s.addressLink} href={addressLink}>
+							<span className={s.addressText}>{addressText}</span>
+						</a>
+					</p>
+				)}
+				{details && <p className={s.details}>{parse(details)}</p>}
+			</div>
+			{image && <Image {...image} className={s.image} />}
+		</div>
 	)
 }
 

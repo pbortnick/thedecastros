@@ -1,0 +1,7 @@
+fragment heroFields on hero {
+  alt
+  title
+  src
+  width
+  height
+}
