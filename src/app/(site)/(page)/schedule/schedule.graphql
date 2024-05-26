@@ -1,0 +1,13 @@
+query Schedule {
+  schedule_day {
+    day
+    schedules {
+      title
+      titleLinkUrl
+      titleLinkText
+      time
+      addressLink
+      addressText
+    }
+  }
+}
