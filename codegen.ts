@@ -18,10 +18,11 @@ const config: CodegenConfig = {
 	],
 	documents: ['src/**/*.graphql'],
 	generates: {
-		'./src/gql/': {
-			preset: 'client',
-			presetConfig: {
-				gqlTagName: 'gql',
+		['src/gql/types.ts']: {
+			plugins: ['typescript', 'typescript-operations', 'typed-document-node'],
+			config: {
+				enumsAsTypes: true,
+				pureMagicComment: true,
 			},
 		},
 	},
