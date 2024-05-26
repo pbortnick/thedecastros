@@ -147,7 +147,15 @@ const GallerySection = ({
 								className={s.galleryGridItem}
 								title="Click to view image in full screen mode"
 							>
-								<Image {...image} alt="" className={s.galleryImage} />
+								<Image
+									src={image.src}
+									alt={image.alt || ''}
+									width={200}
+									height={200}
+									className={s.galleryImage}
+									priority
+									quality={50}
+								/>
 							</div>
 						</Dialog.Trigger>
 					))}
