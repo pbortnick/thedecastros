@@ -32,13 +32,15 @@ async function getData() {
 		query: ScheduleDocument,
 	})
 
-	if (!data) {
+	if (!data || !data.scheduleDays || !data.hero || !data.hero[0]) {
 		throw new Error('Failed to fetch data')
 	}
 
+	const { scheduleDays, hero } = data
+
 	const imageData = await fetchImages()
 
-	return data.scheduleDays.map(({ day, schedules }) => ({
+	const scheduleData = scheduleDays.map(({ day, schedules }) => ({
 		day,
 		items: schedules.map(({ imageId, ...rest }) => {
 			const scheduleItem: ScheduleItemType = rest
@@ -53,25 +55,32 @@ async function getData() {
 			return scheduleItem
 		}),
 	}))
+
+	const heroData = {
+		image: {
+			src: hero[0].src,
+			alt: hero[0].alt,
+			width: hero[0].width,
+			height: hero[0].height,
+		},
+		title: hero[0].title,
+	}
+
+	return {
+		schedule: scheduleData,
+		hero: heroData,
+	}
 }
 
 const SchedulePage = async () => {
-	const data = await getData()
+	const { hero, schedule } = await getData()
 
 	return (
 		<>
-			<PhotoHero
-				image={{
-					src: 'https://ik.imagekit.io/1m3aqn3vb/schedule-hero.jpeg?updatedAt=1714687196127',
-					width: 649,
-					height: 433,
-					alt: 'The Barn at Fallingwater',
-				}}
-				title="Schedule"
-			/>
+			<PhotoHero {...hero} />
 			<PageBody>
 				<div className={s.body}>
-					{data.map(({ day, items }) => (
+					{schedule.map(({ day, items }) => (
 						<div className={s.scheduleDataItem}>
 							<div className={s.dayHeading}>
 								<h2 className={s.dayHeadingText}>{day}</h2>

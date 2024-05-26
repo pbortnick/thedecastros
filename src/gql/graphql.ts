@@ -70,9 +70,255 @@ export enum Cursor_Ordering {
   Desc = 'DESC'
 }
 
+/** columns and relationships of "hero" */
+export type Hero = {
+  __typename?: 'hero';
+  alt: Scalars['String']['output'];
+  height: Scalars['Int']['output'];
+  src: Scalars['String']['output'];
+  title: Scalars['String']['output'];
+  width: Scalars['Int']['output'];
+};
+
+/** aggregated selection of "hero" */
+export type Hero_Aggregate = {
+  __typename?: 'hero_aggregate';
+  aggregate?: Maybe<Hero_Aggregate_Fields>;
+  nodes: Array<Hero>;
+};
+
+/** aggregate fields of "hero" */
+export type Hero_Aggregate_Fields = {
+  __typename?: 'hero_aggregate_fields';
+  avg?: Maybe<Hero_Avg_Fields>;
+  count: Scalars['Int']['output'];
+  max?: Maybe<Hero_Max_Fields>;
+  min?: Maybe<Hero_Min_Fields>;
+  stddev?: Maybe<Hero_Stddev_Fields>;
+  stddev_pop?: Maybe<Hero_Stddev_Pop_Fields>;
+  stddev_samp?: Maybe<Hero_Stddev_Samp_Fields>;
+  sum?: Maybe<Hero_Sum_Fields>;
+  var_pop?: Maybe<Hero_Var_Pop_Fields>;
+  var_samp?: Maybe<Hero_Var_Samp_Fields>;
+  variance?: Maybe<Hero_Variance_Fields>;
+};
+
+
+/** aggregate fields of "hero" */
+export type Hero_Aggregate_FieldsCountArgs = {
+  columns?: InputMaybe<Array<Hero_Select_Column>>;
+  distinct?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+/** aggregate avg on columns */
+export type Hero_Avg_Fields = {
+  __typename?: 'hero_avg_fields';
+  height?: Maybe<Scalars['Float']['output']>;
+  width?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Boolean expression to filter rows from the table "hero". All fields are combined with a logical 'AND'. */
+export type Hero_Bool_Exp = {
+  _and?: InputMaybe<Array<Hero_Bool_Exp>>;
+  _not?: InputMaybe<Hero_Bool_Exp>;
+  _or?: InputMaybe<Array<Hero_Bool_Exp>>;
+  alt?: InputMaybe<String_Comparison_Exp>;
+  height?: InputMaybe<Int_Comparison_Exp>;
+  src?: InputMaybe<String_Comparison_Exp>;
+  title?: InputMaybe<String_Comparison_Exp>;
+  width?: InputMaybe<Int_Comparison_Exp>;
+};
+
+/** unique or primary key constraints on table "hero" */
+export enum Hero_Constraint {
+  /** unique or primary key constraint on columns "title" */
+  HeroPkey = 'hero_pkey'
+}
+
+/** input type for incrementing numeric columns in table "hero" */
+export type Hero_Inc_Input = {
+  height?: InputMaybe<Scalars['Int']['input']>;
+  width?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** input type for inserting data into table "hero" */
+export type Hero_Insert_Input = {
+  alt?: InputMaybe<Scalars['String']['input']>;
+  height?: InputMaybe<Scalars['Int']['input']>;
+  src?: InputMaybe<Scalars['String']['input']>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  width?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** aggregate max on columns */
+export type Hero_Max_Fields = {
+  __typename?: 'hero_max_fields';
+  alt?: Maybe<Scalars['String']['output']>;
+  height?: Maybe<Scalars['Int']['output']>;
+  src?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  width?: Maybe<Scalars['Int']['output']>;
+};
+
+/** aggregate min on columns */
+export type Hero_Min_Fields = {
+  __typename?: 'hero_min_fields';
+  alt?: Maybe<Scalars['String']['output']>;
+  height?: Maybe<Scalars['Int']['output']>;
+  src?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  width?: Maybe<Scalars['Int']['output']>;
+};
+
+/** response of any mutation on the table "hero" */
+export type Hero_Mutation_Response = {
+  __typename?: 'hero_mutation_response';
+  /** number of rows affected by the mutation */
+  affected_rows: Scalars['Int']['output'];
+  /** data from the rows affected by the mutation */
+  returning: Array<Hero>;
+};
+
+/** on_conflict condition type for table "hero" */
+export type Hero_On_Conflict = {
+  constraint: Hero_Constraint;
+  update_columns?: Array<Hero_Update_Column>;
+  where?: InputMaybe<Hero_Bool_Exp>;
+};
+
+/** Ordering options when selecting data from "hero". */
+export type Hero_Order_By = {
+  alt?: InputMaybe<Order_By>;
+  height?: InputMaybe<Order_By>;
+  src?: InputMaybe<Order_By>;
+  title?: InputMaybe<Order_By>;
+  width?: InputMaybe<Order_By>;
+};
+
+/** primary key columns input for table: hero */
+export type Hero_Pk_Columns_Input = {
+  title: Scalars['String']['input'];
+};
+
+/** select columns of table "hero" */
+export enum Hero_Select_Column {
+  /** column name */
+  Alt = 'alt',
+  /** column name */
+  Height = 'height',
+  /** column name */
+  Src = 'src',
+  /** column name */
+  Title = 'title',
+  /** column name */
+  Width = 'width'
+}
+
+/** input type for updating data in table "hero" */
+export type Hero_Set_Input = {
+  alt?: InputMaybe<Scalars['String']['input']>;
+  height?: InputMaybe<Scalars['Int']['input']>;
+  src?: InputMaybe<Scalars['String']['input']>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  width?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** aggregate stddev on columns */
+export type Hero_Stddev_Fields = {
+  __typename?: 'hero_stddev_fields';
+  height?: Maybe<Scalars['Float']['output']>;
+  width?: Maybe<Scalars['Float']['output']>;
+};
+
+/** aggregate stddev_pop on columns */
+export type Hero_Stddev_Pop_Fields = {
+  __typename?: 'hero_stddev_pop_fields';
+  height?: Maybe<Scalars['Float']['output']>;
+  width?: Maybe<Scalars['Float']['output']>;
+};
+
+/** aggregate stddev_samp on columns */
+export type Hero_Stddev_Samp_Fields = {
+  __typename?: 'hero_stddev_samp_fields';
+  height?: Maybe<Scalars['Float']['output']>;
+  width?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Streaming cursor of the table "hero" */
+export type Hero_Stream_Cursor_Input = {
+  /** Stream column input with initial value */
+  initial_value: Hero_Stream_Cursor_Value_Input;
+  /** cursor ordering */
+  ordering?: InputMaybe<Cursor_Ordering>;
+};
+
+/** Initial value of the column from where the streaming should start */
+export type Hero_Stream_Cursor_Value_Input = {
+  alt?: InputMaybe<Scalars['String']['input']>;
+  height?: InputMaybe<Scalars['Int']['input']>;
+  src?: InputMaybe<Scalars['String']['input']>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  width?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** aggregate sum on columns */
+export type Hero_Sum_Fields = {
+  __typename?: 'hero_sum_fields';
+  height?: Maybe<Scalars['Int']['output']>;
+  width?: Maybe<Scalars['Int']['output']>;
+};
+
+/** update columns of table "hero" */
+export enum Hero_Update_Column {
+  /** column name */
+  Alt = 'alt',
+  /** column name */
+  Height = 'height',
+  /** column name */
+  Src = 'src',
+  /** column name */
+  Title = 'title',
+  /** column name */
+  Width = 'width'
+}
+
+export type Hero_Updates = {
+  /** increments the numeric columns with given value of the filtered values */
+  _inc?: InputMaybe<Hero_Inc_Input>;
+  /** sets the columns of the filtered rows to the given values */
+  _set?: InputMaybe<Hero_Set_Input>;
+  /** filter the rows which have to be updated */
+  where: Hero_Bool_Exp;
+};
+
+/** aggregate var_pop on columns */
+export type Hero_Var_Pop_Fields = {
+  __typename?: 'hero_var_pop_fields';
+  height?: Maybe<Scalars['Float']['output']>;
+  width?: Maybe<Scalars['Float']['output']>;
+};
+
+/** aggregate var_samp on columns */
+export type Hero_Var_Samp_Fields = {
+  __typename?: 'hero_var_samp_fields';
+  height?: Maybe<Scalars['Float']['output']>;
+  width?: Maybe<Scalars['Float']['output']>;
+};
+
+/** aggregate variance on columns */
+export type Hero_Variance_Fields = {
+  __typename?: 'hero_variance_fields';
+  height?: Maybe<Scalars['Float']['output']>;
+  width?: Maybe<Scalars['Float']['output']>;
+};
+
 /** mutation root */
 export type Mutation_Root = {
   __typename?: 'mutation_root';
+  /** delete data from the table: "hero" */
+  delete_hero?: Maybe<Hero_Mutation_Response>;
+  /** delete single row from the table: "hero" */
+  delete_hero_by_pk?: Maybe<Hero>;
   /** delete data from the table: "schedule" */
   delete_schedule?: Maybe<Schedule_Mutation_Response>;
   /** delete single row from the table: "schedule" */
@@ -81,6 +327,10 @@ export type Mutation_Root = {
   delete_schedule_day?: Maybe<Schedule_Day_Mutation_Response>;
   /** delete single row from the table: "schedule_day" */
   delete_schedule_day_by_pk?: Maybe<Schedule_Day>;
+  /** insert data into the table: "hero" */
+  insert_hero?: Maybe<Hero_Mutation_Response>;
+  /** insert a single row into the table: "hero" */
+  insert_hero_one?: Maybe<Hero>;
   /** insert data into the table: "schedule" */
   insert_schedule?: Maybe<Schedule_Mutation_Response>;
   /** insert data into the table: "schedule_day" */
@@ -89,6 +339,12 @@ export type Mutation_Root = {
   insert_schedule_day_one?: Maybe<Schedule_Day>;
   /** insert a single row into the table: "schedule" */
   insert_schedule_one?: Maybe<Schedule>;
+  /** update data of the table: "hero" */
+  update_hero?: Maybe<Hero_Mutation_Response>;
+  /** update single row of the table: "hero" */
+  update_hero_by_pk?: Maybe<Hero>;
+  /** update multiples rows of table: "hero" */
+  update_hero_many?: Maybe<Array<Maybe<Hero_Mutation_Response>>>;
   /** update data of the table: "schedule" */
   update_schedule?: Maybe<Schedule_Mutation_Response>;
   /** update single row of the table: "schedule" */
@@ -101,6 +357,18 @@ export type Mutation_Root = {
   update_schedule_day_many?: Maybe<Array<Maybe<Schedule_Day_Mutation_Response>>>;
   /** update multiples rows of table: "schedule" */
   update_schedule_many?: Maybe<Array<Maybe<Schedule_Mutation_Response>>>;
+};
+
+
+/** mutation root */
+export type Mutation_RootDelete_HeroArgs = {
+  where: Hero_Bool_Exp;
+};
+
+
+/** mutation root */
+export type Mutation_RootDelete_Hero_By_PkArgs = {
+  title: Scalars['String']['input'];
 };
 
 
@@ -129,6 +397,20 @@ export type Mutation_RootDelete_Schedule_Day_By_PkArgs = {
 
 
 /** mutation root */
+export type Mutation_RootInsert_HeroArgs = {
+  objects: Array<Hero_Insert_Input>;
+  on_conflict?: InputMaybe<Hero_On_Conflict>;
+};
+
+
+/** mutation root */
+export type Mutation_RootInsert_Hero_OneArgs = {
+  object: Hero_Insert_Input;
+  on_conflict?: InputMaybe<Hero_On_Conflict>;
+};
+
+
+/** mutation root */
 export type Mutation_RootInsert_ScheduleArgs = {
   objects: Array<Schedule_Insert_Input>;
   on_conflict?: InputMaybe<Schedule_On_Conflict>;
@@ -153,6 +435,28 @@ export type Mutation_RootInsert_Schedule_Day_OneArgs = {
 export type Mutation_RootInsert_Schedule_OneArgs = {
   object: Schedule_Insert_Input;
   on_conflict?: InputMaybe<Schedule_On_Conflict>;
+};
+
+
+/** mutation root */
+export type Mutation_RootUpdate_HeroArgs = {
+  _inc?: InputMaybe<Hero_Inc_Input>;
+  _set?: InputMaybe<Hero_Set_Input>;
+  where: Hero_Bool_Exp;
+};
+
+
+/** mutation root */
+export type Mutation_RootUpdate_Hero_By_PkArgs = {
+  _inc?: InputMaybe<Hero_Inc_Input>;
+  _set?: InputMaybe<Hero_Set_Input>;
+  pk_columns: Hero_Pk_Columns_Input;
+};
+
+
+/** mutation root */
+export type Mutation_RootUpdate_Hero_ManyArgs = {
+  updates: Array<Hero_Updates>;
 };
 
 
@@ -215,6 +519,12 @@ export enum Order_By {
 
 export type Query_Root = {
   __typename?: 'query_root';
+  /** fetch data from the table: "hero" */
+  hero: Array<Hero>;
+  /** fetch aggregated fields from the table: "hero" */
+  hero_aggregate: Hero_Aggregate;
+  /** fetch data from the table: "hero" using primary key columns */
+  hero_by_pk?: Maybe<Hero>;
   /** fetch data from the table: "schedule" */
   schedule: Array<Schedule>;
   /** fetch aggregated fields from the table: "schedule" */
@@ -227,6 +537,29 @@ export type Query_Root = {
   schedule_day_aggregate: Schedule_Day_Aggregate;
   /** fetch data from the table: "schedule_day" using primary key columns */
   schedule_day_by_pk?: Maybe<Schedule_Day>;
+};
+
+
+export type Query_RootHeroArgs = {
+  distinct_on?: InputMaybe<Array<Hero_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  offset?: InputMaybe<Scalars['Int']['input']>;
+  order_by?: InputMaybe<Array<Hero_Order_By>>;
+  where?: InputMaybe<Hero_Bool_Exp>;
+};
+
+
+export type Query_RootHero_AggregateArgs = {
+  distinct_on?: InputMaybe<Array<Hero_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  offset?: InputMaybe<Scalars['Int']['input']>;
+  order_by?: InputMaybe<Array<Hero_Order_By>>;
+  where?: InputMaybe<Hero_Bool_Exp>;
+};
+
+
+export type Query_RootHero_By_PkArgs = {
+  title: Scalars['String']['input'];
 };
 
 
@@ -783,6 +1116,14 @@ export type Schedule_Updates = {
 
 export type Subscription_Root = {
   __typename?: 'subscription_root';
+  /** fetch data from the table: "hero" */
+  hero: Array<Hero>;
+  /** fetch aggregated fields from the table: "hero" */
+  hero_aggregate: Hero_Aggregate;
+  /** fetch data from the table: "hero" using primary key columns */
+  hero_by_pk?: Maybe<Hero>;
+  /** fetch data from the table in a streaming manner: "hero" */
+  hero_stream: Array<Hero>;
   /** fetch data from the table: "schedule" */
   schedule: Array<Schedule>;
   /** fetch aggregated fields from the table: "schedule" */
@@ -799,6 +1140,36 @@ export type Subscription_Root = {
   schedule_day_stream: Array<Schedule_Day>;
   /** fetch data from the table in a streaming manner: "schedule" */
   schedule_stream: Array<Schedule>;
+};
+
+
+export type Subscription_RootHeroArgs = {
+  distinct_on?: InputMaybe<Array<Hero_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  offset?: InputMaybe<Scalars['Int']['input']>;
+  order_by?: InputMaybe<Array<Hero_Order_By>>;
+  where?: InputMaybe<Hero_Bool_Exp>;
+};
+
+
+export type Subscription_RootHero_AggregateArgs = {
+  distinct_on?: InputMaybe<Array<Hero_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  offset?: InputMaybe<Scalars['Int']['input']>;
+  order_by?: InputMaybe<Array<Hero_Order_By>>;
+  where?: InputMaybe<Hero_Bool_Exp>;
+};
+
+
+export type Subscription_RootHero_By_PkArgs = {
+  title: Scalars['String']['input'];
+};
+
+
+export type Subscription_RootHero_StreamArgs = {
+  batch_size: Scalars['Int']['input'];
+  cursor: Array<InputMaybe<Hero_Stream_Cursor_Input>>;
+  where?: InputMaybe<Hero_Bool_Exp>;
 };
 
 
@@ -864,7 +1235,9 @@ export type Subscription_RootSchedule_StreamArgs = {
 export type ScheduleQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type ScheduleQuery = { __typename?: 'query_root', scheduleDays: Array<{ __typename?: 'schedule_day', day: string, schedules: Array<{ __typename?: 'schedule', title: string, details?: string | null, titleLinkUrl?: string | null, titleLinkText?: string | null, time?: string | null, addressLink?: string | null, addressText?: string | null, imageId?: string | null }> }> };
+export type ScheduleQuery = { __typename?: 'query_root', hero: Array<{ __typename?: 'hero', alt: string, title: string, src: string, width: number, height: number }>, scheduleDays: Array<{ __typename?: 'schedule_day', day: string, schedules: Array<{ __typename?: 'schedule', title: string, details?: string | null, titleLinkUrl?: string | null, titleLinkText?: string | null, time?: string | null, addressLink?: string | null, addressText?: string | null, imageId?: string | null }> }> };
 
+export type HeroFieldsFragment = { __typename?: 'hero', alt: string, title: string, src: string, width: number, height: number } & { ' $fragmentName'?: 'HeroFieldsFragment' };
 
-export const ScheduleDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"Schedule"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"scheduleDays"},"name":{"kind":"Name","value":"schedule_day"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"order_by"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"Sort"},"value":{"kind":"EnumValue","value":"asc"}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"day"}},{"kind":"Field","name":{"kind":"Name","value":"schedules"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"details"}},{"kind":"Field","name":{"kind":"Name","value":"titleLinkUrl"}},{"kind":"Field","name":{"kind":"Name","value":"titleLinkText"}},{"kind":"Field","name":{"kind":"Name","value":"time"}},{"kind":"Field","name":{"kind":"Name","value":"addressLink"}},{"kind":"Field","name":{"kind":"Name","value":"addressText"}},{"kind":"Field","name":{"kind":"Name","value":"imageId"}}]}}]}}]}}]} as unknown as DocumentNode<ScheduleQuery, ScheduleQueryVariables>;
+export const HeroFieldsFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"heroFields"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"hero"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"height"}}]}}]} as unknown as DocumentNode<HeroFieldsFragment, unknown>;
+export const ScheduleDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"Schedule"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"hero"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"title"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"_eq"},"value":{"kind":"StringValue","value":"Schedule","block":false}}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"height"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"scheduleDays"},"name":{"kind":"Name","value":"schedule_day"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"order_by"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"Sort"},"value":{"kind":"EnumValue","value":"asc"}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"day"}},{"kind":"Field","name":{"kind":"Name","value":"schedules"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"details"}},{"kind":"Field","name":{"kind":"Name","value":"titleLinkUrl"}},{"kind":"Field","name":{"kind":"Name","value":"titleLinkText"}},{"kind":"Field","name":{"kind":"Name","value":"time"}},{"kind":"Field","name":{"kind":"Name","value":"addressLink"}},{"kind":"Field","name":{"kind":"Name","value":"addressText"}},{"kind":"Field","name":{"kind":"Name","value":"imageId"}}]}}]}}]}}]} as unknown as DocumentNode<ScheduleQuery, ScheduleQueryVariables>;

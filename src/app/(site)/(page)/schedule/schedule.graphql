@@ -1,15 +1,22 @@
 query Schedule {
-  scheduleDays: schedule_day(order_by: {Sort: asc}) {
-    day
-    schedules {
-      title
+	hero(where: { title: { _eq: "Schedule" } }) {
+		alt
+		title
+		src
+		width
+		height
+	}
+	scheduleDays: schedule_day(order_by: { Sort: asc }) {
+		day
+		schedules {
+			title
 			details
-      titleLinkUrl
-      titleLinkText
-      time
-      addressLink
-      addressText
+			titleLinkUrl
+			titleLinkText
+			time
+			addressLink
+			addressText
 			imageId
-    }
-  }
+		}
+	}
 }
