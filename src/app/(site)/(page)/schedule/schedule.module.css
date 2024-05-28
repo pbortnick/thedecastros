@@ -68,7 +68,7 @@
 	max-height: 500px;
 	object-fit: cover;
 
-	@media (min-width: 767px) {
+	@media (min-width: 1000px) {
 		width: 68%;
 	}
 }
