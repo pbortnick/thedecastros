@@ -4,6 +4,7 @@ query Schedule {
 	}
 	scheduleDays: schedule_day(order_by: { Sort: asc }) {
 		day
+		date
 		schedules {
 			title
 			details

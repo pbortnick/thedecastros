@@ -691,6 +691,7 @@ export type Schedule_Constraint =
 export type Schedule_Day = {
   __typename?: 'schedule_day';
   Sort?: Maybe<Scalars['Int']['output']>;
+  date?: Maybe<Scalars['String']['output']>;
   day: Scalars['String']['output'];
   /** An array relationship */
   schedules: Array<Schedule>;
@@ -760,6 +761,7 @@ export type Schedule_Day_Bool_Exp = {
   _and?: InputMaybe<Array<Schedule_Day_Bool_Exp>>;
   _not?: InputMaybe<Schedule_Day_Bool_Exp>;
   _or?: InputMaybe<Array<Schedule_Day_Bool_Exp>>;
+  date?: InputMaybe<String_Comparison_Exp>;
   day?: InputMaybe<String_Comparison_Exp>;
   schedules?: InputMaybe<Schedule_Bool_Exp>;
   schedules_aggregate?: InputMaybe<Schedule_Aggregate_Bool_Exp>;
@@ -778,6 +780,7 @@ export type Schedule_Day_Inc_Input = {
 /** input type for inserting data into table "schedule_day" */
 export type Schedule_Day_Insert_Input = {
   Sort?: InputMaybe<Scalars['Int']['input']>;
+  date?: InputMaybe<Scalars['String']['input']>;
   day?: InputMaybe<Scalars['String']['input']>;
   schedules?: InputMaybe<Schedule_Arr_Rel_Insert_Input>;
 };
@@ -786,6 +789,7 @@ export type Schedule_Day_Insert_Input = {
 export type Schedule_Day_Max_Fields = {
   __typename?: 'schedule_day_max_fields';
   Sort?: Maybe<Scalars['Int']['output']>;
+  date?: Maybe<Scalars['String']['output']>;
   day?: Maybe<Scalars['String']['output']>;
 };
 
@@ -793,6 +797,7 @@ export type Schedule_Day_Max_Fields = {
 export type Schedule_Day_Min_Fields = {
   __typename?: 'schedule_day_min_fields';
   Sort?: Maybe<Scalars['Int']['output']>;
+  date?: Maybe<Scalars['String']['output']>;
   day?: Maybe<Scalars['String']['output']>;
 };
 
@@ -822,6 +827,7 @@ export type Schedule_Day_On_Conflict = {
 /** Ordering options when selecting data from "schedule_day". */
 export type Schedule_Day_Order_By = {
   Sort?: InputMaybe<Order_By>;
+  date?: InputMaybe<Order_By>;
   day?: InputMaybe<Order_By>;
   schedules_aggregate?: InputMaybe<Schedule_Aggregate_Order_By>;
 };
@@ -836,11 +842,14 @@ export type Schedule_Day_Select_Column =
   /** column name */
   | 'Sort'
   /** column name */
+  | 'date'
+  /** column name */
   | 'day';
 
 /** input type for updating data in table "schedule_day" */
 export type Schedule_Day_Set_Input = {
   Sort?: InputMaybe<Scalars['Int']['input']>;
+  date?: InputMaybe<Scalars['String']['input']>;
   day?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -873,6 +882,7 @@ export type Schedule_Day_Stream_Cursor_Input = {
 /** Initial value of the column from where the streaming should start */
 export type Schedule_Day_Stream_Cursor_Value_Input = {
   Sort?: InputMaybe<Scalars['Int']['input']>;
+  date?: InputMaybe<Scalars['String']['input']>;
   day?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -886,6 +896,8 @@ export type Schedule_Day_Sum_Fields = {
 export type Schedule_Day_Update_Column =
   /** column name */
   | 'Sort'
+  /** column name */
+  | 'date'
   /** column name */
   | 'day';
 
@@ -1223,9 +1235,9 @@ export type Subscription_RootSchedule_StreamArgs = {
 export type ScheduleQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type ScheduleQuery = { __typename?: 'query_root', hero: Array<{ __typename?: 'hero', alt: string, title: string, src: string, width: number, height: number }>, scheduleDays: Array<{ __typename?: 'schedule_day', day: string, schedules: Array<{ __typename?: 'schedule', title: string, details?: string | null, titleLinkUrl?: string | null, titleLinkText?: string | null, time?: string | null, addressLink?: string | null, addressText?: string | null, imageId?: string | null }> }> };
+export type ScheduleQuery = { __typename?: 'query_root', hero: Array<{ __typename?: 'hero', alt: string, title: string, src: string, width: number, height: number }>, scheduleDays: Array<{ __typename?: 'schedule_day', day: string, date?: string | null, schedules: Array<{ __typename?: 'schedule', title: string, details?: string | null, titleLinkUrl?: string | null, titleLinkText?: string | null, time?: string | null, addressLink?: string | null, addressText?: string | null, imageId?: string | null }> }> };
 
 export type HeroFieldsFragment = { __typename?: 'hero', alt: string, title: string, src: string, width: number, height: number };
 
 export const HeroFieldsFragmentDoc = /*#__PURE__*/ {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"heroFields"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"hero"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"height"}}]}}]} as unknown as DocumentNode<HeroFieldsFragment, unknown>;
-export const ScheduleDocument = /*#__PURE__*/ {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"Schedule"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"hero"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"title"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"_eq"},"value":{"kind":"StringValue","value":"Schedule","block":false}}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"heroFields"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"scheduleDays"},"name":{"kind":"Name","value":"schedule_day"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"order_by"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"Sort"},"value":{"kind":"EnumValue","value":"asc"}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"day"}},{"kind":"Field","name":{"kind":"Name","value":"schedules"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"details"}},{"kind":"Field","name":{"kind":"Name","value":"titleLinkUrl"}},{"kind":"Field","name":{"kind":"Name","value":"titleLinkText"}},{"kind":"Field","name":{"kind":"Name","value":"time"}},{"kind":"Field","name":{"kind":"Name","value":"addressLink"}},{"kind":"Field","name":{"kind":"Name","value":"addressText"}},{"kind":"Field","name":{"kind":"Name","value":"imageId"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"heroFields"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"hero"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"height"}}]}}]} as unknown as DocumentNode<ScheduleQuery, ScheduleQueryVariables>;
+export const ScheduleDocument = /*#__PURE__*/ {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"Schedule"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"hero"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"title"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"_eq"},"value":{"kind":"StringValue","value":"Schedule","block":false}}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"heroFields"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"scheduleDays"},"name":{"kind":"Name","value":"schedule_day"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"order_by"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"Sort"},"value":{"kind":"EnumValue","value":"asc"}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"day"}},{"kind":"Field","name":{"kind":"Name","value":"date"}},{"kind":"Field","name":{"kind":"Name","value":"schedules"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"details"}},{"kind":"Field","name":{"kind":"Name","value":"titleLinkUrl"}},{"kind":"Field","name":{"kind":"Name","value":"titleLinkText"}},{"kind":"Field","name":{"kind":"Name","value":"time"}},{"kind":"Field","name":{"kind":"Name","value":"addressLink"}},{"kind":"Field","name":{"kind":"Name","value":"addressText"}},{"kind":"Field","name":{"kind":"Name","value":"imageId"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"heroFields"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"hero"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"height"}}]}}]} as unknown as DocumentNode<ScheduleQuery, ScheduleQueryVariables>;

@@ -40,8 +40,9 @@ async function getData() {
 
 	const imageData = await fetchImages()
 
-	const scheduleData = scheduleDays.map(({ day, schedules }) => ({
+	const scheduleData = scheduleDays.map(({ day, date, schedules }) => ({
 		day,
+		date,
 		items: schedules.map(({ imageId, ...rest }) => {
 			const scheduleItem: ScheduleItemType = rest
 
@@ -80,11 +81,12 @@ const SchedulePage = async () => {
 			<PhotoHero {...hero} />
 			<PageBody>
 				<div className={s.body}>
-					{schedule.map(({ day, items }) => (
+					{schedule.map(({ day, date, items }) => (
 						<div className={s.scheduleDataItem}>
 							<div className={s.dayHeading}>
 								<h2 className={s.dayHeadingText}>{day}</h2>
 							</div>
+							<h3 className={s.dayHeadingDate}>{date}</h3>
 							<div className={s.items}>
 								{items.map((item) => (
 									<ScheduleItem {...item} />
