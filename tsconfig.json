@@ -12,7 +12,6 @@
 		"isolatedModules": true,
 		"jsx": "preserve",
 		"incremental": true,
-		"noImplicitAny": false,
 		"plugins": [
 			{
 				"name": "next"
@@ -22,7 +21,8 @@
 		"paths": {
 			"*": ["./src/*"],
 			"~images/*": ["public/images/*"]
-		}
+		},
+		"noImplicitAny": false,
 	},
 	"include": [
 		"next-env.d.ts",
