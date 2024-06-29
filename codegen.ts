@@ -23,6 +23,12 @@ const config: CodegenConfig = {
 			config: {
 				enumsAsTypes: true,
 				pureMagicComment: true,
+				strictScalars: true,
+				// TODO: change this to unknown
+				defaultScalarType: 'any',
+				scalars: {
+					date: 'unknown',
+				},
 			},
 		},
 	},
