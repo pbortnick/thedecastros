@@ -24,8 +24,8 @@
 
 	@media (min-width: 768px) {
 		justify-content: flex-end;
-		font-size: 28px;
-		line-height: 120%;
+		font-size: 22px;
+		line-height: 100%;
 	}
 }
 
