@@ -23,6 +23,9 @@ const config: CodegenConfig = {
 			config: {
 				enumsAsTypes: true,
 				pureMagicComment: true,
+				scalars: {
+					date: 'unknown',
+				},
 			},
 		},
 	},

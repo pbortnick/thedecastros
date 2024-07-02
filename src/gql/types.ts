@@ -13,6 +13,7 @@ export type Scalars = {
   Boolean: { input: boolean; output: boolean; }
   Int: { input: number; output: number; }
   Float: { input: number; output: number; }
+  date: { input: unknown; output: unknown; }
 };
 
 /** Boolean expression to compare columns of type "Int". All fields are combined with logical 'AND'. */
@@ -67,6 +68,19 @@ export type Cursor_Ordering =
   | 'ASC'
   /** descending ordering of the cursor */
   | 'DESC';
+
+/** Boolean expression to compare columns of type "date". All fields are combined with logical 'AND'. */
+export type Date_Comparison_Exp = {
+  _eq?: InputMaybe<Scalars['date']['input']>;
+  _gt?: InputMaybe<Scalars['date']['input']>;
+  _gte?: InputMaybe<Scalars['date']['input']>;
+  _in?: InputMaybe<Array<Scalars['date']['input']>>;
+  _is_null?: InputMaybe<Scalars['Boolean']['input']>;
+  _lt?: InputMaybe<Scalars['date']['input']>;
+  _lte?: InputMaybe<Scalars['date']['input']>;
+  _neq?: InputMaybe<Scalars['date']['input']>;
+  _nin?: InputMaybe<Array<Scalars['date']['input']>>;
+};
 
 /** columns and relationships of "hero" */
 export type Hero = {
@@ -691,6 +705,7 @@ export type Schedule_Constraint =
 export type Schedule_Day = {
   __typename?: 'schedule_day';
   Sort?: Maybe<Scalars['Int']['output']>;
+  calendarDate?: Maybe<Scalars['date']['output']>;
   date?: Maybe<Scalars['String']['output']>;
   day: Scalars['String']['output'];
   /** An array relationship */
@@ -761,6 +776,7 @@ export type Schedule_Day_Bool_Exp = {
   _and?: InputMaybe<Array<Schedule_Day_Bool_Exp>>;
   _not?: InputMaybe<Schedule_Day_Bool_Exp>;
   _or?: InputMaybe<Array<Schedule_Day_Bool_Exp>>;
+  calendarDate?: InputMaybe<Date_Comparison_Exp>;
   date?: InputMaybe<String_Comparison_Exp>;
   day?: InputMaybe<String_Comparison_Exp>;
   schedules?: InputMaybe<Schedule_Bool_Exp>;
@@ -780,6 +796,7 @@ export type Schedule_Day_Inc_Input = {
 /** input type for inserting data into table "schedule_day" */
 export type Schedule_Day_Insert_Input = {
   Sort?: InputMaybe<Scalars['Int']['input']>;
+  calendarDate?: InputMaybe<Scalars['date']['input']>;
   date?: InputMaybe<Scalars['String']['input']>;
   day?: InputMaybe<Scalars['String']['input']>;
   schedules?: InputMaybe<Schedule_Arr_Rel_Insert_Input>;
@@ -789,6 +806,7 @@ export type Schedule_Day_Insert_Input = {
 export type Schedule_Day_Max_Fields = {
   __typename?: 'schedule_day_max_fields';
   Sort?: Maybe<Scalars['Int']['output']>;
+  calendarDate?: Maybe<Scalars['date']['output']>;
   date?: Maybe<Scalars['String']['output']>;
   day?: Maybe<Scalars['String']['output']>;
 };
@@ -797,6 +815,7 @@ export type Schedule_Day_Max_Fields = {
 export type Schedule_Day_Min_Fields = {
   __typename?: 'schedule_day_min_fields';
   Sort?: Maybe<Scalars['Int']['output']>;
+  calendarDate?: Maybe<Scalars['date']['output']>;
   date?: Maybe<Scalars['String']['output']>;
   day?: Maybe<Scalars['String']['output']>;
 };
@@ -827,6 +846,7 @@ export type Schedule_Day_On_Conflict = {
 /** Ordering options when selecting data from "schedule_day". */
 export type Schedule_Day_Order_By = {
   Sort?: InputMaybe<Order_By>;
+  calendarDate?: InputMaybe<Order_By>;
   date?: InputMaybe<Order_By>;
   day?: InputMaybe<Order_By>;
   schedules_aggregate?: InputMaybe<Schedule_Aggregate_Order_By>;
@@ -842,6 +862,8 @@ export type Schedule_Day_Select_Column =
   /** column name */
   | 'Sort'
   /** column name */
+  | 'calendarDate'
+  /** column name */
   | 'date'
   /** column name */
   | 'day';
@@ -849,6 +871,7 @@ export type Schedule_Day_Select_Column =
 /** input type for updating data in table "schedule_day" */
 export type Schedule_Day_Set_Input = {
   Sort?: InputMaybe<Scalars['Int']['input']>;
+  calendarDate?: InputMaybe<Scalars['date']['input']>;
   date?: InputMaybe<Scalars['String']['input']>;
   day?: InputMaybe<Scalars['String']['input']>;
 };
@@ -882,6 +905,7 @@ export type Schedule_Day_Stream_Cursor_Input = {
 /** Initial value of the column from where the streaming should start */
 export type Schedule_Day_Stream_Cursor_Value_Input = {
   Sort?: InputMaybe<Scalars['Int']['input']>;
+  calendarDate?: InputMaybe<Scalars['date']['input']>;
   date?: InputMaybe<Scalars['String']['input']>;
   day?: InputMaybe<Scalars['String']['input']>;
 };
@@ -896,6 +920,8 @@ export type Schedule_Day_Sum_Fields = {
 export type Schedule_Day_Update_Column =
   /** column name */
   | 'Sort'
+  /** column name */
+  | 'calendarDate'
   /** column name */
   | 'date'
   /** column name */
