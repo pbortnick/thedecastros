@@ -62,8 +62,8 @@ const GalleryPage = async () => {
 				title="Gallery"
 				image={{
 					src: require('./gallery-graphic.png'),
-					width: 427.5,
-					height: 425.5,
+					width: 397.5,
+					height: 407.5,
 					alt: 'Outline of proposal on the beach',
 				}}
 			/>
