@@ -1,0 +1,4 @@
+.content {
+	composes: container from global;
+	padding-top: var(--spacing-10);
+}

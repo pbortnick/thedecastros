@@ -1,0 +1,90 @@
+@custom-media --small (max-width: 767px);
+@custom-media --small-up (min-width: 0px);
+@custom-media --medium (min-width: 768px) and (max-width: 1119px);
+@custom-media --medium-up (min-width: 768px);
+@custom-media --large (min-width: 1120px);
+
+.hero {
+	width: 100%;
+	max-width: 100%;
+}
+
+.content {
+	padding-top: var(--spacing-10);
+	composes: container from global;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.scheduleList {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-05);
+	list-style-type: none;
+	gap: var(--spacing-10);
+}
+
+.scheduleListItem {
+	max-width: 800px;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: var(--spacing-08);
+	justify-content: center;
+}
+
+.scheduleListItemHeading {
+	font-size: 24px;
+	font-weight: 500;
+	color: var(--accent-2);
+}
+
+.dayItemList {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-06);
+	padding: 0;
+}
+
+.dayItem {
+	display: grid;
+	color: var(--primary);
+	gap: var(--spacing-03);
+	padding: 0;
+
+	@media (--medium-up) {
+		grid-template-columns: 2fr 1fr;
+		gap: var(--spacing-06);
+	}
+}
+
+.dayItemHeading {
+	font-size: 32px;
+}
+
+.dayItemContent {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-03);
+}
+
+.address {
+	display: flex;
+	width: fit-content;
+	gap: var(--spacing-01);
+	align-items: center;
+	color: inherit;
+
+	& a {
+		color: var(--primary);
+	}
+}
+
+.time {
+	display: flex;
+	align-items: center;
+
+	@media (--medium-up) {
+		height: 39.5px;
+	}
+}

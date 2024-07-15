@@ -36,13 +36,12 @@ const MenubarDemo = () => {
 					))}
 					<NavigationMenu.Item>
 						<Link
-							className={s.externalLink}
+							className={s.link}
 							href="https://www.zola.com/registry/jasonandpamela2025"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							Registry
-							{/* <i className="pi pi-external-link" /> */}
 						</Link>
 					</NavigationMenu.Item>
 				</NavigationMenu.List>

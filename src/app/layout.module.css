@@ -1,0 +1,8 @@
+.layout {
+	margin: 0;
+	width: 100vw;
+
+	& i {
+		height: fit-content;
+	}
+}
