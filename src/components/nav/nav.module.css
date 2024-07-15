@@ -1,13 +1,19 @@
+@custom-media --small (max-width: 767px);
+@custom-media --small-up (min-width: 0px);
+@custom-media --medium (min-width: 768px) and (max-width: 1119px);
+@custom-media --medium-up (min-width: 768px);
+@custom-media --large (min-width: 1120px);
+
 .root {
-	width: 100vw;
 	height: 62px;
 	padding: 0 24px;
 	display: flex;
 	align-items: center;
 	top: 0;
 	z-index: 4;
+	background: inherit;
 	position: sticky;
-	background: var(--site-background-color);
+	justify-content: center;
 }
 
 .nav {
@@ -15,18 +21,11 @@
 	margin: 0;
 	display: flex;
 	justify-content: center;
-	color: var(--accent-dark);
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 140%;
 	text-decoration: none;
 	letter-spacing: 0px;
-
-	@media (min-width: 768px) {
-		justify-content: flex-end;
-		font-size: 22px;
-		line-height: 100%;
-	}
 }
 
 .navList {
@@ -36,32 +35,18 @@
 	margin: 0;
 	list-style-type: none;
 
-	@media (min-width: 768px) {
-		gap: var(--spacing-03);
+	@media (--medium-up) {
+		gap: var(--spacing-05);
 	}
 }
 
 .link {
+	color: var(--primary);
 	position: relative;
+	text-decoration: none;
 }
 
-.externalLink {
-	display: flex;
-
-	/* & i {
-		font-size: 12px;
-		margin-left: 4px;
-		margin-top: 5.5px;
-		
-		@media (min-width: 768px) {
-			font-size: 16px;
-			margin-left: 4px;
-			margin-top: 6px;
-		}
-	} */
-}
-
-.isActive {
+.isActive, .link:hover {
 	&::after {
 		content: '';
 		position: absolute;
@@ -69,18 +54,6 @@
 		left: -3px;
 		width: calc(100% + 6px);
 		height: 2px;
-		background-color: var(--accent-dark);
+		background-color: var(--primary);
 	}
-}
-
-.iconButton {
-	width: 30px;
-	height: 30px;
-	cursor: pointer;
-	padding: 2px;
-	color: var(--color-accent-3);
-	background: var(--light-accent);
-	border: 1px solid var(--color-accent-3);
-	border-radius: 50px;
-	transition: box-shadow 0.15s ease-in;
 }

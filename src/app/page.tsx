@@ -1,26 +1,36 @@
+import Image from 'next/image'
 import s from './page.module.css'
-import type { Metadata } from 'next'
+import Nav from 'components/nav'
 
-export const metadata: Metadata = {
-	openGraph: {
-		url: 'https://thedecastro.com',
-	},
-}
-
-export default function Home() {
+export default function HomePage() {
 	return (
-		<main className={s.main}>
-			<div className={s.heading}>
-				<h1 className="page-heading">Pamela & Jason</h1>
-				<h2 style={{ display: 'none' }}>
-					Pamela Bortnick & Jason Decastro's wedding website
-				</h2>
-				<div className={s.details}>
-					<p className="typography-body-large">The Barn at Fallingwater</p>
-					<p className="typography-body-large">Mill Run, PA</p>
-					<p className="typography-body-large">May 31, 2025</p>
+		<div className={s.homePage}>
+			<Nav />
+			<main className={s.main}>
+				<div className={s.container}>
+					<div className={s.intro}>
+						<span className="subheading">Please join us to celebrate</span>
+					</div>
+					<h1 className="title">
+						Pamela
+						<br />
+						<span className={s.accent}>&</span> Jason
+					</h1>
+					<div className={s.details}>
+						<span className="subheading">May 31, 2024</span>
+						<span className="subheading">Mill Run, PA</span>
+					</div>
 				</div>
-			</div>
-		</main>
+
+				<div className={s.imageContainer}>
+					<Image
+						src={require('./homepage-graphic.png')}
+						width={1000}
+						height={734}
+						alt="Outline of Fallingwater"
+					/>
+				</div>
+			</main>
+		</div>
 	)
 }

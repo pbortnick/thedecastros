@@ -1,112 +1,43 @@
-.typography-heading-1 {
-	font-family: 'tt-ricordi-nobili';
-	font-weight: 700;
-	font-size: 64px;
-	text-decoration: none;
-}
+@custom-media --small (max-width: 767px);
+@custom-media --small-up (min-width: 0px);
+@custom-media --medium (min-width: 768px) and (max-width: 1119px);
+@custom-media --medium-up (min-width: 768px);
+@custom-media --large (min-width: 1120px);
 
-.page-heading {
-	text-align: center;
-	font-family: 'tt-ricordi-nobili';
-	line-height: 10rem;
-	font-size: 8rem;
+.title {
+	font-size: 72px;
 	font-weight: 400;
 
-	@media (max-width: 999px) {
-		line-height: 8rem;
-		font-size: 6rem;
-	}
-
-	@media (max-width: 767px) {
-		line-height: 6rem;
-		font-size: 4rem;
+	@media (--medium-up) {
+		font-size: 98px;
 	}
 }
 
-.page-heading-med {
-	text-align: center;
-	font-family: 'tt-ricordi-nobili';
-	font-size: 6rem;
+.heading {
+	font-size: 56px;
 	font-weight: 400;
-	line-height: 110%;
 
-	@media (max-width: 999px) {
-		font-size: 4rem;
-	}
-
-	@media (max-width: 767px) {
-		font-size: 3rem;
+	@media (--medium-up) {
+		font-size: 72px;
 	}
 }
 
-.typography-heading-2 {
-	font-family: 'tt-ricordi-nobili';
-	font-weight: 700;
-	font-size: 40px;
-	text-decoration: none;
-}
-
-.typography-heading-3 {
+.subheading {
 	font-size: 24px;
-	text-decoration: none;
-	letter-spacing: 1px;
+	font-weight: 400;
+
+	
+	@media (--medium-up) {
+		font-size: 32px;
+	}
 }
 
-.typography-subtitle {
-	font-size: 24px;
-	text-decoration: none;
-	letter-spacing: 0px;
+.heading-2 {
+	font-size: 32px;
+	font-weight: 400;
 }
 
-.typography-body-large {
-	font-weight: 500;
-	font-size: 28px;
-	line-height: 120%;
-	text-decoration: none;
-	letter-spacing: 0px;
-}
-
-.typography-body {
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 140%;
-	text-decoration: none;
-	letter-spacing: 0px;
-}
-
-.typography-bold {
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 140%;
-	text-decoration: none;
-	letter-spacing: 0px;
-}
-
-.typography-small {
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 140%;
-	text-decoration: none;
-	letter-spacing: 0px;
-}
-
-.typography-pretitle {
-	font-weight: 700;
-	font-size: 12px;
-	text-decoration: none;
-	letter-spacing: 3%;
-}
-
-.typography-button {
-	font-weight: 700;
-	font-size: 16px;
-	text-decoration: none;
-	letter-spacing: 4%;
-}
-
-.typography-link {
-	font-weight: 700;
-	font-size: 16px;
-	text-decoration: underline;
-	letter-spacing: 0px;
+.body {
+	font-size: 18px;
+	font-weight: 400;
 }
