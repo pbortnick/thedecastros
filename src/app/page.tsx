@@ -28,6 +28,7 @@ export default function HomePage() {
 						width={1000}
 						height={734}
 						alt="Outline of Fallingwater"
+						priority
 					/>
 				</div>
 			</main>
