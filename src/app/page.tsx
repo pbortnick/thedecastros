@@ -17,7 +17,7 @@ export default function HomePage() {
 						<span className={s.accent}>&</span> Jason
 					</h1>
 					<div className={s.details}>
-						<span className="subheading">May 31, 2024</span>
+						<span className="subheading">May 31, 2025</span>
 						<span className="subheading">Mill Run, PA</span>
 					</div>
 				</div>
