@@ -8,8 +8,8 @@ export default function TravelPage() {
 				title="Travel"
 				image={{
 					src: require('./accent.png'),
-					width: 486,
-					height: 407,
+					width: 324,
+					height: 271,
 					alt: '',
 				}}
 			/>
