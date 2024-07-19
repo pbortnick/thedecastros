@@ -1,22 +1,46 @@
+@custom-media --small (max-width: 767px);
+@custom-media --small-up (min-width: 0px);
+@custom-media --medium (min-width: 768px) and (max-width: 1119px);
+@custom-media --medium-up (min-width: 768px);
+@custom-media --large (min-width: 1120px);
+
 .container {
 	margin-left: auto;
 	margin-right: auto;
 
-	@media (max-width: 767px) {
+	@media (--small) {
 		padding-left: var(--spacing-02);
 		padding-right: var(--spacing-02);
 		max-width: 700px;
 	}
 
-	@media (min-width: 768px) and (max-width: 1023px) {
-		padding-left: var(--spacing-04);
-		padding-right: var(--spacing-04);
+	@media (--medium) {
+		padding-left: var(--spacing-06);
+		padding-right: var(--spacing-06);
 		max-width: 980px;
 	}
 
-	@media (min-width: 1024px) {
-		padding-left: var(--spacing-06);
-		padding-right: var(--spacing-06);
+	@media (--large) {
+		padding-left: var(--spacing-08);
+		padding-right: var(--spacing-08);
 		max-width: 1400px;
+	}
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, minmax(0, 1fr));
+	column-gap: var(--column-gap);
+
+	@media (--small) {
+		--column-gap: var(--spacing-02);
+	}
+
+	@media (--medium) {
+		--column-gap: var(--spacing-06);
+	}
+
+	@media (--large) {
+		--column-gap: var(--spacing-08);
 	}
 }

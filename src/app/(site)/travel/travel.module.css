@@ -1,4 +1,75 @@
+@custom-media --small (max-width: 767px);
+@custom-media --small-up (min-width: 0px);
+@custom-media --medium (min-width: 768px) and (max-width: 1119px);
+@custom-media --medium-up (min-width: 768px);
+@custom-media --large (min-width: 1120px);
+
 .content {
 	composes: container from global;
+	composes: grid from global;
 	padding-top: var(--spacing-10);
+	position: relative;
+
+	& a {
+		color: var(--color-primary);
+		text-direction: none;
+	}
+}
+
+.sidebar {
+	position: sticky;
+	top: var(--spacing-06);
+	grid-column: 1 / -1;
+	display: flex;
+	gap: var(--spacing-06);
+
+	@media (--medium-up) {
+		flex-direction: column;
+		grid-column: 1 / span 3;
+	}
+}
+
+.anchorLink {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	gap: var(--spacing-01);
+
+	&:hover {
+		& i {
+			opacity: 1;
+		}
+	}
+
+	& i {
+		font-size: 12px;
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+}
+
+.details {
+	grid-column: 1 / -1;
+	display: flex;
+	gap: var(--spacing-10);
+	flex-direction: column;
+
+	@media (--medium-up) {
+		grid-column: 4 / -1;
+	}
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-03);
+	position: relative;
+
+	& h3 {
+		margin-bottom: var(--spacing-03);
+	}
+}
+
+.sectionAnchor {
+	position: absolute;
 }
