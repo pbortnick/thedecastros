@@ -19,7 +19,8 @@ export const metadata: Metadata = {
 	openGraph: {
 		siteName: 'Pamela & Jason 2025',
 		title: 'Pamela & Jason 2025',
-		description: "Find details of Jason Decastro and Pamela Bortnick's wedding here. View the schedule, travel information, and more. You can also access their photo gallery and registry.",
+		description:
+			"Find details of Jason Decastro and Pamela Bortnick's wedding here. View the schedule, travel information, and more. You can also access their photo gallery and registry.",
 		type: 'website',
 		locale: 'en_US',
 		images: [
@@ -45,7 +46,9 @@ export default function RootLayout({
 				<SpeedInsights />
 				<Analytics />
 				<VisuallyHidden>
-					Pamela Bortnick and Jason Decastro's wedding website
+					Find details of Jason Decastro and Pamela Bortnick's wedding here.
+					View the schedule, travel information, and more. You can also access
+					their photo gallery and registry.
 				</VisuallyHidden>
 			</body>
 		</html>
