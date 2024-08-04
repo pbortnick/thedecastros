@@ -6,6 +6,7 @@ import { Montaga } from 'next/font/google'
 import '../styles/index.css'
 import 'primeicons/primeicons.css'
 import s from './layout.module.css'
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
 
 const bebasNeue = Montaga({
 	weight: '400',
@@ -43,6 +44,9 @@ export default function RootLayout({
 				{children}
 				<SpeedInsights />
 				<Analytics />
+				<VisuallyHidden>
+					Pamela Bortnick and Jason Decastro's wedding website
+				</VisuallyHidden>
 			</body>
 		</html>
 	)
