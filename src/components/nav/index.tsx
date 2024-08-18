@@ -11,6 +11,7 @@ const PAGES = [
 	{ name: 'Gallery', href: '/gallery' },
 	{ name: 'Schedule', href: '/schedule' },
 	{ name: 'Travel', href: '/travel' },
+	{ name: 'FAQ', href: '/faq' },
 	// { name: 'Attractions', href: '/attractions' },
 ]
 
