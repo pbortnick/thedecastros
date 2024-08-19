@@ -67,10 +67,6 @@ const faqList = [
 			'The ceremony will be outdoors and the reception will be indoor/outdoor.',
 	},
 	{
-		question: 'Will there be an open bar?',
-		answer: 'Seriously?',
-	},
-	{
 		question: 'Why Fallingwater?',
 		answer:
 			'Fallingwater is a special place for us. We visited in 2020 and fell in love with the architecture and the natural beauty of the area. We hope you will love it as much as we do!',
