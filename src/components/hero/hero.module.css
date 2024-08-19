@@ -26,11 +26,7 @@
 }
 
 .image {
-	margin: 0 auto;
-	display: flex;
-
-	& img {
-		max-width: 100%;
-		height: auto;
-	}
+	max-width: 500px;
+	objectFit: contain;
+	height: auto;
 }
