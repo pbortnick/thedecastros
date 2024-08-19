@@ -7,6 +7,7 @@ import { Schibsted_Grotesk } from 'next/font/google'
 import '../styles/index.css'
 import 'primeicons/primeicons.css'
 import s from './layout.module.css'
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
 
 const montaga = Montaga({
 	weight: '400',
@@ -28,7 +29,8 @@ export const metadata: Metadata = {
 	openGraph: {
 		siteName: 'Pamela & Jason 2025',
 		title: 'Pamela & Jason 2025',
-		description: "Jason Decastro & Pamela Bortnick's wedding website",
+		description:
+			"Find details of Jason Decastro and Pamela Bortnick's wedding here. View the schedule, travel information, and more. You can also access their photo gallery and registry.",
 		type: 'website',
 		locale: 'en_US',
 		images: [
@@ -53,6 +55,11 @@ export default function RootLayout({
 				{children}
 				<SpeedInsights />
 				<Analytics />
+				<VisuallyHidden>
+					Find details of Jason Decastro and Pamela Bortnick's wedding here.
+					View the schedule, travel information, and more. You can also access
+					their photo gallery and registry.
+				</VisuallyHidden>
 			</body>
 		</html>
 	)
