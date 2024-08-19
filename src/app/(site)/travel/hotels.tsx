@@ -14,14 +14,15 @@ export default function Hotels() {
 							let them know you are a guest of Pamela Bortnick & Jason
 							Decastro's wedding.
 						</p>
+						{/* <br />
 						<p>
-							If you are having trouble choosing a hotel that is right for you,
-							please let us know! We are here to help!
+							Please feel free to reach out to us if you have any questions!
 						</p>
+						<br />
 						<p>
 							Also check back in. We may be adding more options to this page as
 							time goes on.
-						</p>
+						</p> */}
 					</>
 				}
 			/>
@@ -47,7 +48,7 @@ export default function Hotels() {
 					<>
 						<p>
 							Check out the rooms and either book for a single room for yourself
-							or get a group together and book the whole house (maximum 15
+							or get a group together and book the entire house (max 15
 							people)
 						</p>
 					</>
@@ -72,7 +73,7 @@ export default function Hotels() {
 				>
 					<p>
 						Fernwalk offers 2 queen beds, and a queen inflatable or two twin
-						inflatables. Maximum 6 people.
+						inflatables. Max 6 people.
 					</p>
 				</TravelOption>
 				{/* <TravelOption
@@ -122,7 +123,7 @@ export default function Hotels() {
 				>
 					<p>
 						Check out the rooms and either book for a single room for yourself
-						or get a group together and book the whole house (mum 10 people)
+						or get a group together and book the whole house (max 10 people)
 					</p>
 				</TravelOption>
 			</div>
