@@ -52,8 +52,7 @@ export default function Hotels() {
 				>
 					<>
 						<p>
-							Check out the rooms and either book for a single room for yourself
-							or get a group together and book the entire house (max 15 people)
+							Hartzell House has a bunch of offerings, including free breakfast!
 						</p>
 					</>
 				</TravelOption>
