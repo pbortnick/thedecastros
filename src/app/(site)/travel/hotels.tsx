@@ -47,7 +47,7 @@ export default function Hotels() {
 					}}
 					contact={{
 						name: 'Melissa and Robert',
-						phone: '(814) 395-5248',
+						phone: '8143955248',
 					}}
 				>
 					<>
@@ -72,7 +72,7 @@ export default function Hotels() {
 					}}
 					contact={{
 						name: 'Beth',
-						phone: '(215) 313-0112',
+						phone: '2153130112',
 					}}
 				>
 					<p>
@@ -95,17 +95,17 @@ export default function Hotels() {
 					}}
 					contact={{
 						name: 'Robin',
-						phone: '(814) 964-0410',
+						phone: '8149640410',
 					}}
 				>
-					<p>
-						Smith House Inn has 3 options:
+					<div>
+						<p>Paddler's Lane has 3 options:</p>
 						<ul>
 							<li>Chalet (6 guests)</li>
 							<li>Main House (6 guests)</li>
 							<li>Cabin (5 guests)</li>
 						</ul>
-					</p>
+					</div>
 				</TravelOption>
 				<TravelOption
 					heading="Smith House Inn"
@@ -122,7 +122,7 @@ export default function Hotels() {
 					}}
 					contact={{
 						name: 'Amber',
-						phone: '(724) 366-6142',
+						phone: '7243666142',
 					}}
 				>
 					<p>

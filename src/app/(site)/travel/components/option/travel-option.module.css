@@ -53,14 +53,13 @@
 		}
 	}
 
-	& p {
+	& p, & ul {
 		font-family: var(--schibsted-grotesk);
 	}
 
 	& ul {
 		list-style: none;
 		padding: 0;
-		
 	}
 }
 
@@ -70,6 +69,12 @@
 	padding-top: var(--spacing-02);
 	align-items: center;
 	justify-content: center;
+}
+
+.contactInfo {
+	& a {
+		color: var(--primary);
+	}
 }
 
 .image {

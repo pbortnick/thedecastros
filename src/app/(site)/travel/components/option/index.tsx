@@ -3,6 +3,7 @@ import Button from 'components/button'
 import type { ReactNode } from 'react'
 import s from './travel-option.module.css'
 import Tag from 'components/tag'
+import { formatPhoneNumber } from 'lib/format-phone-number'
 
 interface TravelOptionProps {
 	heading: string
@@ -50,12 +51,14 @@ export default function TravelOption({
 			)}
 			{children && <div className={s.content}>{children}</div>}
 			{contact && (
-				<p>
+				<p className={s.contactInfo}>
 					<strong>Contact info</strong>
 					<br />
 					{contact.name}
 					<br />
-					{contact.phone}
+					<a href={`tel:${contact.phone}`}>
+						{formatPhoneNumber(contact.phone)}
+					</a>
 				</p>
 			)}
 			{link && <Button text={link.text} href={link.href} target="_blank" />}
