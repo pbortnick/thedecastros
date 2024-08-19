@@ -25,8 +25,8 @@ export default function HomePage() {
 				<div className={s.imageContainer}>
 					<Image
 						src={require('./homepage-graphic.png')}
-						width={1000}
-						height={734}
+						width={1516}
+						height={1225}
 						alt="Outline of Fallingwater"
 						priority
 					/>
