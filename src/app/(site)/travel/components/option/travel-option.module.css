@@ -10,6 +10,11 @@
 	flex-direction: column;
 	text-align: center;
 	gap: var(--spacing-03);
+	margin: 0 auto;
+
+	@media (--medium-up) {
+		max-width: 600px;
+	}
 
 	& table {
 		border: 1px solid silver;
@@ -50,6 +55,12 @@
 
 	& p {
 		font-family: var(--schibsted-grotesk);
+	}
+
+	& ul {
+		list-style: none;
+		padding: 0;
+		
 	}
 }
 

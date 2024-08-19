@@ -6,13 +6,9 @@
 
 .content {
 	composes: container from global;
-	composes: grid from global;
-	padding-top: var(--spacing-10);
-	position: relative;
-
-	& h2 {
-		text-align: center;
-	}
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-10);
 
 	& hr {
 		background: var(--accent-2);
@@ -20,20 +16,6 @@
 		width: 100%;
 		border: 0;
 		margin: 0;
-	}
-}
-
-.sidebar {
-	z-index: 1;
-
-	@media (--small) {
-		grid-column: 1/ -1;
-	}
-
-	@media (--medium-up) {
-		width: max-content;
-		grid-area: 1 / 1;
-		margin-left: -24px;
 	}
 }
 
@@ -45,7 +27,6 @@
 	grid-column: 1 / -1;
 	grid-row: 2;
 	display: flex;
-	gap: var(--spacing-10);
 	flex-direction: column;
 	padding-top: var(--spacing-06);
 
@@ -71,6 +52,16 @@
 	}
 }
 
+.smallerOptions {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-05);
+
+	@media (--medium-up) {
+		gap: var(--spacing-07);
+	}
+}
+
 .section {
 	display: flex;
 	flex-direction: column;
@@ -78,6 +69,8 @@
 	position: relative;
 }
 
-.sectionAnchor {
-	position: absolute;
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-03);
 }

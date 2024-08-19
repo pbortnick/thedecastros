@@ -7,7 +7,7 @@ import Tag from 'components/tag'
 interface TravelOptionProps {
 	heading: string
 	image?: ImageProps
-	link: {
+	link?: {
 		text: string
 		href: string
 	}
@@ -58,7 +58,7 @@ export default function TravelOption({
 					{contact.phone}
 				</p>
 			)}
-			<Button text={link.text} href={link.href} target="_blank" />
+			{link && <Button text={link.text} href={link.href} target="_blank" />}
 		</div>
 	)
 }
