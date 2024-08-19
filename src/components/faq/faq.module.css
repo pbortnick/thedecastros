@@ -1,0 +1,15 @@
+.root {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-02);
+}
+
+.question {
+	font-size: 22px;
+}
+
+.answer {
+	font-size: 16px;
+	font-family: var(--schibsted-grotesk);
+	line-height: 1.75;
+}
