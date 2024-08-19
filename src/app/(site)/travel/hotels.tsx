@@ -76,7 +76,7 @@ export default function Hotels() {
 						inflatables. Max 6 people.
 					</p>
 				</TravelOption>
-				{/* <TravelOption
+				<TravelOption
 					heading="Paddler's Lane"
 					tags={['groups']}
 					image={{
@@ -102,7 +102,7 @@ export default function Hotels() {
 							<li>Cabin (5 guests)</li>
 						</ul>
 					</p>
-				</TravelOption> */}
+				</TravelOption>
 				<TravelOption
 					heading="Smith House Inn"
 					tags={['groups', 'individuals', 'couples']}
@@ -117,8 +117,8 @@ export default function Hotels() {
 						href: 'https://smithhouseinn.com/guest-rooms/',
 					}}
 					contact={{
-						name: 'Robin',
-						phone: '(814) 395-5248',
+						name: 'Amber',
+						phone: '(724) 366-6142',
 					}}
 				>
 					<p>
