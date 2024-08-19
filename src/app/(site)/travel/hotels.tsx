@@ -57,7 +57,7 @@ export default function Hotels() {
 					heading="Fernwalk"
 					tags={['group']}
 					image={{
-						src: '/images/hotels/fernwalk.png',
+						src: '/images/hotels/fernwalk.jpeg',
 						width: 500,
 						height: 400,
 						alt: 'Image of Fernwalk',
