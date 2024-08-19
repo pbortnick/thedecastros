@@ -12,7 +12,6 @@ const PAGES = [
 	{ name: 'Schedule', href: '/schedule' },
 	{ name: 'Travel', href: '/travel' },
 	{ name: 'FAQ', href: '/faq' },
-	// { name: 'Attractions', href: '/attractions' },
 ]
 
 const MenubarDemo = () => {

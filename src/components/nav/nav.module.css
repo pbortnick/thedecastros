@@ -26,14 +26,19 @@
 	line-height: 140%;
 	text-decoration: none;
 	letter-spacing: 0px;
+	max-width: 100%;
+	overflow-x: scroll;
 }
 
 .navList {
 	display: flex;
-	gap: var(--spacing-02);
+	gap: 16px;
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
+	font-size: 14px;
+	overflow: scroll;
+	max-width: 100%;
 
 	@media (--medium-up) {
 		gap: var(--spacing-05);
@@ -46,7 +51,8 @@
 	text-decoration: none;
 }
 
-.isActive, .link:hover {
+.isActive,
+.link:hover {
 	&::after {
 		content: '';
 		position: absolute;
