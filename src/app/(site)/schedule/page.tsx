@@ -73,8 +73,8 @@ const data: Array<DateItem> = [
 		items: [
 			{
 				heading: 'Fallingwater Tours',
-				description: 'Take a tour of the historic home',
-				time: '10am - 12pm',
+				description: 'Feel free to take this time to tour the historic home!',
+				time: '12pm-3pm',
 				location: 'Fallingwater',
 				addressLink: 'https://maps.app.goo.gl/Zut1RfyGQH1Yvoc2A',
 			},

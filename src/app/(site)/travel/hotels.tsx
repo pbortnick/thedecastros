@@ -14,6 +14,11 @@ export default function Hotels() {
 							let them know you are a guest of Pamela Bortnick & Jason
 							Decastro's wedding.
 						</p>
+						<p>
+							The dates will be blocked out online so you have to contact them
+							directly.
+						</p>
+						<p>We will update this page if an option is no longer available.</p>
 						{/* <br />
 						<p>
 							Please feel free to reach out to us if you have any questions!
@@ -48,8 +53,7 @@ export default function Hotels() {
 					<>
 						<p>
 							Check out the rooms and either book for a single room for yourself
-							or get a group together and book the entire house (max 15
-							people)
+							or get a group together and book the entire house (max 15 people)
 						</p>
 					</>
 				</TravelOption>
@@ -105,7 +109,7 @@ export default function Hotels() {
 				</TravelOption>
 				<TravelOption
 					heading="Smith House Inn"
-					tags={['groups', 'individuals', 'couples']}
+					tags={['individuals', 'couples']}
 					image={{
 						src: '/images/hotels/smith-house.jpg',
 						width: 500,
@@ -122,8 +126,8 @@ export default function Hotels() {
 					}}
 				>
 					<p>
-						Check out the rooms and either book for a single room for yourself
-						or get a group together and book the whole house (max 10 people)
+						The Smith House Inn offers 3 rooms and 1 suite with 2 bedrooms. All
+						of the rooms are in one house. Contact Amber for discounted rates!
 					</p>
 				</TravelOption>
 			</div>
