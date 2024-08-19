@@ -36,12 +36,15 @@
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
-	font-size: 14px;
 	overflow: scroll;
 	max-width: 100%;
 
 	@media (--medium-up) {
 		gap: var(--spacing-05);
+	}
+
+	@media (--small) {
+		font-size: 14px;
 	}
 }
 
