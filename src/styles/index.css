@@ -2,3 +2,13 @@
 @import './container.css';
 @import './spacing.css';
 @import './typography.css';
+
+:root {
+	h1, h2, h3, h4, p {
+		margin: 0;
+	}
+
+	html {
+		-webkit-overflow-scrolling: touch;
+	}
+}

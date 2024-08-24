@@ -26,7 +26,11 @@
 }
 
 .image {
-	max-width: 500px;
-	objectFit: contain;
+	objectfit: contain;
 	height: auto;
+	max-width: 100%;
+
+	@media (--medium-up) {
+		max-width: 500px;
+	}
 }

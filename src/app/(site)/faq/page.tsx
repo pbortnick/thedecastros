@@ -50,7 +50,7 @@ const faqList = [
 	{
 		question: 'What is the dress code?',
 		answer:
-			'Cocktail/formal attire is suggested but most importantly, we want you to feel comfortable and have fun!',
+			'Cocktail/casual attire is suggested but most importantly, we want you to feel comfortable and have fun!',
 	},
 	{
 		question: 'Will transportation be provided?',

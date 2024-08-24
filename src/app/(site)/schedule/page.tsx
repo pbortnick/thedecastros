@@ -8,8 +8,10 @@ export default function SchedulePage() {
 				title="Schedule"
 				image={{
 					src: require('./accent.png'),
-					width: 452.4,
-					height: 621.4,
+					// width: 1905,
+					// height: 2000,
+					width: 476,
+					height: 500,
 					alt: '',
 				}}
 			/>
