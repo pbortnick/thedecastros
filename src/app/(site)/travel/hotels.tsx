@@ -18,7 +18,7 @@ export default function Hotels() {
 							The dates will be blocked out online so you have to contact them
 							directly.
 						</p>
-						<p>We will update this page if an option is no longer available.</p>
+						<p>We will continue to update this page with new options and their status.</p>
 						{/* <br />
 						<p>
 							Please feel free to reach out to us if you have any questions!
@@ -100,11 +100,33 @@ export default function Hotels() {
 					<div>
 						<p>Paddler's Lane has 3 options:</p>
 						<ul>
-							<li>Chalet (6 guests)</li>
-							<li>Main House (6 guests)</li>
-							<li>Cabin (5 guests)</li>
+							<li>Chalet Rental with Apartment (10 guests)</li>
+							<li>Main House (14 guests)</li>
 						</ul>
 					</div>
+				</TravelOption>
+				<TravelOption
+					heading="Smith House Inn"
+					tags={['individuals', 'couples']}
+					image={{
+						src: '/images/hotels/smith-house.jpg',
+						width: 500,
+						height: 400,
+						alt: 'Image of Smith House Inn',
+					}}
+					link={{
+						text: 'Rooms',
+						href: 'https://smithhouseinn.com/guest-rooms/',
+					}}
+					contact={{
+						name: 'Amber',
+						phone: '7243666142',
+					}}
+				>
+					<p>
+						The Smith House Inn offers 3 rooms and 1 suite with 2 bedrooms. All
+						of the rooms are in one house. Contact Amber for discounted rates!
+					</p>
 				</TravelOption>
 				<TravelOption
 					heading="Smith House Inn"
@@ -168,8 +190,9 @@ export default function Hotels() {
 						href: 'https://www.nemacolin.com/',
 					}}
 				>
-					You may recognize this one from Matt James' season of The Bachelor. Or
-					maybe thats just me 🤷‍♀️
+					Nemacolin is a pricey option but absolutely beautiful. You may
+					recognize it from Matt James' season of The Bachelor. Or maybe
+					thats just me 🤷‍♀️
 				</TravelOption>
 			</div>
 		</div>
