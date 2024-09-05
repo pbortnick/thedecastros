@@ -36,7 +36,9 @@ export default function SchedulePage() {
 												)}
 												<p className={s.dayItemDescription}>{description}</p>
 											</div>
-											<div className={s.time}>{time && <span>{time}</span>}</div>
+											<div className={s.time}>
+												{time && <span>{time}</span>}
+											</div>
 										</li>
 									),
 								)}
@@ -89,7 +91,8 @@ const data: Array<DateItem> = [
 			},
 			{
 				heading: 'After Party',
-				description: 'Details to come',
+				description:
+					'Subject to change but will likely be at the Anchor In. More details to come.',
 			},
 		],
 	},
@@ -98,7 +101,11 @@ const data: Array<DateItem> = [
 		items: [
 			{
 				heading: 'Brunch',
-				description: 'Details to come',
+				description:
+					'If you aren’t too hungover and are still in town, join us for brunch at the beautiful Hartzell House',
+				time: 'TBD',
+				location: 'Hartzell House',
+				addressLink: 'https://maps.app.goo.gl/6tV8Ry6QZQ5QgR1z8',
 			},
 		],
 	},
