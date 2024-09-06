@@ -57,8 +57,8 @@ export default function Hotels() {
 								out mattress. Super cute!
 							</li>
 							<li>
-								<strong>East wing Patriot Suite:</strong>
-								King bed with en suite large bathroom. ADA compliant.
+								<strong>East wing Patriot Suite:</strong> King bed with en suite
+								large bathroom. ADA compliant.
 							</li>
 							<li>
 								<strong>East wing upstairs:</strong> 1 queen bedroom with en
@@ -74,7 +74,7 @@ export default function Hotels() {
 						</p>
 						<p>
 							Call or text Melissa & Robert and let them know you are a guest of
-							Pam & Jason's wedding. <i>$215-280/night-</i>
+							Pam & Jason's wedding. <i>$215-280/night</i>
 						</p>
 					</>
 				</TravelOption>
