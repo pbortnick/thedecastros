@@ -74,7 +74,7 @@ export default function Hotels() {
 						</p>
 						<p>
 							Call or text Melissa & Robert and let them know you are a guest of
-							Pam & Jason's wedding.
+							Pam & Jason's wedding. <i>$215-280/night-</i>
 						</p>
 					</>
 				</TravelOption>
@@ -113,7 +113,7 @@ export default function Hotels() {
 					</p>
 					<p>
 						Call Beth and let her know that you are a guest of Pamela & Jason's
-						wedding.
+						wedding. <i>$270/night</i>
 					</p>
 				</TravelOption>
 				<TravelOption
@@ -145,17 +145,17 @@ export default function Hotels() {
 								<strong>Chalet Rental with Apartment:</strong> The chalet has 3
 								queen bedrooms and 1 sleeper sofa in the living room. It also
 								has an attached basement apartment with one queen bedroom and 2
-								single beds in the common area.
+								single beds in the common area. <i>$290/night</i>
 							</li>
 							<li>
 								<strong>Main House:</strong> 3 queen bedrooms and one sleeper
 								sofa in the living den. There is also an attic area with 8
-								single beds.
+								single beds. <i>$425/night</i>
 							</li>
 							<li>
 								<strong>Cabin:</strong> One king bedroom with private bathroom.
 								One Queen bedroom with semi-private bath (shared with the single
-								room). One single bedroom.
+								room). One single bedroom.<i>$325/night</i>
 							</li>
 						</ul>
 						<p>
@@ -164,8 +164,8 @@ export default function Hotels() {
 						<p>
 							Pam reserved this directly. Let Pam know if you are interested in
 							any or all of these options via email hello@thedecastros.com or
-							phone (516) 205-3754. The standards rates are available via the
-							website. Note: the cabin is cash only upon arrival paid to Robin
+							phone (516) 205-3754. Note: the cabin is cash only upon arrival
+							paid to Robin
 						</p>
 						<p>
 							If you have any other questions about the property, feel free to
