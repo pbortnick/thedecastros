@@ -241,8 +241,7 @@ export default function Hotels() {
 					<p>
 						There are plenty of other options in the area. We suggest sticking
 						to <strong>Addison, Confluence, or Mill Run</strong> for the most
-						convenient locations. Please let us know if you book one of these
-						options and we will try our best to arrange transportation!
+						convenient locations.
 					</p>
 					<Button
 						text="Options in Confluence, PA"
