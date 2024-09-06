@@ -35,7 +35,7 @@ export default function FAQPage() {
 const faqList = [
 	{
 		question: 'How can I reach Pam and Jason?',
-		answer: 'You can email us at hello@thedecastros.com',
+		answer: 'You can email us at hello@thedecastros.com or call/text our cells',
 		// <>
 		// 	Pam's phone number is (516) 205-3754
 		// 	<br />
@@ -48,6 +48,11 @@ const faqList = [
 		// </>
 	},
 	{
+		question: 'PA has weird alcohol laws. Help?',
+		answer:
+			"If you are driving from out of town, you may want to stock up for your stay. There is alcohol delivery available but it is limited. We don't know all of the rules but it definitely isn't NY here. Alcohol will be plentiful at all of the wedding events so don't worry about that!",
+	},
+	{
 		question: 'What is the dress code?',
 		answer:
 			'Cocktail/casual attire is suggested but most importantly, we want you to feel comfortable and have fun!',
@@ -55,7 +60,7 @@ const faqList = [
 	{
 		question: 'Will transportation be provided?',
 		answer:
-			'Transportation will be provided from the designated hotels to the venue and back. Afterparty plans are TBD but we will make sure everyone gets home safely.',
+			'Transportation will be provided from the designated hotels to the venue and back. After party plans are TBD but we will make sure everyone gets home safely.',
 	},
 	{
 		question: 'Does the venue have parking?',
@@ -64,7 +69,7 @@ const faqList = [
 	{
 		question: 'Is the wedding indoors or outdoors?',
 		answer:
-			'The ceremony will be outdoors and the reception will be indoor/outdoor.',
+			'The ceremony will be outdoors. The cocktail hour will be outdoors & tented. The reception will be inside the barn.',
 	},
 	{
 		question: 'Why Fallingwater?',

@@ -1,3 +1,4 @@
+import Button from 'components/button'
 import TravelOption from './components/option'
 import SectionHeading from './components/section-heading'
 import s from './travel.module.css'
@@ -10,24 +11,18 @@ export default function Hotels() {
 				subtitle={
 					<>
 						<p>
-							For each option listed below, call or text the phone number and
-							let them know you are a guest of Pamela Bortnick & Jason
-							Decastro's wedding.
-						</p>
-						<p>
-							The dates will be blocked out online so you have to contact them
-							directly.
-						</p>
-						<p>We will continue to update this page with new options and their status.</p>
-						{/* <br />
-						<p>
-							Please feel free to reach out to us if you have any questions!
+							For each option below, follow the booking instructions to reserve.
 						</p>
 						<br />
 						<p>
-							Also check back in. We may be adding more options to this page as
-							time goes on.
-						</p> */}
+							The dates may be blocked out online but that doesn't mean they are
+							booked - just that they are blocked off for the wedding. Once we
+							know that an option has been booked, we will update this page.
+						</p>
+						<br />
+						<p>
+							Please feel free to reach out to us if you have any questions!
+						</p>
 					</>
 				}
 			/>
@@ -52,7 +47,34 @@ export default function Hotels() {
 				>
 					<>
 						<p>
-							Hartzell House has a bunch of offerings, including free breakfast!
+							Hartzell house is extremely special. There is something
+							indescribable about this property. It is impeccably clean and has
+							colorful & artistic touches. There are several options available:
+						</p>
+						<ul>
+							<li>
+								<strong>Standalone Cottage:</strong> One loft queen bed & pull
+								out mattress. Super cute!
+							</li>
+							<li>
+								<strong>East wing Patriot Suite:</strong>
+								King bed with en suite large bathroom. ADA compliant.
+							</li>
+							<li>
+								<strong>East wing upstairs:</strong> 1 queen bedroom with en
+								suite. 1 queen bedroom with private detached bathroom.
+							</li>
+							<li>
+								<strong>West wing:</strong> 1 queen bedroom with en suite. 2
+								queen bedrooms with shared detached bathroom.
+							</li>
+						</ul>
+						<p>
+							<strong>Booking instructions</strong>
+						</p>
+						<p>
+							Call or text Melissa & Robert and let them know you are a guest of
+							Pam & Jason's wedding.
 						</p>
 					</>
 				</TravelOption>
@@ -75,8 +97,23 @@ export default function Hotels() {
 					}}
 				>
 					<p>
-						Fernwalk offers 2 queen beds, and a queen inflatable or two twin
-						inflatables. Max 6 people.
+						Fernwalk is absolutely lovely. It offers 2 queen bedrooms, one with
+						an en suite bathroom and one with a detached (but private) bathroom.
+						There are also 2 single or 1 queen inflatable beds available that
+						can be placed in the semi-private sunroom. Max 6 people. It is right
+						next door to Hartzell House.
+					</p>
+					<p>
+						Note: There is also one more property being built next door that
+						will be available by the time of the wedding. It is almost identical
+						to Fernwalk but will also have a private ADA compliant suite.
+					</p>
+					<p>
+						<strong>Booking instructions:</strong>
+					</p>
+					<p>
+						Call Beth and let her know that you are a guest of Pamela & Jason's
+						wedding.
 					</p>
 				</TravelOption>
 				<TravelOption
@@ -98,11 +135,43 @@ export default function Hotels() {
 					}}
 				>
 					<div>
-						<p>Paddler's Lane has 3 options:</p>
+						<p>
+							Paddler's Lane has 3 options is absolutely beautiful. It has 3
+							different homes on a large campground property with access to the
+							river. The homes are:
+						</p>
 						<ul>
-							<li>Chalet Rental with Apartment (10 guests)</li>
-							<li>Main House (14 guests)</li>
+							<li>
+								<strong>Chalet Rental with Apartment:</strong> The chalet has 3
+								queen bedrooms and 1 sleeper sofa in the living room. It also
+								has an attached basement apartment with one queen bedroom and 2
+								single beds in the common area.
+							</li>
+							<li>
+								<strong>Main House:</strong> 3 queen bedrooms and one sleeper
+								sofa in the living den. There is also an attic area with 8
+								single beds.
+							</li>
+							<li>
+								<strong>Cabin:</strong> One king bedroom with private bathroom.
+								One Queen bedroom with semi-private bath (shared with the single
+								room). One single bedroom.
+							</li>
 						</ul>
+						<p>
+							<strong>Booking instructions</strong>
+						</p>
+						<p>
+							Pam reserved this directly. Let Pam know if you are interested in
+							any or all of these options via email hello@thedecastros.com or
+							phone (516) 205-3754. The standards rates are available via the
+							website. Note: the cabin is cash only upon arrival paid to Robin
+						</p>
+						<p>
+							If you have any other questions about the property, feel free to
+							contact Robin and let her know that you are a guest of our
+							wedding.
+						</p>
 					</div>
 				</TravelOption>
 				<TravelOption
@@ -124,31 +193,36 @@ export default function Hotels() {
 					}}
 				>
 					<p>
-						The Smith House Inn offers 3 rooms and 1 suite with 2 bedrooms. All
-						of the rooms are in one house. Contact Amber for discounted rates!
+						The Smith House Inn offers 3 rooms and 1 suite with 2 bedrooms (so 5
+						bedrooms total). All of the rooms are in one house. Contact Amber to
+						book and let her know you are with the wedding!
 					</p>
 				</TravelOption>
 				<TravelOption
-					heading="Smith House Inn"
-					tags={['individuals', 'couples']}
+					heading="Hanna House Bed & Breakfast"
+					tags={['individuals', 'couples', 'group']}
 					image={{
-						src: '/images/hotels/smith-house.jpg',
+						src: '/images/hotels/hanna-house.jpg',
 						width: 500,
 						height: 400,
-						alt: 'Image of Smith House Inn',
+						alt: 'Image of Hanna House BnB',
 					}}
 					link={{
 						text: 'Rooms',
-						href: 'https://smithhouseinn.com/guest-rooms/',
+						href: 'http://www.hannahousebandb.net/rooms---rates',
 					}}
 					contact={{
-						name: 'Amber',
-						phone: '7243666142',
+						name: 'Frances',
+						phone: '8143959466',
 					}}
 				>
 					<p>
-						The Smith House Inn offers 3 rooms and 1 suite with 2 bedrooms. All
-						of the rooms are in one house. Contact Amber for discounted rates!
+						Hanna House has one of the coolest bathrooms we've ever seen with an
+						actual tree inside of it. Frances is the owner and she is super
+						sweet. When we visited, we were treated to delicious homemade iced
+						tea and fresh veggies from her garden. Check out the rooms available
+						and see if it works for you. Let her know you are with the wedding
+						and your third night will be half off!
 					</p>
 				</TravelOption>
 			</div>
@@ -157,24 +231,27 @@ export default function Hotels() {
 					heading="More Options"
 					subtitle={
 						<>
-							Please let us know if you book one of these options (or something
-							else) and we will do our best to coordinate transportation. See{' '}
+							Please let us know if you book one of these options (if you want)
+							and we will do our best to coordinate transportation. See{' '}
 							<a href="/faq">FAQ</a> for more information.
 						</>
 					}
 				/>
-				<TravelOption
-					heading="Airbnb"
-					link={{
-						text: 'View nearby options',
-						href: 'https://www.airbnb.com/s/Mill-Run--Pennsylvania--United-States/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2024-09-01&monthly_length=3&monthly_end_date=2024-12-01&price_filter_input_type=2&channel=EXPLORE&query=Mill%20Run%2C%20PA&place_id=ChIJWYLHQzMyNYgRgCSmlC_aofs&date_picker_type=calendar&checkin=2025-05-30&checkout=2025-06-01&source=structured_search_input_header&search_type=user_map_move&search_mode=regular_search&price_filter_num_nights=2&ne_lat=39.94085860566678&ne_lng=-79.41433728380179&sw_lat=39.85816448922689&sw_lng=-79.48842078877027&zoom=13.301733431116443&zoom_level=13.301733431116443&search_by_map=true',
-					}}
-				>
+				<TravelOption heading="Airbnb (or vrbo)">
 					<p>
-						There are plenty of options in the surrounding areas but if you will
-						require transportation, the closer to the hotels listed above the
-						better!
+						There are plenty of other options in the area. We suggest sticking
+						to <strong>Addison, Confluence, or Mill Run</strong> for the most
+						convenient locations. Please let us know if you book one of these
+						options and we will try our best to arrange transportation!
 					</p>
+					<Button
+						text="Options in Confluence, PA"
+						href="https://www.airbnb.com/s/Confluence--Pennsylvania--United-States/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2024-10-01&monthly_length=3&monthly_end_date=2025-01-01&price_filter_input_type=2&channel=EXPLORE&query=Confluence%2C%20PA&date_picker_type=calendar&checkin=2025-05-30&checkout=2025-06-01&source=structured_search_input_header&search_type=user_map_move&price_filter_num_nights=2&zoom_level=15.363981837111908&place_id=ChIJAfaHMGa1yokRnTtK0WnM6Yw&search_mode=regular_search&ne_lat=39.82520179134156&ne_lng=-79.35474150772177&sw_lat=39.80486463620985&sw_lng=-79.3727272212659&zoom=15.363981837111908&search_by_map=true"
+					/>
+					<Button
+						text="Options in Mill Run, PA"
+						href="https://www.airbnb.com/s/Mill-Run--Pennsylvania--United-States/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2024-10-01&monthly_length=3&monthly_end_date=2025-01-01&price_filter_input_type=2&channel=EXPLORE&query=Mill%20Run%2C%20PA&date_picker_type=calendar&checkin=2025-05-30&checkout=2025-06-01&source=structured_search_input_header&search_type=user_map_move&price_filter_num_nights=2&zoom_level=13.25241325996383&search_mode=regular_search&place_id=ChIJWYLHQzMyNYgRgCSmlC_aofs&ne_lat=39.957551124585486&ne_lng=-79.40274495983243&sw_lat=39.86978816891993&sw_lng=-79.48047218284779&zoom=13.25241325996383&search_by_map=true"
+					/>
 				</TravelOption>
 				<TravelOption
 					heading="Historic Summit Inn"
@@ -191,8 +268,8 @@ export default function Hotels() {
 					}}
 				>
 					Nemacolin is a pricey option but absolutely beautiful. You may
-					recognize it from Matt James' season of The Bachelor. Or maybe
-					thats just me 🤷‍♀️
+					recognize it from Matt James' season of The Bachelor. Or maybe thats
+					just me 🤷‍♀️
 				</TravelOption>
 			</div>
 		</div>
