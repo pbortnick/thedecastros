@@ -28,7 +28,7 @@ export default function Hotels() {
 			/>
 			<div className={s.options}>
 				<TravelOption
-					heading="Hartzell House"
+					heading="Hartzell House (14-18 people)"
 					tags={['groups', 'individuals', 'couples']}
 					image={{
 						src: '/images/hotels/hartzell-house.jpg',
@@ -79,7 +79,7 @@ export default function Hotels() {
 					</>
 				</TravelOption>
 				<TravelOption
-					heading="Fernwalk"
+					heading="Fernwalk (4-6 people)"
 					tags={['group']}
 					image={{
 						src: '/images/hotels/fernwalk.jpeg',
@@ -117,7 +117,7 @@ export default function Hotels() {
 					</p>
 				</TravelOption>
 				<TravelOption
-					heading="Paddler's Lane"
+					heading="Paddler's Lane (Up to 28 people)"
 					tags={['groups']}
 					image={{
 						src: '/images/hotels/paddlers-lane.jpg',
@@ -199,7 +199,7 @@ export default function Hotels() {
 					</p>
 				</TravelOption>
 				<TravelOption
-					heading="Hanna House Bed & Breakfast"
+					heading="Hanna House Bed & Breakfast (up to 12 people)"
 					tags={['individuals', 'couples', 'group']}
 					image={{
 						src: '/images/hotels/hanna-house.jpg',
@@ -224,6 +224,24 @@ export default function Hotels() {
 						and see if it works for you. Let her know you are with the wedding
 						and your third night will be half off!
 					</p>
+					<p>
+						Just a note: Hanna House doesn't have A/C but there are ceiling fans
+						and the place is breezy
+					</p>
+					<ul>
+						<li>
+							<strong>First floor:</strong> 1 bedroom with 2 single beds &
+							private bathroom <i>$140/night</i>
+						</li>
+						<li>
+							<strong>Second floor:</strong> 3 bedrooms with a full bed in each
+							& a shared bathroom <i>$125/night each</i>
+						</li>
+						<li>
+							<strong>Third floor:</strong> 1 bedroom with a full bed, 1 bedroom
+							with 2 singles, one shared bathroom <i>$125/night each</i>
+						</li>
+					</ul>
 				</TravelOption>
 			</div>
 			<div className={s.smallerOptions}>
@@ -237,12 +255,16 @@ export default function Hotels() {
 						</>
 					}
 				/>
-				<TravelOption heading="Airbnb (or vrbo)">
+				<TravelOption heading="Airbnb, vrbo, or other rental sites">
 					<p>
 						There are plenty of other options in the area. We suggest sticking
-						to <strong>Addison, Confluence, or Mill Run</strong> for the most
-						convenient locations.
+						to <strong>Addison, Confluence, Ohiopyle, or Mill Run</strong> for
+						the most convenient locations.
 					</p>
+					<Button
+						text="Turning Leaf Rentals"
+						href="https://www.turningleafrentals.com/fallingwater/"
+					/>
 					<Button
 						text="Options in Confluence, PA"
 						href="https://www.airbnb.com/s/Confluence--Pennsylvania--United-States/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2024-10-01&monthly_length=3&monthly_end_date=2025-01-01&price_filter_input_type=2&channel=EXPLORE&query=Confluence%2C%20PA&date_picker_type=calendar&checkin=2025-05-30&checkout=2025-06-01&source=structured_search_input_header&search_type=user_map_move&price_filter_num_nights=2&zoom_level=15.363981837111908&place_id=ChIJAfaHMGa1yokRnTtK0WnM6Yw&search_mode=regular_search&ne_lat=39.82520179134156&ne_lng=-79.35474150772177&sw_lat=39.80486463620985&sw_lng=-79.3727272212659&zoom=15.363981837111908&search_by_map=true"
