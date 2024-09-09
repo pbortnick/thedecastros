@@ -138,7 +138,6 @@ export default function Hotels() {
 						wedding. <i>$270/night</i>
 					</p>
 				</TravelOption>
-				<h2>Paddler's Lane Campground</h2>
 				<TravelOption
 					heading="Paddler's Lane"
 					tags={['groups', 'capacity: 22-28 people']}
@@ -197,7 +196,6 @@ export default function Hotels() {
 						</p>
 					</div>
 				</TravelOption>
-				<h2>Confluence</h2>
 				<TravelOption
 					heading="Smith House Inn"
 					tags={['group', 'capacity: 10']}
