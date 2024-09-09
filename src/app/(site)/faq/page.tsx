@@ -36,22 +36,12 @@ const faqList = [
 	{
 		question: 'How can I reach Pam and Jason?',
 		answer: 'You can email us at hello@thedecastros.com or call/text our cells',
-		// <>
-		// 	Pam's phone number is (516) 205-3754
-		// 	<br />
-		// 	Our shared email address is hello@thedecastros.com
-		// 	<br />
-		// 	Jason's phone number is (917) 676-1342.
-		// 	<br />
-		// 	Feel free to text him if you don't mind waiting a few days for a
-		// 	response...
-		// </>
 	},
-	{
-		question: 'PA has weird alcohol laws. Help?',
-		answer:
-			"If you are driving from out of town, you may want to stock up for your stay. There is alcohol delivery available but it is limited. We don't know all of the rules but it definitely isn't NY here. Alcohol will be plentiful at all of the wedding events so don't worry about that!",
-	},
+	// {
+	// 	question: 'PA has weird alcohol laws. Help?',
+	// 	answer:
+	// 		"If you are driving from out of town, you may want to stock up for your stay. There is alcohol delivery available but it is limited. We don't know all of the rules but it definitely isn't NY here. Alcohol will be plentiful at all of the wedding events so don't worry about that!",
+	// },
 	{
 		question: 'What is the dress code?',
 		answer:
@@ -60,7 +50,7 @@ const faqList = [
 	{
 		question: 'Will transportation be provided?',
 		answer:
-			'Transportation will be provided from the designated hotels to the venue and back. After party plans are TBD but we will make sure everyone gets home safely.',
+			' We plan to schedule vehicles to & from the venue at a designated location in each of the main areas: 1) Addison, 2) The Historic Summit Inn, 3) Paddlers Lane Retreat, 4) Confluence (where there are a few hotels), and 5) Ohiopyle/Mill Run. We will do our absolute best to provide convenient transportation for each & every one of you. We will provide an exact pickup schedule closer to the wedding date.',
 	},
 	{
 		question: 'Does the venue have parking?',

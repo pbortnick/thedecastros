@@ -15,6 +15,7 @@ interface TravelOptionProps {
 	contact?: {
 		name: string
 		phone: string
+		email?: string
 	}
 	tags?: string[]
 	children?: ReactNode
@@ -31,7 +32,7 @@ export default function TravelOption({
 	return (
 		<div className={s.root}>
 			<div>
-				<h3 className="heading-3">{heading}</h3>
+				<h4 className="heading-3">{heading}</h4>
 				{tags && (
 					<div className={s.tags}>
 						{tags.map((tag) => (
@@ -59,6 +60,7 @@ export default function TravelOption({
 					<a href={`tel:${contact.phone}`}>
 						{formatPhoneNumber(contact.phone)}
 					</a>
+					{contact.email && <a href={`mailto:${contact.email}`}>{contact.email}</a>}
 				</p>
 			)}
 			{link && <Button text={link.text} href={link.href} target="_blank" />}

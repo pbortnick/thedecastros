@@ -27,6 +27,28 @@ export default function Hotels() {
 				}
 			/>
 			<div className={s.options}>
+				<h2>Hotel</h2>
+				<TravelOption
+					heading="Historic Summit Inn (up to 24 people)"
+					link={{
+						text: 'Website',
+						href: 'https://www.summitinnresort.com/',
+					}}
+					contact={{
+						name: '',
+						phone: '',
+						email: 'events@summitinnresort.com',
+					}}
+				>
+					<p>
+						We have 8 rooms reserved at this hotel, 4 kings and 4 doubles. We
+						did not get a chance to check it out but it has excellent reviews
+						and looks charming! Contact them via phone or email and let them
+						know you are a guest of Pamela Bortnick & Jason Decastro's wedding.
+					</p>
+				</TravelOption>
+				<h2>Addison</h2>
+				<p>Each option is within walking distance from each other</p>
 				<TravelOption
 					heading="Hartzell House (14-18 people)"
 					tags={['groups', 'individuals', 'couples']}
@@ -47,9 +69,9 @@ export default function Hotels() {
 				>
 					<>
 						<p>
-							Hartzell house is extremely special. There is something
-							indescribable about this property. It is impeccably clean and has
-							colorful & artistic touches. There are several options available:
+							Hartzell house is a special place. There is something
+							indescribable about this property. It is impeccably clean with
+							whimsical touches. There are several options available:
 						</p>
 						<ul>
 							<li>
@@ -116,6 +138,7 @@ export default function Hotels() {
 						wedding. <i>$270/night</i>
 					</p>
 				</TravelOption>
+				<h2>Paddler's Lane Campground</h2>
 				<TravelOption
 					heading="Paddler's Lane (Up to 28 people)"
 					tags={['groups']}
@@ -136,9 +159,9 @@ export default function Hotels() {
 				>
 					<div>
 						<p>
-							Paddler's Lane has 3 options is absolutely beautiful. It has 3
-							different homes on a large campground property with access to the
-							river. The homes are:
+							Paddler's Lane is absolutely beautiful. It has 3 different homes
+							on a large campground property. With access to the river, it
+							offers both a serene and an adventurous atmosphere. The homes are:
 						</p>
 						<ul>
 							<li>
@@ -174,8 +197,9 @@ export default function Hotels() {
 						</p>
 					</div>
 				</TravelOption>
+				<h2>Confluence</h2>
 				<TravelOption
-					heading="Smith House Inn"
+					heading="Smith House Inn (up to 10 guests)"
 					tags={['individuals', 'couples']}
 					image={{
 						src: '/images/hotels/smith-house.jpg',
@@ -194,11 +218,13 @@ export default function Hotels() {
 				>
 					<p>
 						The Smith House Inn offers 3 rooms and 1 suite with 2 bedrooms (so 5
-						bedrooms total). All of the rooms are in one house. Contact Amber to
-						book and let her know you are with the wedding!
+						bedrooms total). All of the rooms are in one house. Click{' '}
+						<a href="https://www.book-it-now.com/smithhouseinn/">here</a> to
+						learn more about the rates. Contact Amber to book and let her know
+						you are with the wedding!
 					</p>
 				</TravelOption>
-				<TravelOption
+				{/* <TravelOption
 					heading="Hanna House Bed & Breakfast (up to 12 people)"
 					tags={['individuals', 'couples', 'group']}
 					image={{
@@ -242,45 +268,42 @@ export default function Hotels() {
 							with 2 singles, one shared bathroom <i>$125/night each</i>
 						</li>
 					</ul>
-				</TravelOption>
+				</TravelOption> */}
 			</div>
 			<div className={s.smallerOptions}>
 				<SectionHeading
 					heading="More Options"
 					subtitle={
 						<>
-							Please let us know if you book one of these options (if you want)
-							and we will do our best to coordinate transportation. See{' '}
-							<a href="/faq">FAQ</a> for more information.
+							Please let us know if you book one of these options and we will do
+							our best to coordinate transportation. See <a href="/faq">FAQ</a>{' '}
+							for more information.
 						</>
 					}
 				/>
-				<TravelOption heading="Airbnb, vrbo, or other rental sites">
+				<TravelOption heading="Rental Sites">
 					<p>
 						There are plenty of other options in the area. We suggest sticking
-						to <strong>Addison, Confluence, Ohiopyle, or Mill Run</strong> for
+						to <strong>Addison, Confluence, Chalk Hill, and Ohiopyle</strong> for
 						the most convenient locations.
 					</p>
+					<Button
+						text="AirBnB in Confluence, PA (all walking distance to Smith House Inn)"
+						href="https://www.airbnb.com/s/Confluence--Pennsylvania--United-States/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2024-10-01&monthly_length=3&monthly_end_date=2025-01-01&price_filter_input_type=2&channel=EXPLORE&query=Confluence%2C%20PA&date_picker_type=calendar&checkin=2025-05-30&checkout=2025-06-01&source=structured_search_input_header&search_type=user_map_move&price_filter_num_nights=2&zoom_level=15.363981837111908&place_id=ChIJAfaHMGa1yokRnTtK0WnM6Yw&search_mode=regular_search&ne_lat=39.82520179134156&ne_lng=-79.35474150772177&sw_lat=39.80486463620985&sw_lng=-79.3727272212659&zoom=15.363981837111908&search_by_map=true"
+					/>
 					<Button
 						text="Turning Leaf Rentals"
 						href="https://www.turningleafrentals.com/fallingwater/"
 					/>
 					<Button
-						text="Options in Confluence, PA"
-						href="https://www.airbnb.com/s/Confluence--Pennsylvania--United-States/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2024-10-01&monthly_length=3&monthly_end_date=2025-01-01&price_filter_input_type=2&channel=EXPLORE&query=Confluence%2C%20PA&date_picker_type=calendar&checkin=2025-05-30&checkout=2025-06-01&source=structured_search_input_header&search_type=user_map_move&price_filter_num_nights=2&zoom_level=15.363981837111908&place_id=ChIJAfaHMGa1yokRnTtK0WnM6Yw&search_mode=regular_search&ne_lat=39.82520179134156&ne_lng=-79.35474150772177&sw_lat=39.80486463620985&sw_lng=-79.3727272212659&zoom=15.363981837111908&search_by_map=true"
+						text="Ohiopyle Vacation Rentals"
+						href="https://www.ohiopylevacationrentals.com/"
 					/>
-					<Button
-						text="Options in Mill Run, PA"
-						href="https://www.airbnb.com/s/Mill-Run--Pennsylvania--United-States/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2024-10-01&monthly_length=3&monthly_end_date=2025-01-01&price_filter_input_type=2&channel=EXPLORE&query=Mill%20Run%2C%20PA&date_picker_type=calendar&checkin=2025-05-30&checkout=2025-06-01&source=structured_search_input_header&search_type=user_map_move&price_filter_num_nights=2&zoom_level=13.25241325996383&search_mode=regular_search&place_id=ChIJWYLHQzMyNYgRgCSmlC_aofs&ne_lat=39.957551124585486&ne_lng=-79.40274495983243&sw_lat=39.86978816891993&sw_lng=-79.48047218284779&zoom=13.25241325996383&search_by_map=true"
-					/>
+					{/* <Button
+						text="AirBnB in Mill Run, PA"
+						href="https://www.airbnb.com/s/Mill-Run--Pennsylvania--United-States/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2024-10-01&monthly_length=3&monthly_end_date=2025-01-01&price_filter_input_type=2&channel=EXPLORE&query=Mill%20Run%2C%20PA&date_picker_type=calendar&checkin=2025-05-30&checkout=2025-06-01&source=structured_search_input_header&search_type=user_map_move&price_filter_num_nights=2&zoom_level=14.956766308102925&search_mode=regular_search&place_id=ChIJWYLHQzMyNYgRgCSmlC_aofs&ne_lat=39.905042576124&ne_lng=-79.45026461168567&sw_lat=39.87810304703659&sw_lng=-79.47411589554753&zoom=14.956766308102925&search_by_map=true"
+					/> */}
 				</TravelOption>
-				<TravelOption
-					heading="Historic Summit Inn"
-					link={{
-						text: 'Website',
-						href: 'https://www.summitinnresort.com/',
-					}}
-				/>
 				<TravelOption
 					heading="Nemacolin"
 					link={{
