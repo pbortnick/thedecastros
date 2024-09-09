@@ -27,9 +27,8 @@ export default function Hotels() {
 				}
 			/>
 			<div className={s.options}>
-				<h2>Hotel</h2>
 				<TravelOption
-					heading="Historic Summit Inn (up to 24 people)"
+					heading="Historic Summit Inn"
 					link={{
 						text: 'Website',
 						href: 'https://www.summitinnresort.com/',
@@ -39,6 +38,7 @@ export default function Hotels() {
 						phone: '',
 						email: 'events@summitinnresort.com',
 					}}
+					tags={['capacity: up to 24']}
 				>
 					<p>
 						We have 8 rooms reserved at this hotel, 4 kings and 4 doubles. We
@@ -47,11 +47,11 @@ export default function Hotels() {
 						know you are a guest of Pamela Bortnick & Jason Decastro's wedding.
 					</p>
 				</TravelOption>
-				<h2>Addison</h2>
 				<p>Each option is within walking distance from each other</p>
 				<TravelOption
-					heading="Hartzell House (14-18 people)"
-					tags={['groups', 'individuals', 'couples']}
+					heading="Hartzell House"
+					tags={['capacity: 14-18 people']}
+					// tags={['groups', 'individuals', 'couples']}
 					image={{
 						src: '/images/hotels/hartzell-house.jpg',
 						width: 500,
@@ -101,8 +101,8 @@ export default function Hotels() {
 					</>
 				</TravelOption>
 				<TravelOption
-					heading="Fernwalk (4-6 people)"
-					tags={['group']}
+					heading="Fernwalk (nextdoor to Hartzell House)"
+					tags={['capacity: 6 people']}
 					image={{
 						src: '/images/hotels/fernwalk.jpeg',
 						width: 500,
@@ -140,8 +140,8 @@ export default function Hotels() {
 				</TravelOption>
 				<h2>Paddler's Lane Campground</h2>
 				<TravelOption
-					heading="Paddler's Lane (Up to 28 people)"
-					tags={['groups']}
+					heading="Paddler's Lane"
+					tags={['groups', 'capacity: 22-28 people']}
 					image={{
 						src: '/images/hotels/paddlers-lane.jpg',
 						width: 500,
@@ -199,8 +199,8 @@ export default function Hotels() {
 				</TravelOption>
 				<h2>Confluence</h2>
 				<TravelOption
-					heading="Smith House Inn (up to 10 guests)"
-					tags={['individuals', 'couples']}
+					heading="Smith House Inn"
+					tags={['group', 'capacity: 10']}
 					image={{
 						src: '/images/hotels/smith-house.jpg',
 						width: 500,
@@ -222,6 +222,10 @@ export default function Hotels() {
 						<a href="https://www.book-it-now.com/smithhouseinn/">here</a> to
 						learn more about the rates. Contact Amber to book and let her know
 						you are with the wedding!
+					</p>
+					<p>
+						There are also many listings on AirBnB that are walking distance to
+						this property (linked below)
 					</p>
 				</TravelOption>
 				{/* <TravelOption
@@ -284,8 +288,8 @@ export default function Hotels() {
 				<TravelOption heading="Rental Sites">
 					<p>
 						There are plenty of other options in the area. We suggest sticking
-						to <strong>Addison, Confluence, Chalk Hill, and Ohiopyle</strong> for
-						the most convenient locations.
+						to <strong>Addison, Confluence, Chalk Hill, and Ohiopyle</strong>{' '}
+						for the most convenient locations.
 					</p>
 					<Button
 						text="AirBnB in Confluence, PA (all walking distance to Smith House Inn)"
