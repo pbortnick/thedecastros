@@ -7,28 +7,25 @@ export default function Hotels() {
 	return (
 		<div className={s.content}>
 			<SectionHeading
-				heading="Hotels"
+				heading="Places to Stay"
 				subtitle={
 					<>
 						<p>
 							For each option below, follow the booking instructions to reserve.
-						</p>
-						<br />
-						<p>
-							The dates may be blocked out online but that doesn't mean they are
-							booked - just that they are blocked off for the wedding. Once we
-							know that an option has been booked, we will update this page.
+							Once we know that one of these options has has been fully booked,
+							we will update this page.
 						</p>
 						<br />
 						<p>
 							Please feel free to reach out to us if you have any questions!
+							Also visit our <a href="/faq">FAQ page</a> for more information.
 						</p>
 					</>
 				}
 			/>
 			<div className={s.options}>
 				<TravelOption
-					heading="Historic Summit Inn"
+					heading="The Historic Summit Inn"
 					link={{
 						text: 'Website',
 						href: 'https://www.summitinnresort.com/',
@@ -39,69 +36,84 @@ export default function Hotels() {
 						email: 'events@summitinnresort.com',
 					}}
 					tags={['capacity: up to 24']}
+					image={{
+						src: '/images/hotels/historic-summit-inn.jpg',
+						alt: 'Image of patio at the Historic Summit Inn',
+						width: 500,
+						height: 400,
+					}}
 				>
 					<p>
 						We have 8 rooms reserved at this hotel, 4 kings and 4 doubles. We
-						did not get a chance to check it out but it has excellent reviews
-						and looks charming! Contact them via phone or email and let them
-						know you are a guest of Pamela Bortnick & Jason Decastro's wedding.
+						did not get a chance to check it out in person but it has excellent
+						reviews and looks charming! Contact them via phone or email and let
+						them know you are a guest of Pamela Bortnick & Jason Decastro's
+						wedding.
 					</p>
 				</TravelOption>
-				<p>Each option is within walking distance from each other</p>
+				<div>
+					<SectionHeading
+						heading="Hartzell House & Fernwalk"
+						subtitle={
+							<p>These properties are right nextdoor and share amenities.</p>
+						}
+						className={s.smallSectionHeading}
+					/>
+					<TravelOption
+						heading="Hartzell House"
+						tags={['capacity: 14-18 people']}
+						// tags={['groups', 'individuals', 'couples']}
+						image={{
+							src: '/images/hotels/hartzell-house.jpg',
+							width: 500,
+							height: 400,
+							alt: 'Image of Hartzell House cabin',
+						}}
+						link={{
+							text: 'Rooms',
+							href: 'https://www.hartzellhouse.com/rooms.htm',
+						}}
+						contact={{
+							name: 'Melissa and Robert',
+							phone: '8143955248',
+						}}
+					>
+						<>
+							<p>
+								Hartzell house is a special place. There is something
+								indescribable about this property. It is impeccably clean with
+								whimsical touches. There are several options available:
+							</p>
+							<ul>
+								<li>
+									<strong>Standalone Cottage:</strong> One loft queen bed & pull
+									out mattress. Super cute!
+								</li>
+								<li>
+									<strong>East wing Patriot Suite:</strong> King bed with en
+									suite large bathroom. ADA compliant.
+								</li>
+								<li>
+									<strong>East wing upstairs:</strong> 1 queen bedroom with en
+									suite. 1 queen bedroom with private detached bathroom.
+								</li>
+								<li>
+									<strong>West wing:</strong> 1 queen bedroom with en suite. 2
+									queen bedrooms with shared detached bathroom.
+								</li>
+							</ul>
+							<p>
+								<strong>Booking instructions</strong>
+							</p>
+							<p>
+								Call or text Melissa & Robert and let them know you are a guest
+								of Pam & Jason's wedding. <i>$215-280/night</i>
+							</p>
+						</>
+					</TravelOption>
+				</div>
 				<TravelOption
-					heading="Hartzell House"
-					tags={['capacity: 14-18 people']}
-					// tags={['groups', 'individuals', 'couples']}
-					image={{
-						src: '/images/hotels/hartzell-house.jpg',
-						width: 500,
-						height: 400,
-						alt: 'Image of Hartzell House cabin',
-					}}
-					link={{
-						text: 'Rooms',
-						href: 'https://www.hartzellhouse.com/rooms.htm',
-					}}
-					contact={{
-						name: 'Melissa and Robert',
-						phone: '8143955248',
-					}}
-				>
-					<>
-						<p>
-							Hartzell house is a special place. There is something
-							indescribable about this property. It is impeccably clean with
-							whimsical touches. There are several options available:
-						</p>
-						<ul>
-							<li>
-								<strong>Standalone Cottage:</strong> One loft queen bed & pull
-								out mattress. Super cute!
-							</li>
-							<li>
-								<strong>East wing Patriot Suite:</strong> King bed with en suite
-								large bathroom. ADA compliant.
-							</li>
-							<li>
-								<strong>East wing upstairs:</strong> 1 queen bedroom with en
-								suite. 1 queen bedroom with private detached bathroom.
-							</li>
-							<li>
-								<strong>West wing:</strong> 1 queen bedroom with en suite. 2
-								queen bedrooms with shared detached bathroom.
-							</li>
-						</ul>
-						<p>
-							<strong>Booking instructions</strong>
-						</p>
-						<p>
-							Call or text Melissa & Robert and let them know you are a guest of
-							Pam & Jason's wedding. <i>$215-280/night</i>
-						</p>
-					</>
-				</TravelOption>
-				<TravelOption
-					heading="Fernwalk (nextdoor to Hartzell House)"
+					heading="Fernwalk"
 					tags={['capacity: 6 people']}
 					image={{
 						src: '/images/hotels/fernwalk.jpeg',
@@ -177,7 +189,7 @@ export default function Hotels() {
 							<li>
 								<strong>Cabin:</strong> One king bedroom with private bathroom.
 								One Queen bedroom with semi-private bath (shared with the single
-								room). One single bedroom.<i>$325/night</i>
+								room). One single bedroom.<i>$325/night - cash only upon arrival</i>
 							</li>
 						</ul>
 						<p>
@@ -186,8 +198,7 @@ export default function Hotels() {
 						<p>
 							Pam reserved this directly. Let Pam know if you are interested in
 							any or all of these options via email hello@thedecastros.com or
-							phone (516) 205-3754. Note: the cabin is cash only upon arrival
-							paid to Robin
+							phone (516) 205-3754.
 						</p>
 						<p>
 							If you have any other questions about the property, feel free to
@@ -198,7 +209,7 @@ export default function Hotels() {
 				</TravelOption>
 				<TravelOption
 					heading="Smith House Inn"
-					tags={['group', 'capacity: 10']}
+					tags={['Good for a group', 'Capacity: 10']}
 					image={{
 						src: '/images/hotels/smith-house.jpg',
 						width: 500,
@@ -289,10 +300,15 @@ export default function Hotels() {
 						to <strong>Addison, Confluence, Chalk Hill, and Ohiopyle</strong>{' '}
 						for the most convenient locations.
 					</p>
-					<Button
-						text="AirBnB in Confluence, PA (all walking distance to Smith House Inn)"
-						href="https://www.airbnb.com/s/Confluence--Pennsylvania--United-States/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2024-10-01&monthly_length=3&monthly_end_date=2025-01-01&price_filter_input_type=2&channel=EXPLORE&query=Confluence%2C%20PA&date_picker_type=calendar&checkin=2025-05-30&checkout=2025-06-01&source=structured_search_input_header&search_type=user_map_move&price_filter_num_nights=2&zoom_level=15.363981837111908&place_id=ChIJAfaHMGa1yokRnTtK0WnM6Yw&search_mode=regular_search&ne_lat=39.82520179134156&ne_lng=-79.35474150772177&sw_lat=39.80486463620985&sw_lng=-79.3727272212659&zoom=15.363981837111908&search_by_map=true"
-					/>
+					<div>
+						<Button
+							text="AirBnB in Confluence, PA"
+							href="https://www.airbnb.com/s/Confluence--Pennsylvania--United-States/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2024-10-01&monthly_length=3&monthly_end_date=2025-01-01&price_filter_input_type=2&channel=EXPLORE&query=Confluence%2C%20PA&date_picker_type=calendar&checkin=2025-05-30&checkout=2025-06-01&source=structured_search_input_header&search_type=user_map_move&price_filter_num_nights=2&zoom_level=15.363981837111908&place_id=ChIJAfaHMGa1yokRnTtK0WnM6Yw&search_mode=regular_search&ne_lat=39.82520179134156&ne_lng=-79.35474150772177&sw_lat=39.80486463620985&sw_lng=-79.3727272212659&zoom=15.363981837111908&search_by_map=true"
+						/>
+						<span className="caption">
+							<i>walking distance from Smith House Inn</i>
+						</span>
+					</div>
 					<Button
 						text="Turning Leaf Rentals"
 						href="https://www.turningleafrentals.com/fallingwater/"
