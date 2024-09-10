@@ -45,12 +45,12 @@ const faqList = [
 	{
 		question: 'What is the dress code?',
 		answer:
-			'Cocktail/casual attire is suggested but most importantly, we want you to feel comfortable and have fun!',
+			'Cocktail attire is suggested but most importantly, we want you to feel comfortable and have fun!',
 	},
 	{
 		question: 'Will transportation be provided?',
 		answer:
-			' We plan to schedule vehicles to & from the venue at a designated location in each of the main areas: 1) Addison, 2) The Historic Summit Inn, 3) Paddlers Lane Retreat, 4) Confluence (where there are a few hotels), and 5) Ohiopyle/Mill Run. We will do our absolute best to provide convenient transportation for each & every one of you. We will provide an exact pickup schedule closer to the wedding date.',
+			' We plan to schedule vehicles to & from the venue at a designated location in each of the main areas: 1) Ohiopyle/Mill Run (The Historic Summit House Inn & Rentals), 2) Confluence (Smith House Inn, AirBnBs, Paddler\s Lane), 3) Addison (Hartzell House/Fernwalk). We will do our absolute best to provide convenient transportation for each & every one of you. We will provide an exact pickup schedule closer to the wedding date.',
 	},
 	{
 		question: 'Does the venue have parking?',
