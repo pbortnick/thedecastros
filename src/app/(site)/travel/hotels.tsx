@@ -189,7 +189,8 @@ export default function Hotels() {
 							<li>
 								<strong>Cabin:</strong> One king bedroom with private bathroom.
 								One Queen bedroom with semi-private bath (shared with the single
-								room). One single bedroom.<i>$325/night - cash only upon arrival</i>
+								room). One single bedroom.
+								<i>$325/night - cash only upon arrival</i>
 							</li>
 						</ul>
 						<p>
@@ -309,10 +310,15 @@ export default function Hotels() {
 							<i>walking distance from Smith House Inn</i>
 						</span>
 					</div>
-					<Button
-						text="Turning Leaf Rentals"
-						href="https://www.turningleafrentals.com/fallingwater/"
-					/>
+					<div>
+						<Button
+							text="Turning Leaf Rentals"
+							href="https://www.turningleafrentals.com/fallingwater/"
+						/>
+						<span className="caption">
+							<i>Contact: Lindsay Zeuch sales@turningleafrentals.com</i>
+						</span>
+					</div>
 					<Button
 						text="Ohiopyle Vacation Rentals"
 						href="https://www.ohiopylevacationrentals.com/"
