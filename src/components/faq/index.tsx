@@ -1,10 +1,9 @@
 import Balancer from 'react-wrap-balancer'
-import type { ReactNode } from 'react'
 import s from './faq.module.css'
 
 interface FaqProps {
 	question: string
-	answer: ReactNode
+	answer: string | TrustedHTML
 }
 
 export default function Faq({ question, answer }: FaqProps) {
@@ -14,7 +13,9 @@ export default function Faq({ question, answer }: FaqProps) {
 				<Balancer>{question}</Balancer>
 			</div>
 			<div className={s.answer}>
-				<Balancer>{answer}</Balancer>
+				<Balancer>
+					<div dangerouslySetInnerHTML={{ __html: answer }} />
+				</Balancer>
 			</div>
 		</div>
 	)
