@@ -13,6 +13,7 @@ interface TravelOptionProps {
 		href: string
 	}
 	contact?: {
+		instructions?: string
 		name: string
 		phone: string
 		email?: string
@@ -31,13 +32,36 @@ export default function TravelOption({
 }: TravelOptionProps) {
 	return (
 		<div className={s.root}>
-			<div>
+			<div className={s.intro}>
 				<h4 className="heading-3">{heading}</h4>
 				{tags && (
 					<div className={s.tags}>
 						{tags.map((tag) => (
 							<Tag text={tag} />
 						))}
+					</div>
+				)}
+			</div>
+			<div className={s.content}>
+				{children && <div className={s.content}>{children}</div>}
+				{link && (
+					<div className={s.buttonWrapper}>
+						<Button text={link.text} href={link.href} target="_blank" />
+					</div>
+				)}
+				{contact && (
+					<div className={s.contactInfo}>
+						<span>
+							<strong>Contact info:</strong>
+						</span>
+						{contact.name && <span>{contact.name}</span>}
+						<a href={`tel:${contact.phone}`}>
+							{formatPhoneNumber(contact.phone)}
+						</a>
+						{contact.email && (
+							<a href={`mailto:${contact.email}`}>{contact.email}</a>
+						)}
+						{contact.instructions && <p>{contact.instructions}</p>}
 					</div>
 				)}
 			</div>
@@ -50,20 +74,6 @@ export default function TravelOption({
 					alt={image.alt ?? ''}
 				/>
 			)}
-			{children && <div className={s.content}>{children}</div>}
-			{contact && (
-				<p className={s.contactInfo}>
-					<strong>Contact info</strong>
-					<br />
-					{contact.name}
-					<br />
-					<a href={`tel:${contact.phone}`}>
-						{formatPhoneNumber(contact.phone)}
-					</a>
-					{contact.email && <a href={`mailto:${contact.email}`}>{contact.email}</a>}
-				</p>
-			)}
-			{link && <Button text={link.text} href={link.href} target="_blank" />}
 		</div>
 	)
 }
