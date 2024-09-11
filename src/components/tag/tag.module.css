@@ -1,6 +1,5 @@
 .root {
 	text-transform: uppercase;
-	background: var(--accent);
 	border-radius: 8px;
 	padding: 4px var(--spacing-01);
 	font-family: var(--schibsted-grotesk);

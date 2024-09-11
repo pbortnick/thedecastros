@@ -19,6 +19,7 @@ interface TravelOptionProps {
 		email?: string
 	}
 	tags?: string[]
+	isBooked?: boolean
 	children?: ReactNode
 }
 
@@ -29,16 +30,22 @@ export default function TravelOption({
 	link,
 	contact,
 	children,
+	isBooked,
 }: TravelOptionProps) {
 	return (
 		<div className={s.root}>
 			<div className={s.intro}>
 				<h4 className="heading-3">{heading}</h4>
-				{tags && (
+				{tags && !isBooked && (
 					<div className={s.tags}>
 						{tags.map((tag) => (
 							<Tag text={tag} />
 						))}
+					</div>
+				)}
+				{isBooked && (
+					<div className={s.tags}>
+						<Tag text="Booked" color="var(--accent-2)" />
 					</div>
 				)}
 			</div>
