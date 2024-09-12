@@ -35,9 +35,10 @@ export default function Hotels() {
 						contact={{
 							name: '',
 							phone: '7244388594',
-							email: 'events@summitinnresort.com',
+							instructions:
+								"Call to book and let them know you are a guest of Pamela Bortnick & Jason Decastro's wedding",
 						}}
-						tags={['max 24 guests']}
+						tags={['hotel rooms']}
 						image={{
 							src: '/images/hotels/historic-summit-inn.jpg',
 							alt: 'Image of patio at the Historic Summit Inn',
@@ -45,11 +46,9 @@ export default function Hotels() {
 							height: 400,
 						}}
 					>
-						<p>
-							We have 4 kings and 4 double rooms reserved at this hotel. Contact
-							them via phone or email and let them know you are a guest of
-							Pamela Bortnick & Jason Decastro's wedding.
-						</p>
+						<p>We have 5 kings rooms and 7 double rooms reserved at this hotel for 5/30-5/31.</p>
+						<p>The block will be available until April 1 2025</p>
+						<span><i>$244/night</i></span>
 					</TravelOption>
 					<Button
 						text="More options in Farmington"
@@ -98,10 +97,7 @@ export default function Hotels() {
 									<strong>West wing:</strong> 3 queen bedrooms
 								</li>
 							</ul>
-							<p>
-								Call or text Melissa & Robert and let them know you are a guest
-								of Pam & Jason's wedding.
-							</p>
+							<span><i>$215-280/night</i></span>
 						</>
 					</TravelOption>
 					<TravelOption
@@ -135,6 +131,7 @@ export default function Hotels() {
 							available by the time of the wedding. It is almost identical to
 							Fernwalk but will also have a private ADA compliant suite.
 						</p>
+						<span><i>$215-280/night for the house</i></span>	
 					</TravelOption>
 					<Button
 						text="More options in Addison"
@@ -145,7 +142,7 @@ export default function Hotels() {
 					<SectionHeading heading="Confluence, PA" />
 					<TravelOption
 						heading="Paddler's Lane"
-						tags={['capacity: 22-28 guests']}
+						// tags={['capacity: 22-28 guests']}
 						image={{
 							src: '/images/hotels/paddlers-lane.jpg',
 							width: 500,

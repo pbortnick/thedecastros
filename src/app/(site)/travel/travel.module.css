@@ -70,8 +70,8 @@
 	border-bottom: 1px solid var(--accent-2);
 
 	@media (--medium-up) {
-		padding-bottom: var(--spacing-09);
-		gap: var(--spacing-09);
+		padding-bottom: var(--spacing-10);
+		gap: var(--spacing-10);
 	}
 }
 
