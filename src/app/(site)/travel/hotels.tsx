@@ -46,18 +46,24 @@ export default function Hotels() {
 							height: 400,
 						}}
 					>
-						<p>We have 5 kings rooms and 7 double rooms reserved at this hotel for 5/30-5/31.</p>
+						<p>
+							We have 5 kings rooms and 7 double rooms reserved at this hotel
+							for 5/30-5/31.
+						</p>
 						<p>The block will be available until April 1 2025</p>
-						<span><i>$244/night</i></span>
+						<span>
+							<i>$244/night</i>
+						</span>
 					</TravelOption>
 					<Button
 						text="More options in Farmington"
 						href="https://www.ohiopylevacationrentals.com/"
 					/>
 				</div>
-				<div className={s.smallerOptions}>
+				{/* <div className={s.smallerOptions}>
 					<SectionHeading heading="Addison, PA" />
 					<TravelOption
+						isBooked
 						heading="Hartzell House"
 						tags={['14-18 guests']}
 						// tags={['groups', 'individuals', 'couples']}
@@ -77,9 +83,6 @@ export default function Hotels() {
 						}}
 					>
 						<>
-							{/* <p className="caption">
-								<i>$215-280/night</i>
-							</p> */}
 							<p>
 								Hartzell house is a special place. There is something
 								indescribable about this property. It is impeccably clean with
@@ -97,10 +100,13 @@ export default function Hotels() {
 									<strong>West wing:</strong> 3 queen bedrooms
 								</li>
 							</ul>
-							<span><i>$215-280/night</i></span>
+							<span>
+								<i>$215-280/night</i>
+							</span>
 						</>
 					</TravelOption>
 					<TravelOption
+						isBooked
 						heading="Fernwalk"
 						tags={['max 6 guests']}
 						image={{
@@ -131,13 +137,15 @@ export default function Hotels() {
 							available by the time of the wedding. It is almost identical to
 							Fernwalk but will also have a private ADA compliant suite.
 						</p>
-						<span><i>$215-280/night for the house</i></span>	
+						<span>
+							<i>$215-280/night for the house</i>
+						</span>
 					</TravelOption>
 					<Button
 						text="More options in Addison"
 						href="https://www.airbnb.com/rooms/960911509298197520"
 					/>
-				</div>
+				</div> */}
 				<div className={s.smallerOptions}>
 					<SectionHeading heading="Confluence, PA" />
 					<TravelOption
