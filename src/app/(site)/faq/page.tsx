@@ -49,7 +49,7 @@ const faqList = [
 	},
 	{
 		question: 'Will transportation be provided?',
-		answer: `<span>We plan to schedule vehicles to & from the venue at a designated location in each of the main areas: 1) Ohiopyle <i>(The Historic Summit House Inn & Rentals Sites)</i>, 2) Confluence <i>(Smith House Inn & AirBnBs, Paddler\s Lane)</i>, 3) Addison <i>(Hartzell House/Fernwalk)<i>. We will do our absolute best to provide convenient transportation for each & every one of you. We will provide an exact pickup schedule closer to the wedding date.</span>`,
+		answer: `<span>We plan to schedule vehicles to & from the venue at a designated location in each of the main areas: 1) Ohiopyle <i>(The Historic Summit House Inn & Rentals Sites)</i>, 2) Confluence <i>(stops at both Smith House Inn/AirBnBs and Paddler\s Lane)</i>, 3) Addison <i>(Hartzell House/Fernwalk)</i>. We will provide an exact pickup schedule closer to the wedding date.</span>`,
 	},
 	{
 		question: 'Does the venue have parking?',
@@ -63,6 +63,6 @@ const faqList = [
 	{
 		question: 'Why Fallingwater?',
 		answer:
-			'Fallingwater is a special place for us. We visited in 2020 and fell in love with the architecture and the natural beauty of the area. We hope you will love it as much as we do!',
+			"Fallingwater is a special place for us. We visited in 2020 and fell in love with the architecture and the natural beauty of the area. In addition, Pam's grandfather, Julian Moss, was a builder and was a big fan of Frank Lloyd Wright so choosing this location was in tribute to him. We hope you will love it as much as we do!",
 	},
 ]
