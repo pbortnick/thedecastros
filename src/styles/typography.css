@@ -26,18 +26,35 @@
 	font-size: 24px;
 	font-weight: 400;
 
-	
 	@media (--medium-up) {
 		font-size: 32px;
 	}
 }
 
 .heading-2 {
-	font-size: 32px;
+	font-size: 38px;
 	font-weight: 400;
+}
+
+.heading-3 {
+	font-size: 28px;
+	font-weight: 400;
+}
+
+.heading-4 {
+	font-size: 20px;
 }
 
 .body {
 	font-size: 18px;
 	font-weight: 400;
+}
+
+.subtitle {
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.caption {
+	font-size: 12px;
 }
