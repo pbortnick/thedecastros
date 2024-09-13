@@ -1,5 +1,8 @@
 import Hero from 'components/hero'
-import s from './travel.module.css'
+import Tabs from 'components/tabs'
+import Hotels from './hotels'
+import Directions from './directions'
+import Attractions from './attractions'
 
 export default function TravelPage() {
 	return (
@@ -13,9 +16,25 @@ export default function TravelPage() {
 					alt: '',
 				}}
 			/>
-			<div className={s.content}>
-				<div>Coming soon</div>
-			</div>
+			<Tabs
+				tabs={[
+					{
+						id: 'hotels',
+						label: 'Hotels',
+						content: <Hotels />,
+					},
+					{
+						id: 'directions',
+						label: 'Directions',
+						content: <Directions />,
+					},
+					{
+						id: 'attractions',
+						label: 'Attractions',
+						content: <Attractions />,
+					},
+				]}
+			/>
 		</>
 	)
 }

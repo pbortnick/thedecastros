@@ -61,9 +61,9 @@ const GalleryPage = async () => {
 			<Hero
 				title="Gallery"
 				image={{
-					src: require('./gallery-graphic.png'),
-					width: 397.5,
-					height: 407.5,
+					src: require('./accent.png'),
+					width: 795,
+					height: 815,
 					alt: 'Outline of proposal on the beach',
 				}}
 			/>

@@ -1,0 +1,23 @@
+.buttonContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button {
+	background-color: var(--primary);
+	color: var(--neutral);
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: var(--spacing-01) var(--spacing-03);
+	border-radius: 4px;
+	text-decoration: none;
+	transition: 0.25s;
+
+	&:hover {
+		background-color: var(--dark);
+		text-decoration: underline;
+	}
+}
