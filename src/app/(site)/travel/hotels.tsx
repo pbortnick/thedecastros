@@ -60,7 +60,7 @@ export default function Hotels() {
 						href="https://www.ohiopylevacationrentals.com/"
 					/>
 				</div>
-				{/* <div className={s.smallerOptions}>
+				<div className={s.smallerOptions}>
 					<SectionHeading heading="Addison, PA" />
 					<TravelOption
 						isBooked
@@ -145,7 +145,7 @@ export default function Hotels() {
 						text="More options in Addison"
 						href="https://www.airbnb.com/rooms/960911509298197520"
 					/>
-				</div> */}
+				</div>
 				<div className={s.smallerOptions}>
 					<SectionHeading heading="Confluence, PA" />
 					<TravelOption

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import s from './page.module.css'
 import Nav from 'components/nav'
+import WeddingAddToCalendar from 'components/add-to-calendar/wedding'
 
 export default function HomePage() {
 	return (
@@ -20,6 +21,7 @@ export default function HomePage() {
 						<span className="subheading">May 31, 2025</span>
 						<span className="subheading">Mill Run, PA</span>
 					</div>
+					<WeddingAddToCalendar />
 				</div>
 
 				<div className={s.imageContainer}>

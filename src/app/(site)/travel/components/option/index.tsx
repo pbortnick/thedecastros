@@ -4,6 +4,7 @@ import type { ReactNode } from 'react'
 import s from './travel-option.module.css'
 import Tag from 'components/tag'
 import { formatPhoneNumber } from 'lib/format-phone-number'
+import classNames from 'classnames'
 
 interface TravelOptionProps {
 	heading: string
@@ -45,7 +46,7 @@ export default function TravelOption({
 				)}
 				{isBooked && (
 					<div className={s.tags}>
-						<Tag text="Booked" color="var(--accent-2)" />
+						<Tag text="Booked" color="var(--accent-2)" textColor="white" />
 					</div>
 				)}
 			</div>
@@ -56,7 +57,7 @@ export default function TravelOption({
 						<Button text={link.text} href={link.href} target="_blank" />
 					</div>
 				)}
-				{contact && (
+				{!isBooked && contact && (
 					<div className={s.contactInfo}>
 						<span>
 							<strong>Contact info:</strong>
@@ -73,13 +74,14 @@ export default function TravelOption({
 				)}
 			</div>
 			{image && (
-				<Image
-					className={s.image}
-					{...image}
-					width={image.width ?? 500}
-					height={image.height ?? 400}
-					alt={image.alt ?? ''}
-				/>
+				<div className={classNames(s.image, { [s.isBooked]: isBooked })}>
+					<Image
+						{...image}
+						width={image.width ?? 500}
+						height={image.height ?? 400}
+						alt={image.alt ?? ''}
+					/>
+				</div>
 			)}
 		</div>
 	)
