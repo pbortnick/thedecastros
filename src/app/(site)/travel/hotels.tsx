@@ -48,7 +48,7 @@ export default function Hotels() {
 					>
 						<p>
 							We have 5 kings rooms and 7 double rooms reserved at this hotel
-							for 5/30-5/31.
+							for the nights of May 30 & May 31
 						</p>
 						<p>The block will be available until April 1 2025</p>
 						<span>
