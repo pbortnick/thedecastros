@@ -18,6 +18,7 @@ const WeddingAddToCalendar = () => (
 		size="5|5|5"
 		hideIconButton
 		hideBranding
+		hideCheckmark
 	/>
 )
 
