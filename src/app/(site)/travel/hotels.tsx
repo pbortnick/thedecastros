@@ -61,92 +61,6 @@ export default function Hotels() {
 					/>
 				</div>
 				<div className={s.smallerOptions}>
-					<SectionHeading heading="Addison, PA" />
-					<TravelOption
-						isBooked
-						heading="Hartzell House"
-						tags={['14-18 guests']}
-						// tags={['groups', 'individuals', 'couples']}
-						image={{
-							src: '/images/hotels/hartzell-house.jpg',
-							width: 500,
-							height: 400,
-							alt: 'Image of Hartzell House cabin',
-						}}
-						link={{
-							text: 'Rooms',
-							href: 'https://www.hartzellhouse.com/rooms.htm',
-						}}
-						contact={{
-							name: 'Melissa and Robert',
-							phone: '8143955248',
-						}}
-					>
-						<>
-							<p>
-								Hartzell house is a special place. There is something
-								indescribable about this property. It is impeccably clean with
-								whimsical touches.
-							</p>
-							<ul>
-								<li>
-									<strong>Cottage:</strong> 1 lofted queen bed & pull out
-									mattress
-								</li>
-								<li>
-									<strong>East wing upstairs:</strong> 1 king & 2 queen bedrooms
-								</li>
-								<li>
-									<strong>West wing:</strong> 3 queen bedrooms
-								</li>
-							</ul>
-							<span>
-								<i>$215-280/night</i>
-							</span>
-						</>
-					</TravelOption>
-					<TravelOption
-						isBooked
-						heading="Fernwalk"
-						tags={['max 6 guests']}
-						image={{
-							src: '/images/hotels/fernwalk.jpeg',
-							width: 500,
-							height: 400,
-							alt: 'Image of Fernwalk',
-						}}
-						link={{
-							text: 'Website',
-							href: 'https://fernwalk.wordpress.com/',
-						}}
-						contact={{
-							name: 'Beth',
-							phone: '2153130112',
-							instructions: `Call Beth and let her know that you are a guest of Pamela &
-							Jason's wedding.`,
-						}}
-					>
-						<p>
-							Fernwalk is right next door to the Hartzell House and they share
-							amenities. with an en suite bathroom and one with a detached (but
-							private) bathroom. There are also 2 single or 1 queen inflatable
-							beds available that can be placed in the semi-private sunroom.
-						</p>
-						<p>
-							Note: There is another property being built next door that will be
-							available by the time of the wedding. It is almost identical to
-							Fernwalk but will also have a private ADA compliant suite.
-						</p>
-						<span>
-							<i>$215-280/night for the house</i>
-						</span>
-					</TravelOption>
-					<Button
-						text="More options in Addison"
-						href="https://www.airbnb.com/rooms/960911509298197520"
-					/>
-				</div>
-				<div className={s.smallerOptions}>
 					<SectionHeading heading="Confluence, PA" />
 					<TravelOption
 						heading="Paddler's Lane"
@@ -282,6 +196,92 @@ export default function Hotels() {
 						</li>
 					</ul>
 				</TravelOption> */}
+				</div>
+				<div className={s.smallerOptions}>
+					<SectionHeading heading="Addison, PA" />
+					<TravelOption
+						isBooked
+						heading="Hartzell House"
+						tags={['14-18 guests']}
+						// tags={['groups', 'individuals', 'couples']}
+						image={{
+							src: '/images/hotels/hartzell-house.jpg',
+							width: 500,
+							height: 400,
+							alt: 'Image of Hartzell House cabin',
+						}}
+						link={{
+							text: 'Rooms',
+							href: 'https://www.hartzellhouse.com/rooms.htm',
+						}}
+						contact={{
+							name: 'Melissa and Robert',
+							phone: '8143955248',
+						}}
+					>
+						<>
+							<p>
+								Hartzell house is a special place. There is something
+								indescribable about this property. It is impeccably clean with
+								whimsical touches.
+							</p>
+							<ul>
+								<li>
+									<strong>Cottage:</strong> 1 lofted queen bed & pull out
+									mattress
+								</li>
+								<li>
+									<strong>East wing upstairs:</strong> 1 king & 2 queen bedrooms
+								</li>
+								<li>
+									<strong>West wing:</strong> 3 queen bedrooms
+								</li>
+							</ul>
+							<span>
+								<i>$215-280/night</i>
+							</span>
+						</>
+					</TravelOption>
+					<TravelOption
+						isBooked
+						heading="Fernwalk"
+						tags={['max 6 guests']}
+						image={{
+							src: '/images/hotels/fernwalk.jpeg',
+							width: 500,
+							height: 400,
+							alt: 'Image of Fernwalk',
+						}}
+						link={{
+							text: 'Website',
+							href: 'https://fernwalk.wordpress.com/',
+						}}
+						contact={{
+							name: 'Beth',
+							phone: '2153130112',
+							instructions: `Call Beth and let her know that you are a guest of Pamela &
+							Jason's wedding.`,
+						}}
+					>
+						<p>
+							Fernwalk is right next door to the Hartzell House and they share
+							amenities. with an en suite bathroom and one with a detached (but
+							private) bathroom. There are also 2 single or 1 queen inflatable
+							beds available that can be placed in the semi-private sunroom.
+						</p>
+						<p>
+							Note: There is another property being built next door that will be
+							available by the time of the wedding. It is almost identical to
+							Fernwalk but will also have a private ADA compliant suite.
+						</p>
+						<span>
+							<i>$215-280/night for the house</i>
+						</span>
+					</TravelOption>
+					<Button
+						text="More options in Addison"
+						href="https://www.airbnb.com/rooms/960911509298197520"
+					/>
 				</div>
 			</div>
 			<div className={s.smallerOptions}>
