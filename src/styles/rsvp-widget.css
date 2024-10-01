@@ -1,0 +1,20 @@
+:root {
+	.rsvp-survey {
+	}
+
+	.rsvp-font {
+	}
+
+	.rsvp-title {
+	}
+
+	#widget-oursvp {
+		.rsvp-btn {
+			cursor: pointer;
+
+			&:hover {
+				filter: unset;
+			}
+		}
+	}
+}
