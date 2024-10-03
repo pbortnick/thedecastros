@@ -1,12 +1,13 @@
 // pages/index.js
+import Hero from 'components/hero'
 import RsvpWidget from './components/rsvp-widget'
 
 const Home = () => {
 	return (
-		<div>
-			<h1>Welcome to Our RSVP Page</h1>
+		<>
+			<Hero title="RSVP" />
 			<RsvpWidget eventId="IUZIpFfYkHlXZSYa11Et" />
-		</div>
+		</>
 	)
 }
 

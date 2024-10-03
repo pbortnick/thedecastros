@@ -2,10 +2,12 @@
 	.rsvp-survey {
 	}
 
-	.rsvp-font {
-	}
+	.survey {
 
-	.rsvp-title {
+	}
+	
+
+	.rsvp-form {
 	}
 
 	#widget-oursvp {
@@ -16,5 +18,8 @@
 				filter: unset;
 			}
 		}
+	}
+
+	input {
 	}
 }
