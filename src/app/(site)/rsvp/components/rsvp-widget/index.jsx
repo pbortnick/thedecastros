@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 
-const RsvpWidget = ({ eventId }: { eventId: string }) => {
+const RsvpWidget = ({ eventId }) => {
 	useEffect(() => {
 		const loadScript = () => {
 			const w = window
