@@ -2,6 +2,7 @@
 @import './container.css';
 @import './spacing.css';
 @import './typography.css';
+@import './rsvp-widget.css';
 
 :root {
 	h1, h2, h3, h4, p {

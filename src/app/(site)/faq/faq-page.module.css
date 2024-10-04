@@ -9,7 +9,7 @@
 	padding-top: var(--spacing-06);
 
 	@media (--medium-up) {
-		padding-top: var(--spacing-03);
+		padding-top: var(--spacing-10);
 	}
 }
 
