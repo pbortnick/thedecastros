@@ -27,7 +27,7 @@ const RsvpWidget = () => {
 		oursvp('init', {
 			element: document.getElementById('rsvp-widget'),
 			eventId: 'IUZIpFfYkHlXZSYa11Et',
-			showBackBtn: false,
+			showBackBtn: true,
 		})
 	}, [])
 
