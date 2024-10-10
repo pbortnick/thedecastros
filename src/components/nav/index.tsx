@@ -10,7 +10,7 @@ import s from './nav.module.css'
 const PAGES = [
 	{ name: 'Home', href: '/' },
 	{ name: 'Schedule', href: '/schedule' },
-	// { name: 'RSVP', href: '/rsvp' },
+	{ name: 'RSVP', href: '/rsvp' },
 ]
 
 const DROPDOWN_PAGES = [
