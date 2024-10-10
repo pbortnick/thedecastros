@@ -28,8 +28,7 @@
 		"**/*.ts",
 		"**/*.tsx",
 		".next/types/**/*.ts",
-		".vscode/codegen.ts",
-		"src/app/(site)/rsvp/components/rsvp-widget/index.jsx"
+		".vscode/codegen.ts"
 	],
 	"exclude": ["node_modules"]
 }

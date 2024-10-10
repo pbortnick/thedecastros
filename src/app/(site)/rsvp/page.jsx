@@ -1,14 +1,16 @@
+// pages/index.js
+import Hero from 'components/hero'
 import Head from 'next/head'
 import Script from 'next/script'
 
-const RsvpWidget = () => {
+const Home = () => {
 	return (
 		<>
 			<Head>
 				<Script
 					id="oursvp-script"
 					src="https://www.oursvp.app/widget/widget.js"
-					strategy="lazyOnload"
+					strategy="afterInteractive"
 					onLoad={() => {
 						window.oursvp =
 							window.oursvp ||
@@ -23,8 +25,10 @@ const RsvpWidget = () => {
 					}}
 				/>
 			</Head>
+			<Hero title="RSVP" />
+			<div id="rsvp-widget"></div>
 		</>
 	)
 }
 
-export default RsvpWidget
+export default Home
