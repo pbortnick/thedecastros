@@ -1,0 +1,16 @@
+.rsvpWidgetLoading {
+	background-color: #fff;
+	width: 446px;
+	height: 336px;
+	margin: 0 auto;
+	margin-top: 1.5rem;
+	--tw-shadow: 0 0.5px 5px 0 #00000012;
+	--tw-shadow-colored: 0 0.5px 5px 0 var(--tw-shadow-color);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+		var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+	border-radius: 0.25rem;
+	max-width: 28rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
