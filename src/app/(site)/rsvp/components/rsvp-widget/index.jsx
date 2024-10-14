@@ -1,11 +1,18 @@
 'use client'
 
-// import Head from 'next/head'
 import { useEffect } from 'react'
-// import Script from 'next/script'
+// import { usePathname } from 'next/navigation'
 
 const RsvpWidget = () => {
+	// const pathname = usePathname()
+
 	useEffect(() => {
+		if (typeof window === 'undefined') return
+
+		if (window.oursvp) {
+			window.oursvp('destroy')
+		}
+
 		;(function (w, d, s, o, f, js, fjs) {
 			w[o] =
 				w[o] ||
@@ -31,9 +38,7 @@ const RsvpWidget = () => {
 		})
 	}, [])
 
-	return (
-		<div id="rsvp-widget"></div>
-	)
+	return <div id="rsvp-widget"></div>
 }
 
 export default RsvpWidget

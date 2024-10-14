@@ -5,6 +5,7 @@
 @custom-media --large (min-width: 1120px);
 
 .root {
+	width: 100%;
 	display: grid;
 	/* align-items: center; */
 	/* flex-direction: column; */

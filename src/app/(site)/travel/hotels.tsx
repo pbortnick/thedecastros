@@ -63,6 +63,7 @@ export default function Hotels() {
 				<div className={s.smallerOptions}>
 					<SectionHeading heading="Confluence, PA" />
 					<TravelOption
+						isBooked
 						heading="Paddler's Lane"
 						// tags={['capacity: 22-28 guests']}
 						image={{
@@ -75,15 +76,15 @@ export default function Hotels() {
 							text: 'Website',
 							href: 'https://www.paddlerslane.com/',
 						}}
-						contact={{
-							name: 'Robin',
-							phone: '8149640410',
-							instructions: `Let Pam know if you are interested
-								in any or all of these options via email hello@thedecastros.com
-								or phone (516) 205-3754.`,
-						}}
+						// contact={{
+						// 	name: 'Robin',
+						// 	phone: '8149640410',
+						// 	instructions: `Let Pam know if you are interested
+						// 		in any or all of these options via email hello@thedecastros.com
+						// 		or phone (516) 205-3754.`,
+						// }}
 					>
-						<>
+						{/* <>
 							<p>
 								Paddler's Lane is absolutely beautiful. It has 3 different homes
 								on a large campground property with access to the river.
@@ -110,7 +111,7 @@ export default function Hotels() {
 								contact Robin and let her know that you are a guest of our
 								wedding.
 							</p>
-						</>
+						</> */}
 					</TravelOption>
 					<TravelOption
 						heading="Smith House Inn"
@@ -219,7 +220,7 @@ export default function Hotels() {
 						// 	phone: '8143955248',
 						// }}
 					/>
-						{/* <>
+					{/* <>
 							<p>
 								Hartzell house is a special place. There is something
 								indescribable about this property. It is impeccably clean with
@@ -263,7 +264,7 @@ export default function Hotels() {
 						// 	Jason's wedding.`,
 						// }}
 					/>
-						{/* <p>
+					{/* <p>
 							Fernwalk is right next door to the Hartzell House and they share
 							amenities. with an en suite bathroom and one with a detached (but
 							private) bathroom. There are also 2 single or 1 queen inflatable
