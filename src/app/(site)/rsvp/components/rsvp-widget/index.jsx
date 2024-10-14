@@ -7,11 +7,11 @@ const RsvpWidget = () => {
 	// const pathname = usePathname()
 
 	useEffect(() => {
-		if (typeof window === 'undefined') return
+		// if (typeof window === 'undefined') return
 
-		if (window.oursvp) {
-			window.oursvp('destroy')
-		}
+		// if (window.oursvp) {
+		// 	window.oursvp('destroy')
+		// }
 
 		;(function (w, d, s, o, f, js, fjs) {
 			w[o] =
