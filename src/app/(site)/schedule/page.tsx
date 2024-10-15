@@ -10,8 +10,8 @@ export default function SchedulePage() {
 					src: require('./accent.png'),
 					// width: 1905,
 					// height: 2000,
-					width: 476,
-					height: 500,
+					width: 396.6,
+					height: 416.6,
 					alt: '',
 				}}
 			/>
