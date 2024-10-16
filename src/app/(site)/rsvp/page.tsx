@@ -1,16 +1,16 @@
 import Hero from 'components/hero'
-import RsvpWidget from './components/rsvp-widget'
+import RsvpWidget from './widget'
 
-const Home = () => {
+const RsvpPage = () => {
 	return (
 		<>
 			<Hero title="RSVP" />
 			<div style={{ margin: '0 auto', maxWidth: '90%', width: 'fit-content' }}>
-				<p>If the form below does not load, please refresh the page.</p>
+				<p>RSVP for Pamela & Jason's wedding weekend</p>
 			</div>
 			<RsvpWidget />
 		</>
 	)
 }
 
-export default Home
+export default RsvpPage
