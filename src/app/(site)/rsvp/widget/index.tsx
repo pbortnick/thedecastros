@@ -18,7 +18,7 @@ type Inputs = {
   example: string,
   exampleRequired: string,
 };
-
+    
 
 const RsvpWidget = () => {
 	const {
