@@ -1,16 +1,18 @@
 import Hero from 'components/hero'
-import RsvpWidget from './widget'
+import RsvpWidget from 'components/rsvp-widget'
+import { getForm } from 'components/rsvp-widget/utils'
 
-const RsvpPage = () => {
+const EVENT_ID = 'IUZIpFfYkHlXZSYa11Et'
+
+const Rsvp = async () => {
+	const data = await getForm(EVENT_ID)
+
 	return (
 		<>
-			<Hero title="RSVP" />
-			<div style={{ margin: '0 auto', maxWidth: '90%', width: 'fit-content' }}>
-				<p>RSVP for Pamela & Jason's wedding weekend</p>
-			</div>
-			<RsvpWidget />
+			<Hero title="RSVP" subtitle="Wedding Weekend" />
+			<RsvpWidget eventId="IUZIpFfYkHlXZSYa11Et" {...data} />
 		</>
 	)
 }
 
-export default RsvpPage
+export default Rsvp

@@ -4,6 +4,14 @@
 	align-items: center;
 }
 
+.fullWidth {
+	width: 100%;
+
+	& > * {
+		width: 100%;
+	}
+}
+
 .button {
 	background-color: var(--primary);
 	color: var(--neutral);
@@ -11,13 +19,34 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: var(--spacing-01) var(--spacing-03);
+	padding: var(--spacing-02) var(--spacing-03);
 	border-radius: 4px;
 	text-decoration: none;
 	transition: 0.25s;
+	cursor: pointer;
+	font-family: inherit;
+	font-feature-settings: inherit;
+	font-variation-settings: inherit;
 
 	&:hover {
 		background-color: var(--dark);
+	}
+}
+
+.disabled {
+	background-color: var(--accent-light);
+	color: var(--accent);
+	cursor: not-allowed;
+
+	&:hover {
+		background-color: var(--accent-light);
+	}
+}
+
+.buttonLink {
+	composes: button;
+
+	&:hover {
 		text-decoration: underline;
 	}
 }

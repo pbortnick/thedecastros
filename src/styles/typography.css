@@ -46,8 +46,13 @@
 }
 
 .body {
+	line-height: 1.5;
 	font-size: 18px;
 	font-weight: 400;
+}
+
+.body-small {
+	font-size: 14px;
 }
 
 .subtitle {

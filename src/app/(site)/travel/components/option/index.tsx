@@ -1,5 +1,5 @@
 import Image, { type ImageProps } from 'next/image'
-import Button from 'components/button'
+import Button from 'components/button/link'
 import type { ReactNode } from 'react'
 import s from './travel-option.module.css'
 import Tag from 'components/tag'

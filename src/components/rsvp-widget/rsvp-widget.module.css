@@ -1,0 +1,68 @@
+.formContainer {
+	width: 28rem;
+	background-color: var(--neutral);
+	--tw-shadow: 0 0.5px 5px 0 #00000012;
+	--tw-shadow-colored: 0 0.5px 5px 0 var(--tw-shadow-color);
+	--tw-border-opacity: 1;
+	border-color: rgb(245 245 244 / var(--tw-border-opacity));
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+		var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+	border-radius: 0.25rem;
+	max-width: 28rem;
+	margin: auto;
+	font-family: inherit;
+	font-feature-settings: inherit;
+	font-variation-settings: inherit;
+
+	& h3 {
+		margin-top: var(--spacing-02);
+	}
+}
+
+.form {
+	padding: 1.5rem;
+	align-items: flex-start;
+	flex-direction: column;
+	display: flex;
+	position: relative;
+
+	& input {
+		margin: 0;
+	}
+}
+
+.formInner {
+	flex-direction: column;
+	width: 100%;
+	display: flex;
+}
+
+.textInput {
+	appearance: none;
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgb(212, 212, 212);
+	/* color rgb(38, 38, 38) */
+	cursor: text;
+	display: block;
+	font-size: 14px;
+	padding: 10px;
+	border-radius: 4px;
+}
+
+.inputs {
+	padding-top: var(--spacing-06);
+	gap: var(--spacing-04);
+	flex-direction: column;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	display: none;
+
+	&.active {
+		display: flex;
+	}
+}
+
+.error {
+	composes: body-small from global;
+	color: var(--accent-2);
+}

@@ -1,4 +1,4 @@
-import Button from 'components/button'
+import Button from 'components/button/link'
 import TravelOption from './components/option'
 import SectionHeading from './components/section-heading'
 import s from './travel.module.css'
