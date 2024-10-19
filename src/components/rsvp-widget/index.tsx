@@ -2,7 +2,7 @@
 
 import Script from 'next/script'
 
-const RsvpWidget = () => {
+const RsvpWidget = ({ eventId }: { eventId: string }) => {
 	return (
 		<>
 			<Script
@@ -17,11 +17,14 @@ const RsvpWidget = () => {
 }(window, document, 'script', 'oursvp', 'https://www.oursvp.app/widget/widget.js'));
 oursvp('init', { 
 		element: document.getElementById('rsvp-widget'),
-		eventId: 'IUZIpFfYkHlXZSYa11Et',
+		eventId: "${eventId}",
 		showBackBtn: true
 });`,
 				}}
 			/>
+			<div style={{ margin: '0 auto', maxWidth: '90%', width: 'fit-content', padding: '24px' }}>
+				<p>If the form below does not load, please refresh the page.</p>
+			</div>
 			<div id="rsvp-widget"></div>
 		</>
 	)
