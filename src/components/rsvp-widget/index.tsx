@@ -22,10 +22,17 @@ oursvp('init', {
 });`,
 				}}
 			/>
-			<div style={{ margin: '0 auto', maxWidth: '90%', width: 'fit-content', padding: '24px' }}>
-				<p>If the form below does not load, please refresh the page.</p>
-			</div>
 			<div id="rsvp-widget"></div>
+			<div
+				className="container"
+				style={{
+					paddingTop: 'var(--spacing-03)',
+				}}
+			>
+				<p className="centered-text">
+					If the form doesn't load, please refresh the page.
+				</p>
+			</div>
 		</>
 	)
 }
