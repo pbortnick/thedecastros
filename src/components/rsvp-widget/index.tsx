@@ -1,27 +1,63 @@
 'use client'
 
-import Script from 'next/script'
+import { useEffect, useState } from 'react'
+// import Script from 'next/script'
+import Widget from './widget'
 
 const RsvpWidget = ({ eventId }: { eventId: string }) => {
+	// const [mainScriptRemoved, setMainScriptRemoved] = useState(false)
+	// const [jsScriptRemoved, setJsScriptRemoved] = useState(false)
+	const [loaded, setLoaded] = useState(false)
+
+	// useEffect(() => {
+	// 	if (mainScriptRemoved) return
+	// 	console.log('running useEffect 1')
+	// 	const script = document.querySelector('#oursvp')
+	// 	if (script) {
+	// 		script.remove()
+	// 	}
+	// 	setMainScriptRemoved(true)
+	// }, [mainScriptRemoved])
+
+	// useEffect(() => {
+	// 	if (jsScriptRemoved || !mainScriptRemoved) return
+	// 	console.log('running useEffect 2')
+	// 	const script = document.querySelector('#oursvp-js-script')
+	// 	if (script) {
+	// 		script.remove()
+	// 	}
+	// 	setJsScriptRemoved(true)
+	// }, [mainScriptRemoved, jsScriptRemoved])
+
+	// useEffect(() => {
+	// 	if (loaded) return
+	// 	console.log('running useEffect 3')
+
+	// 	if (jsScriptRemoved) {
+	// 		setLoaded(true)
+	// 	}
+	// }, [loaded, jsScriptRemoved])
+
+	// console.log({ mainScriptRemoved, jsScriptRemoved, loaded })
+
+	useEffect(() => {
+		setLoaded(true)
+		return () => {
+			const jsScript = document.querySelector('#oursvp-js-script')
+			if (jsScript) {
+				jsScript.remove()
+			}
+
+			const mainScript = document.querySelector('#oursvp')
+			if (mainScript) {
+				mainScript.remove()
+			}
+		}
+	}, [])
+
 	return (
 		<>
-			<Script
-				type="text/javascript"
-				id=""
-				dangerouslySetInnerHTML={{
-					__html: `
-	(function (w, d, s, o, f, js, fjs) {
-		w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
-		js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
-		js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
-}(window, document, 'script', 'oursvp', 'https://www.oursvp.app/widget/widget.js'));
-oursvp('init', { 
-		element: document.getElementById('rsvp-widget'),
-		eventId: "${eventId}",
-		showBackBtn: true
-});`,
-				}}
-			/>
+			<Widget eventId={eventId} loaded={loaded} />
 			<div id="rsvp-widget"></div>
 			<div
 				className="container"
