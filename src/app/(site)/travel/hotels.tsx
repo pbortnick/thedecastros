@@ -201,7 +201,7 @@ export default function Hotels() {
 				<div className={s.smallerOptions}>
 					<SectionHeading heading="Addison, PA" />
 					<TravelOption
-						isBooked
+						// isBooked
 						heading="Hartzell House"
 						tags={['14-18 guests']}
 						// tags={['groups', 'individuals', 'couples']}
@@ -244,7 +244,7 @@ export default function Hotels() {
 						</>
 					</TravelOption> */}
 					<TravelOption
-						isBooked
+						// isBooked
 						heading="Fernwalk"
 						tags={['max 6 guests']}
 						image={{

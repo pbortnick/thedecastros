@@ -75,24 +75,25 @@ const data: Array<DateItem> = [
 	{
 		date: 'Saturday, May 31',
 		items: [
-			{
-				heading: 'Fallingwater Tours',
-				description: '',
-				time: '10am-12pm',
-				location: 'Fallingwater',
-				addressLink: 'https://maps.app.goo.gl/Zut1RfyGQH1Yvoc2A',
-			},
+			// {
+			// 	heading: 'Fallingwater Tours',
+			// 	description: '',
+			// 	time: '10am-12pm',
+			// 	location: 'Fallingwater',
+			// 	addressLink: 'https://maps.app.goo.gl/Zut1RfyGQH1Yvoc2A',
+			// },
 			{
 				heading: 'Ceremony & Reception',
 				description: 'The main event',
-				time: '4pm - 10pm',
+				time: '5pm - 10pm',
 				location: 'The Barn at Fallingwater',
 				addressLink: 'https://maps.app.goo.gl/nvxHYZxzrYAhgkjc7',
 			},
 			{
 				heading: 'After Party',
+				time: '10pm - 11pm',
 				description:
-					'Subject to change but will likely be at the Anchor In. More details to come.',
+					'Continue partying at The Barn at Fallingwater with a DJ, dancing, and late-night snacks',
 			},
 		],
 	},
