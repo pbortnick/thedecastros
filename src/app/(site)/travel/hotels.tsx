@@ -201,7 +201,7 @@ export default function Hotels() {
 				<div className={s.smallerOptions}>
 					<SectionHeading heading="Addison, PA" />
 					<TravelOption
-						// isBooked
+						isBooked
 						heading="Hartzell House"
 						tags={['14-18 guests']}
 						// tags={['groups', 'individuals', 'couples']}
@@ -215,12 +215,12 @@ export default function Hotels() {
 							text: 'Rooms',
 							href: 'https://www.hartzellhouse.com/rooms.htm',
 						}}
-						// contact={{
-						// 	name: 'Melissa and Robert',
-						// 	phone: '8143955248',
-						// }}
+						contact={{
+							name: 'Melissa and Robert',
+							phone: '8143955248',
+						}}
 					/>
-					{/* <>
+					<>
 							<p>
 								Hartzell house is a special place. There is something
 								indescribable about this property. It is impeccably clean with
@@ -242,9 +242,9 @@ export default function Hotels() {
 								<i>$215-280/night</i>
 							</span>
 						</>
-					</TravelOption> */}
+					</TravelOption>
 					<TravelOption
-						// isBooked
+						isBooked
 						heading="Fernwalk"
 						tags={['max 6 guests']}
 						image={{
@@ -257,14 +257,14 @@ export default function Hotels() {
 							text: 'Website',
 							href: 'https://fernwalk.wordpress.com/',
 						}}
-						// contact={{
-						// 	name: 'Beth',
-						// 	phone: '2153130112',
-						// 	instructions: `Call Beth and let her know that you are a guest of Pamela &
-						// 	Jason's wedding.`,
-						// }}
+						contact={{
+							name: 'Beth',
+							phone: '2153130112',
+							instructions: `Call Beth and let her know that you are a guest of Pamela &
+							Jason's wedding.`,
+						}}
 					/>
-					{/* <p>
+					<p>
 							Fernwalk is right next door to the Hartzell House and they share
 							amenities. with an en suite bathroom and one with a detached (but
 							private) bathroom. There are also 2 single or 1 queen inflatable
@@ -278,7 +278,7 @@ export default function Hotels() {
 						<span>
 							<i>$215-280/night for the house</i>
 						</span>
-					</TravelOption> */}
+					</TravelOption>
 					<Button
 						text="More options in Addison"
 						href="https://www.airbnb.com/rooms/960911509298197520"
