@@ -201,7 +201,7 @@ export default function Hotels() {
 				<div className={s.smallerOptions}>
 					<SectionHeading heading="Addison, PA" />
 					<TravelOption
-						isBooked
+						// isBooked
 						heading="Hartzell House"
 						tags={['14-18 guests']}
 						// tags={['groups', 'individuals', 'couples']}
@@ -219,7 +219,7 @@ export default function Hotels() {
 							name: 'Melissa and Robert',
 							phone: '8143955248',
 						}}
-					/>
+					>
 					<>
 							<p>
 								Hartzell house is a special place. There is something
@@ -244,7 +244,7 @@ export default function Hotels() {
 						</>
 					</TravelOption>
 					<TravelOption
-						isBooked
+						// isBooked
 						heading="Fernwalk"
 						tags={['max 6 guests']}
 						image={{
@@ -263,7 +263,7 @@ export default function Hotels() {
 							instructions: `Call Beth and let her know that you are a guest of Pamela &
 							Jason's wedding.`,
 						}}
-					/>
+					>
 					<p>
 							Fernwalk is right next door to the Hartzell House and they share
 							amenities. with an en suite bathroom and one with a detached (but
