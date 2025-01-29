@@ -68,7 +68,8 @@ const data: Array<DateItem> = [
 		items: [
 			{
 				heading: 'Welcome event',
-				description: 'Details to come',
+				description: 'More details on location and time to come.',
+				time: 'Around 7pm',
 			},
 		],
 	},
