@@ -1,4 +1,3 @@
-import OpenGraphReact from 'opengraph-react'
 import SectionHeading from './components/section-heading'
 import s from './travel.module.css'
 
@@ -19,20 +18,18 @@ export default function Attractions() {
 									href="https://fallingwater.org/visit-laurel-highlands/"
 									target="_blank"
 								>
-									Fallingwater's website
+									Visit the Laurel Highlands of Pennsylvania - Home to
+									Fallingwater
 								</a>
-							</li>
-							<li>
-								<OpenGraphReact
-									site="https://fallingwater.org/visit-laurel-highlands/"
-									appId="695b84f7-ff34-4c32-8301-e6407d7356f1"
-								/>
 							</li>
 							<li>
 								<a
 									href="https://www.hartzellhouse.com/area.htm"
 									target="_blank"
-								></a>
+								>
+									Things to Do & See: Vacations in the Laurel Highlands of
+									Western PA
+								</a>
 							</li>
 						</ul>
 					</>
