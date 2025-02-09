@@ -61,6 +61,22 @@ const faqList = [
 			'The ceremony will be outdoors. The cocktail hour will be outdoors & tented. The reception will be inside the barn.',
 	},
 	{
+		question: 'Can I bring my kids?',
+		answer:
+			'Yes we would love to have your kids at the wedding! Just please let us know so we can accommodate.',
+	},
+	{
+		question: 'Can I bring a plus one?',
+		answer:
+			'Yes of course, you can fill out the RSVP form with your plus one’s name.',
+	},
+	{
+		question:
+			'I am having trouble RSVPing through the website. What should I do?',
+		answer:
+			'Please email us at hello@thedecastros.com with the subject line “RSVP” and let us know if you will be attending the welcome event on friday and the wedding on saturday. Please include your name and your guest’s name if applicable.',
+	},
+	{
 		question: 'Why Fallingwater?',
 		answer:
 			"Fallingwater is a special place for us. We visited in 2020 and fell in love with the architecture and the natural beauty of the area. In addition, Pam's grandfather, Julian Moss, was a builder and was a big fan of Frank Lloyd Wright so choosing this location was in tribute to him. We hope you will love it as much as we do!",
