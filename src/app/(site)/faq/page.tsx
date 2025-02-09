@@ -60,15 +60,15 @@ const faqList = [
 		answer:
 			'The ceremony will be outdoors. The cocktail hour will be outdoors & tented. The reception will be inside the barn.',
 	},
-	{
-		question: 'Can I bring my kids?',
-		answer:
-			'Yes we would love to have your kids at the wedding! Just please let us know so we can accommodate.',
-	},
+	// {
+	// 	question: 'Can I bring my kids?',
+	// 	answer:
+	// 		'We love kids and would love to have them at the wedding. Please let us know if you plan to bring your children so we can accommodate.',
+	// },
 	{
 		question: 'Can I bring a plus one?',
 		answer:
-			'Yes of course, you can fill out the RSVP form with your plus one’s name.',
+			'Unfortunately, our venue has a strict limit on the number of guests we can have. However, we will do our best to accommodate plus ones for all of our guests. If you do not see a plus one option on your RSVP and would like to bring someone, please reach out to us.',
 	},
 	{
 		question:
