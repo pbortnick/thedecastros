@@ -47,8 +47,8 @@ export default function Hotels() {
 						}}
 					>
 						<p>
-							We have 5 kings rooms and 7 double rooms reserved at this hotel
-							for the nights of May 30 & May 31
+							We have plenty of rooms reserved at this hotel for the nights of
+							May 30 & May 31
 						</p>
 						<p>The block will be available until April 1 2025</p>
 						<span>
@@ -220,7 +220,7 @@ export default function Hotels() {
 							phone: '8143955248',
 						}}
 					>
-					<>
+						<>
 							<p>
 								Hartzell house is a special place. There is something
 								indescribable about this property. It is impeccably clean with
@@ -264,7 +264,7 @@ export default function Hotels() {
 							Jason's wedding.`,
 						}}
 					>
-					<p>
+						<p>
 							Fernwalk is right next door to the Hartzell House and they share
 							amenities. with an en suite bathroom and one with a detached (but
 							private) bathroom. There are also 2 single or 1 queen inflatable
