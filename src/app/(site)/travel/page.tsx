@@ -29,8 +29,8 @@ export default function TravelPage() {
 						content: <Directions />,
 					},
 					{
-						id: 'attractions',
-						label: 'Attractions',
+						id: 'things-to-do',
+						label: 'Things to do',
 						content: <Attractions />,
 					},
 				]}

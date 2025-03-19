@@ -5,7 +5,27 @@ export default function Attractions() {
 	return (
 		<div className={s.content}>
 			<SectionHeading
+				heading="Restaurants"
+				alignment="left"
+				subtitle={
+					<>
+						<p>
+							We highly recommend this restaurant for a special dinner while you
+							are in the area:
+						</p>
+						<ul>
+							<li>
+								<a href="https://www.treetopsrestaurant.net/" target="_blank">
+									Treetops at Polymath Park
+								</a>
+							</li>
+						</ul>
+					</>
+				}
+			/>
+			<SectionHeading
 				heading="Attractions"
+				alignment="left"
 				subtitle={
 					<>
 						<p>
