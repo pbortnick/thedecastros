@@ -78,10 +78,13 @@
 	}
 }
 
+.travelDropdown {
+	position: relative;
+}
+
 .dropdownTrigger {
 	height: 100%;
 	vertical-align: middle;
-	font-size: 14px;
 	font-family: var(--montaga);
 	padding: 0;
 	border: none;
@@ -93,6 +96,11 @@
 	outline: none;
 	user-select: none;
 	background: transparent;
+	font-size: 18px;
+
+	@media (--small) {
+		font-size: 14px;
+	}
 }
 
 .dropdownContent {

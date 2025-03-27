@@ -58,7 +58,7 @@ export default function Directions() {
 								Pittsburgh International Airport
 							</a>
 							<br />
-							<span>~1.5 hr drive</span>
+							<span>~1 hr drive</span>
 						</li>
 					</ul>
 				</>

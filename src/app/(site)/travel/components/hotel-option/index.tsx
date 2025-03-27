@@ -1,12 +1,12 @@
 import Image, { type ImageProps } from 'next/image'
 import Button from 'components/button'
 import type { ReactNode } from 'react'
-import s from './travel-option.module.css'
+import s from './hotel-option.module.css'
 import Tag from 'components/tag'
 import { formatPhoneNumber } from 'lib/format-phone-number'
 import classNames from 'classnames'
 
-interface TravelOptionProps {
+interface HotelOptionProps {
 	heading: string
 	image?: ImageProps
 	link?: {
@@ -24,7 +24,7 @@ interface TravelOptionProps {
 	children?: ReactNode
 }
 
-export default function TravelOption({
+export default function HotelOption({
 	heading,
 	tags,
 	image,
@@ -32,10 +32,10 @@ export default function TravelOption({
 	contact,
 	children,
 	isBooked,
-}: TravelOptionProps) {
+}: HotelOptionProps) {
 	return (
 		<div className={s.root}>
-			<div className={s.content}>
+			<div className={s.intro}>
 				<h4 className="heading-3">{heading}</h4>
 				{tags && !isBooked && (
 					<div className={s.tags}>
@@ -49,6 +49,8 @@ export default function TravelOption({
 						<Tag text="Booked" color="var(--accent-2)" textColor="white" />
 					</div>
 				)}
+			</div>
+			<div className={s.content}>
 				{children && <div className={s.content}>{children}</div>}
 				{link && (
 					<div className={s.buttonWrapper}>

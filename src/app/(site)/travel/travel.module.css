@@ -5,6 +5,7 @@
 @custom-media --large (min-width: 1120px);
 
 .content {
+	padding-top: var(--spacing-10);
 	composes: container from global;
 	display: flex;
 	flex-direction: column;

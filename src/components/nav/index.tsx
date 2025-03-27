@@ -13,9 +13,15 @@ const PAGES = [
 	{ name: 'RSVP', href: '/rsvp' },
 ]
 
+const TRAVEL_PAGES = [
+	{ name: 'Hotels', href: '/travel/hotels' },
+	{ name: 'Things to Do', href: '/travel/things-to-do' },
+	{ name: 'Dining', href: '/travel/dining' },
+	{ name: 'Directions', href: '/travel/directions' },
+]
+
 const DROPDOWN_PAGES = [
 	{ name: 'Gallery', href: '/gallery' },
-	{ name: 'Travel', href: '/travel' },
 	{ name: 'FAQ', href: '/faq' },
 ]
 
@@ -39,6 +45,27 @@ const MenubarDemo = () => {
 							</Link>
 						</NavigationMenu.Item>
 					))}
+					<NavigationMenu.Item className={s.travelDropdown}>
+						<NavigationMenu.Trigger className={s.dropdownTrigger}>
+							Travel
+							<CaretDownIcon className={s.caret} aria-hidden />
+						</NavigationMenu.Trigger>
+						<NavigationMenu.Content className={s.dropdownContent}>
+							{TRAVEL_PAGES.map((page) => (
+								<NavigationMenu.Item key={page.name}>
+									<Link
+										href={page.href}
+										className={classNames(
+											s.link,
+											page.href === currentPath && s.isActive,
+										)}
+									>
+										{page.name}
+									</Link>
+								</NavigationMenu.Item>
+							))}
+						</NavigationMenu.Content>
+					</NavigationMenu.Item>
 					{DROPDOWN_PAGES.map((page) => (
 						<NavigationMenu.Item key={page.name} className={s.dropdownPage}>
 							<Link
