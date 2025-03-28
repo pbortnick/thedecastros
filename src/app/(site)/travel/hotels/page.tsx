@@ -330,7 +330,7 @@ export default function Hotels() {
 					<HotelOption heading="Rental Sites">
 						<p>
 							There are plenty of other options in the area. We suggest finding
-							to <strong>Addison, Confluence, & Farmington/Chalk Hill</strong>{' '}
+							to <strong>Addison, Confluence, & Farmington/Ohiopyle/Chalk Hill</strong>{' '}
 							for the most convenient locations.
 						</p>
 						{/* <div>
