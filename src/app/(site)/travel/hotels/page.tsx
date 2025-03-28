@@ -36,7 +36,7 @@ export default function Hotels() {
 				/>
 				<div className={s.options}>
 					<div className={s.smallerOptions}>
-						<SectionHeading heading="Farmington, PA" />
+						<SectionHeading heading="Farmington/Ohiopyle" />
 						<HotelOption
 							heading="The Historic Summit Inn"
 							link={{
@@ -61,15 +61,33 @@ export default function Hotels() {
 								We have plenty of rooms reserved at this hotel for the nights of
 								May 30 & May 31
 							</p>
-							<p>The block will be available until April 1 2025</p>
+							<p>The block will be available until April 6 2025</p>
 							<span>
 								<i>$244/night</i>
 							</span>
 						</HotelOption>
-						<Button
-							text="More options in Farmington"
-							href="https://www.ohiopylevacationrentals.com/"
-						/>
+						<HotelOption
+							heading="Ohiopyle Vacation Rentals"
+							link={{
+								text: 'Website',
+								href: 'https://www.ohiopylevacationrentals.com/"',
+							}}
+							tags={['rental homes']}
+							image={{
+								src: '/images/hotels/ohiopyle-vaca-rentals.jpg',
+								alt: 'Image of Ohiopyle Vaction Rentals',
+								width: 500,
+								height: 400,
+							}}
+						>
+							<p>
+								Unique rental collections including properties in Downtown
+								Ohiopyle, treehouses, cozy cabins, secluded homes, rentals near
+								the state park, homes with private pools, homes with hot tubs
+								and more. All vacation rentals are professionally managed, and
+								locally owned and operated.
+							</p>
+						</HotelOption>
 					</div>
 					<div className={s.smallerOptions}>
 						<SectionHeading heading="Confluence, PA" />

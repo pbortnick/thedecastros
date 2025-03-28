@@ -10,6 +10,11 @@ const nextConfig = {
 	},
 	async redirects() {
 		return [
+			{
+				source: '/travel',
+				destination: '/travel/hotels',
+				permanent: true,
+			},
 		]
 	},
 }
