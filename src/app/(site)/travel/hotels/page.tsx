@@ -92,7 +92,7 @@ export default function Hotels() {
 					<div className={s.smallerOptions}>
 						<SectionHeading heading="Confluence, PA" />
 						<HotelOption
-							isBooked
+							// isBooked
 							heading="Paddler's Lane"
 							// tags={['capacity: 22-28 guests']}
 							image={{
@@ -106,11 +106,9 @@ export default function Hotels() {
 								href: 'https://www.paddlerslane.com/',
 							}}
 							// contact={{
-							// 	name: 'Robin',
-							// 	phone: '8149640410',
-							// 	instructions: `Let Pam know if you are interested
-							// 		in any or all of these options via email hello@thedecastros.com
-							// 		or phone (516) 205-3754.`,
+							// name: 'Robin',
+							// phone: '8149640410',
+							// instructions: `Talk to Robin and let her know that you are a guest of Pamela &`,
 							// }}
 						>
 							{/* <>
@@ -330,7 +328,10 @@ export default function Hotels() {
 					<HotelOption heading="Rental Sites">
 						<p>
 							There are plenty of other options in the area. We suggest finding
-							to <strong>Addison, Confluence, & Farmington/Ohiopyle/Chalk Hill</strong>{' '}
+							to{' '}
+							<strong>
+								Addison, Confluence, & Farmington/Ohiopyle/Chalk Hill
+							</strong>{' '}
 							for the most convenient locations.
 						</p>
 						{/* <div>
