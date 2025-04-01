@@ -34,6 +34,11 @@ export default function FAQPage() {
 
 const faqList = [
 	{
+		question: 'Why Fallingwater?',
+		answer:
+			"<p>In the challenging days of 2020, during the height of lockdown, Jason planned a surprise birthday getaway for Pam—something outdoors, peaceful, and meaningful. He remembered her long-standing admiration and fascination for Fallingwater, a place she mentioned (more than once) wanting to visit someday. By some stroke of luck, they were offering self-guided tours at the time.</p><br/><p>Without revealing the destination, Jason booked the tickets, found a cozy Airbnb nearby, and simply told Pam to pack a bag. Normally, she could guess every surprise he had up his sleeve but this time, she was genuinely stumped.</p><p>When they finally arrived, Pam was overjoyed. Seeing Fallingwater in person exceeded even both Pam and Jason's highest expectations. The architecture, the setting, the serenity—it was breathtaking.</p><br/><p>After five years together and many shared adventures, that trip remains one of their most cherished memories.<p>In addition, Pam’s grandfather, Julian Moss, was a gifted builder with a deep admiration for Frank Lloyd Wright. He even had the opportunity to attend one of Wright’s talks, a memory he cherished. Choosing this venue is a heartfelt tribute to Julian.</p><p>If you ever get the chance, we highly recommend visiting. It’s a truly magical place.</p>",
+	},
+	{
 		question: 'How can I reach Pam and Jason?',
 		answer: 'You can email us at hello@thedecastros.com or call/text our cells',
 	},
@@ -60,11 +65,11 @@ const faqList = [
 		answer:
 			'The ceremony will be outdoors. The cocktail hour will be outdoors & tented. The reception will be inside the barn.',
 	},
-	// {
-	// 	question: 'Can I bring my kids?',
-	// 	answer:
-	// 		'We love kids and would love to have them at the wedding. Please let us know if you plan to bring your children so we can accommodate.',
-	// },
+	{
+		question: 'Can I bring my kids?',
+		answer:
+			'We love kids and would love to have them at the wedding. Please let us know if you plan to bring your children so we can accommodate.',
+	},
 	{
 		question: 'Can I bring a plus one?',
 		answer:
@@ -75,10 +80,5 @@ const faqList = [
 			'I am having trouble RSVPing through the website. What should I do?',
 		answer:
 			'Please email us at hello@thedecastros.com with the subject line “RSVP” and let us know if you will be attending the welcome event on friday and the wedding on saturday. Please include your name and your guest’s name if applicable.',
-	},
-	{
-		question: 'Why Fallingwater?',
-		answer:
-			"Fallingwater is a special place for us. We visited in 2020 and fell in love with the architecture and the natural beauty of the area. In addition, Pam's grandfather, Julian Moss, was a builder and was a big fan of Frank Lloyd Wright so choosing this location was in tribute to him. We hope you will love it as much as we do!",
 	},
 ]
