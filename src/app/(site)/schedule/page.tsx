@@ -104,10 +104,10 @@ const data: Array<DateItem> = [
 			{
 				heading: 'Brunch',
 				description:
-					'If you aren’t too hungover and are still in town, join us for brunch at the beautiful Hartzell House',
+					'If you aren’t too hungover and are still in town, join us for brunch.',
 				time: 'TBD',
-				location: 'Hartzell House',
-				addressLink: 'https://maps.app.goo.gl/6tV8Ry6QZQ5QgR1z8',
+				location: 'TBD',
+				// addressLink: 'https://maps.app.goo.gl/6tV8Ry6QZQ5QgR1z8',
 			},
 		],
 	},
