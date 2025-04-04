@@ -22,11 +22,11 @@ const schibstedGrotesk = Schibsted_Grotesk({
 })
 
 export const metadata: Metadata = {
-	title: 'Pamela & Jason 2025',
+	title: 'Pamela Bortnick & Jason Decastro 2025',
 	description: "Jason Decastro & Pamela Bortnick's wedding website",
 	openGraph: {
-		siteName: 'Pamela & Jason 2025',
-		title: 'Pamela & Jason 2025',
+		siteName: 'Pamela Bortnick & Jason Decastro 2025',
+		title: 'Pamela Bortnick & Jason Decastro 2025',
 		description:
 			"Find details of Jason Decastro and Pamela Bortnick's wedding here. View the schedule, travel information, and more. You can also access their photo gallery and registry.",
 		type: 'website',
