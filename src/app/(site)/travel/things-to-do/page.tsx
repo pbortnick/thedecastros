@@ -3,7 +3,7 @@ import Hero from 'components/hero'
 import s from '../travel.module.css'
 import SectionHeading from '../components/section-heading'
 
-export default function Hotels() {
+export default function ThingsToDo() {
 	return (
 		<>
 			<Hero title="Things to do" />
