@@ -151,6 +151,27 @@ export default function Dining() {
 								and spirits.
 							</p>
 						</TravelOption>
+						<TravelOption
+							heading="Hopwood House"
+							link={{
+								text: 'Website',
+								href: 'https://www.hopwood-house.com/',
+							}}
+							image={{
+								src: '/images/dining/hopwood-house.png',
+								alt: 'Image of The Hopwood House',
+								width: 500,
+								height: 400,
+							}}
+						>
+							<p>
+								​Chef Jose also comes from fine dining and has worked all over
+								the globe and has been with us since the grand opening of the
+								Hopwood House. Jose has a keen eye for perfect steaks and helps
+								with menu and plating development which really allows the
+								Hopwood House to stand out!
+							</p>
+						</TravelOption>
 					</div>
 					<div className={s.smallerOptions}>
 						<div className={s.optionText}>
