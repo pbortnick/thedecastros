@@ -79,7 +79,7 @@ const MenubarDemo = () => {
 							</Link>
 						</NavigationMenu.Item>
 					))}
-					<NavigationMenu.Item>
+					<NavigationMenu.Item className={s.hideOnMobile}>
 						<NavigationMenu.Link
 							className={s.link}
 							href="https://www.zola.com/registry/jasonandpamela2025"
@@ -108,6 +108,16 @@ const MenubarDemo = () => {
 									</Link>
 								</NavigationMenu.Item>
 							))}
+							<NavigationMenu.Item>
+								<NavigationMenu.Link
+									className={s.link}
+									href="https://www.zola.com/registry/jasonandpamela2025"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Registry
+								</NavigationMenu.Link>
+							</NavigationMenu.Item>
 						</NavigationMenu.Content>
 					</NavigationMenu.Item>
 				</NavigationMenu.List>

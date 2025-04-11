@@ -219,3 +219,9 @@
 		opacity: 0;
 	}
 }
+
+.hideOnMobile {
+	@media (--small) {
+		display: none;
+	}
+}

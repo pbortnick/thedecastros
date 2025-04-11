@@ -34,7 +34,10 @@ export default function SchedulePage() {
 														</a>
 													</div>
 												)}
-												<p className={s.dayItemDescription}>{description}</p>
+												<p
+													className={s.dayItemDescription}
+													dangerouslySetInnerHTML={{ __html: description }}
+												/>
 											</div>
 											<div className={s.time}>
 												{time && <span>{time}</span>}
@@ -69,7 +72,7 @@ const data: Array<DateItem> = [
 			{
 				heading: 'Welcome event',
 				description:
-					'Join us for a welcome event to kick off the weekend. We will have beer, wine, and excellent food. Casual attire',
+					'Join us for a welcome event to kick off the weekend. We will have beer, wine, and excellent food.<br />Casual attire.',
 				time: '6pm - 8pm',
 				location: 'Hopwood House',
 				addressLink: '1186 National Pike, Hopwood, PA 15445',
@@ -88,7 +91,8 @@ const data: Array<DateItem> = [
 			// },
 			{
 				heading: 'Ceremony & Reception',
-				description: 'The main event',
+				description:
+					'We are so excited to celebrate with you!<br />Cocktail attire.',
 				time: '5pm - 10pm',
 				location: 'The Barn at Fallingwater',
 				addressLink: 'https://maps.app.goo.gl/nvxHYZxzrYAhgkjc7',
