@@ -151,7 +151,7 @@ export default function Dining() {
 								and spirits.
 							</p>
 						</TravelOption>
-						<TravelOption
+						{/* <TravelOption
 							heading="Hopwood House"
 							link={{
 								text: 'Website',
@@ -171,7 +171,7 @@ export default function Dining() {
 								with menu and plating development which really allows the
 								Hopwood House to stand out!
 							</p>
-						</TravelOption>
+						</TravelOption> */}
 					</div>
 					<div className={s.smallerOptions}>
 						<div className={s.optionText}>

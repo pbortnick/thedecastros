@@ -68,8 +68,11 @@ const data: Array<DateItem> = [
 		items: [
 			{
 				heading: 'Welcome event',
-				description: 'More details on location and time to come.',
-				time: 'Around 7pm',
+				description:
+					'Join us for a welcome event to kick off the weekend. We will have beer, wine, and excellent food. Casual attire',
+				time: '6pm - 8pm',
+				location: 'Hopwood House',
+				addressLink: '1186 National Pike, Hopwood, PA 15445',
 			},
 		],
 	},
@@ -98,17 +101,17 @@ const data: Array<DateItem> = [
 			},
 		],
 	},
-	{
-		date: 'Sunday, June 1',
-		items: [
-			{
-				heading: 'Brunch',
-				description:
-					'If you aren’t too hungover and are still in town, join us for brunch.',
-				time: 'TBD',
-				location: 'TBD',
-				// addressLink: 'https://maps.app.goo.gl/6tV8Ry6QZQ5QgR1z8',
-			},
-		],
-	},
+	// {
+	// 	date: 'Sunday, June 1',
+	// 	items: [
+	// 		{
+	// 			heading: 'Brunch',
+	// 			description:
+	// 				'If you aren’t too hungover and are still in town, join us for brunch.',
+	// 			time: 'TBD',
+	// 			location: 'TBD',
+	// 			// addressLink: 'https://maps.app.goo.gl/6tV8Ry6QZQ5QgR1z8',
+	// 		},
+	// 	],
+	// },
 ]
