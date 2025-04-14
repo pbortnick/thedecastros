@@ -117,6 +117,39 @@ export default function ThingsToDo() {
 								link for more information.
 							</p>
 						</TravelOption>
+						<TravelOption
+							heading="Ohiopyle State Park"
+							link={{
+								text: 'Website',
+								href: 'https://www.golaurelhighlands.com/listing/ohiopyle-state-park/373/',
+							}}
+							image={{
+								src: '/images/things-to-do/ohiopyle-state-park.jpg',
+								alt: 'Image of Ohiopyle state park waterfall',
+								width: 500,
+								height: 400,
+							}}
+						>
+							<p>
+								More than 14 miles of the Youghiogheny River Gorge churns through the heart of Ohiopyle, some of the best whitewater boating in the eastern U.S. The 30-foot bridal veil Cucumber Falls and Cucumber Run Ravine are blanketed with flowers in spring and summer. 80 miles of trails within the park including 28-miles of the Great Allegheny Passage offer visitors awesome views.
+							</p>
+						</TravelOption>
+						<TravelOption
+							heading="Laurel Caverns"
+							link={{
+								text: 'Website',
+								href: 'https://laurelcaverns.com/',
+							}}
+							image={{
+								src: '/images/things-to-do/laurel-caverns.jpg',
+								alt: 'Image of Laurel Cavern',
+								width: 500,
+								height: 400,
+							}}
+						>
+							<p>
+								Laurel Caverns is a large natural calcareous sandstone cave located 50 miles south of Pittsburgh.   Most of the passage ceilings in its four mile labyrinth are between ten and twenty feet high (many as high as 50 feet) with an average width of over twelve feet.  This makes it the largest cave in Pennsylvania.  If classified as a sandstone cave, it is the largest sandstone cave in the world.  The cave itself is situated beneath a 435 acre privately owned geological preserve.  Because this property is at the top of Chestnut Ridge, all of the water that enters the cave is pristine.</p>
+						</TravelOption>
 					</div>
 					<div className={s.smallerOptions}>
 						<SectionHeading heading="Other stuff" />
@@ -140,6 +173,23 @@ export default function ThingsToDo() {
 								elevated dining, members-only perks, and exclusive promotions,
 								you’ve just stumbled on your new favorite spot for gaming action
 								in the mountains.
+							</p>
+						</TravelOption>
+						<TravelOption
+							heading="OmBody Spa"
+							link={{
+								text: 'Website',
+								href: 'https://ombodymassageandwellness.com/',
+							}}
+							image={{
+								src: '/images/things-to-do/om-body.png',
+								alt: 'Image of spa',
+								width: 500,
+								height: 400,
+							}}
+						>
+							<p>
+								OMBody is a culmination of talented and passionate women needing a space in our Uniontown community to teach, share, practice, massage, breathe, learn and support themselves, as well as each other.
 							</p>
 						</TravelOption>
 					</div>

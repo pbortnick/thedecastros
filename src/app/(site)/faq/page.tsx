@@ -61,6 +61,10 @@ const faqList = [
 		answer: 'Yes, there is parking available at the venue.',
 	},
 	{
+		question: 'I\'m having trouble booking an Uber. Is there a car service around?',
+		answer: 'Call Barbie (724) 557-4241 for help'
+	},
+	{
 		question: 'Is the wedding indoors or outdoors?',
 		answer:
 			'The ceremony will be outdoors. The cocktail hour will be outdoors & tented. The reception will be inside the barn.',
