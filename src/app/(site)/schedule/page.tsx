@@ -93,16 +93,16 @@ const data: Array<DateItem> = [
 				heading: 'Ceremony & Reception',
 				description:
 					'We are so excited to celebrate with you!<br />Cocktail attire.',
-				time: '5pm - 10pm',
+				time: '5pm - 11pm',
 				location: 'The Barn at Fallingwater',
 				addressLink: 'https://maps.app.goo.gl/nvxHYZxzrYAhgkjc7',
 			},
-			{
-				heading: 'After Party',
-				time: '10pm - 11pm',
-				description:
-					'Continue partying at The Barn at Fallingwater with a DJ, dancing, and late-night snacks',
-			},
+			// {
+			// 	heading: 'After Party',
+			// 	time: '10pm - 11pm',
+			// 	description:
+			// 		'Continue partying at The Barn at Fallingwater with a DJ, dancing, and late-night snacks',
+			// },
 		],
 	},
 	// {
