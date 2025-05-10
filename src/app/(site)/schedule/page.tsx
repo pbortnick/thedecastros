@@ -1,5 +1,6 @@
 import Hero from 'components/hero'
 import s from './schedule.module.css'
+import { ReactNode } from 'react'
 
 export default function SchedulePage() {
 	return (
@@ -34,10 +35,7 @@ export default function SchedulePage() {
 														</a>
 													</div>
 												)}
-												<p
-													className={s.dayItemDescription}
-													dangerouslySetInnerHTML={{ __html: description }}
-												/>
+												{description}
 											</div>
 											<div className={s.time}>
 												{time && <span>{time}</span>}
@@ -58,7 +56,7 @@ type DateItem = {
 	date: string
 	items: Array<{
 		heading: string
-		description: string
+		description: ReactNode
 		time?: string
 		location?: string
 		addressLink?: string
@@ -72,7 +70,7 @@ const data: Array<DateItem> = [
 			{
 				heading: 'Welcome event',
 				description:
-					'Join us for a welcome event to kick off the weekend. We will have beer, wine, and excellent food.<br />Casual attire.',
+					<div><p>Join us for a welcome event to kick off the weekend. We will have beer, wine, and excellent food.</p><p>Casual attire.</p></div>,
 				time: '6pm - 8pm',
 				location: 'Hopwood House',
 				addressLink: '1186 National Pike, Hopwood, PA 15445',
@@ -92,7 +90,7 @@ const data: Array<DateItem> = [
 			{
 				heading: 'Ceremony & Reception',
 				description:
-					'We are so excited to celebrate with you!<br />Cocktail attire.',
+					<p>We are so excited to celebrate with you!<br />Cocktail attire.</p>,
 				time: '5pm - 11pm',
 				location: 'The Barn at Fallingwater',
 				addressLink: 'https://maps.app.goo.gl/nvxHYZxzrYAhgkjc7',
@@ -103,19 +101,20 @@ const data: Array<DateItem> = [
 			// 	description:
 			// 		'Continue partying at The Barn at Fallingwater with a DJ, dancing, and late-night snacks',
 			// },
+			
 		],
 	},
-	// {
-	// 	date: 'Sunday, June 1',
-	// 	items: [
-	// 		{
-	// 			heading: 'Brunch',
-	// 			description:
-	// 				'If you aren’t too hungover and are still in town, join us for brunch.',
-	// 			time: 'TBD',
-	// 			location: 'TBD',
-	// 			// addressLink: 'https://maps.app.goo.gl/6tV8Ry6QZQ5QgR1z8',
-	// 		},
-	// 	],
-	// },
+	{
+		date: 'Sunday, June 1',
+		items: [
+			{
+				heading: 'The ',
+				description:
+					<div>
+<p>Due to varying travel schedules, we will not be hosting a formal brunch. But stay tuned for reccommendations in your welcome bag and on this site!</p>
+
+</div>
+			},
+		],
+	},
 ]
