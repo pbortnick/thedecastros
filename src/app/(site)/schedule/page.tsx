@@ -73,7 +73,7 @@ const data: Array<DateItem> = [
 					<div><p>Join us for a welcome event to kick off the weekend. We will have beer, wine, and excellent food.</p><p>Casual attire.</p></div>,
 				time: '6pm - 8pm',
 				location: 'Hopwood House',
-				addressLink: '1186 National Pike, Hopwood, PA 15445',
+				addressLink: 'https://maps.app.goo.gl/bWRLD8xj4RukkjEx9',
 			},
 		],
 	},
@@ -111,7 +111,7 @@ const data: Array<DateItem> = [
 				heading: 'The ',
 				description:
 					<div>
-<p>Due to varying travel schedules, we will not be hosting a formal brunch. But stay tuned for reccommendations in your welcome bag and on this site!</p>
+<p>Due to varying travel schedules, we will not be hosting a formal brunch. But stay tuned for recommendations in your welcome bag and on this site!</p>
 
 </div>
 			},
