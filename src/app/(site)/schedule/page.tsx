@@ -90,7 +90,7 @@ const data: Array<DateItem> = [
 			{
 				heading: 'Ceremony & Reception',
 				description:
-					<p>We are so excited to celebrate with you!<br />Cocktail attire.</p>,
+					<p>We are so excited to celebrate with you!<br />Semi-formal/Cocktail attire (see <a href="/faq">faq</a> for more details).</p>,
 				time: '5pm - 11pm',
 				location: 'The Barn at Fallingwater',
 				addressLink: 'https://maps.app.goo.gl/nvxHYZxzrYAhgkjc7',
