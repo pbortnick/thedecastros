@@ -50,7 +50,7 @@ const faqList = [
 	{
 		question: 'What is the dress code?',
 		answer:
-			'<p>Semi-formal/Cocktail (we are not really sure what the difference is) attire is suggested. But most importantly, we want you to feel comfortable and have fun!</p><br/><p>For those who want more inspiration, if Pam was a guest she says she\'d wear a nice jumpsuit and if Jason was he says he\'d wear a suit with a buttonless polo and no tie.</p><br/><p>Please don\'t put pressure on yourself to "get it right". If you feel good, we do too.</p>'
+			'<p>Semi-formal/Cocktail (we are not really sure what the difference is) attire is suggested. But most importantly, we want you to feel comfortable and have fun!</p><br/><p>For those who want more inspiration, if Pam were a guest she says she\'d wear a nice jumpsuit and if Jason were he says he\'d wear a suit with a buttonless polo and no tie.</p><br/><p>Please don\'t put pressure on yourself to "get it right". If you feel good, we do too.</p>'
 	},
 	{
 		question: 'Will transportation be provided?',
