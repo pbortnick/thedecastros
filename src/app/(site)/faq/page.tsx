@@ -61,7 +61,7 @@ const faqList = [
 		answer: 'Yes, there is parking available at the venue.',
 	},
 	{
-		questions: 'Can I leave my car there overnight?',
+		question: 'Can I leave my car there overnight?',
 		answer: 'Yes!'
 	},
 	{
