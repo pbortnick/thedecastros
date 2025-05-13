@@ -61,6 +61,10 @@ const faqList = [
 		answer: 'Yes, there is parking available at the venue.',
 	},
 	{
+		questions: 'Can I leave my car there overnight?',
+		answer: 'Yes!'
+	},
+	{
 		question: 'I\'m having trouble booking an Uber. Is there a car service around?',
 		answer: 'Call Barbie (724) 557-4241 for help'
 	},
@@ -85,4 +89,5 @@ const faqList = [
 		answer:
 			'Please email us at hello@thedecastros.com with the subject line “RSVP” and let us know if you will be attending the welcome event on friday and the wedding on saturday. Please include your name and your guest’s name if applicable.',
 	},
+	
 ]
