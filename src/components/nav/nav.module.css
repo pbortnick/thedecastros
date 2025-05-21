@@ -118,6 +118,7 @@
 	padding: 8px 24px;
 	border-radius: 6px;
 	box-shadow: 0 1px 4px var(--accent);
+	width: max-content;
 }
 .dropdownContent[data-motion='from-start'] {
 	animation-name: enterFromLeft;
@@ -130,11 +131,6 @@
 }
 .dropdownContent[data-motion='to-end'] {
 	animation-name: exitToRight;
-}
-@media only screen and (min-width: 600px) {
-	.dropdownContent {
-		width: auto;
-	}
 }
 
 .caret {

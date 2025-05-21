@@ -10,10 +10,10 @@ import s from './nav.module.css'
 const PAGES = [
 	{ name: 'Home', href: '/' },
 	{ name: 'Schedule', href: '/schedule' },
-	{ name: 'RSVP', href: '/rsvp' },
 ]
 
 const TRAVEL_PAGES = [
+	{ name: 'Shuttles', href: '/schedule#shuttles' },
 	{ name: 'Hotels', href: '/travel/hotels' },
 	{ name: 'Things to Do', href: '/travel/things-to-do' },
 	{ name: 'Dining', href: '/travel/dining' },
@@ -21,6 +21,7 @@ const TRAVEL_PAGES = [
 ]
 
 const DROPDOWN_PAGES = [
+	{ name: 'RSVP', href: '/rsvp' },
 	{ name: 'Gallery', href: '/gallery' },
 	{ name: 'FAQ', href: '/faq' },
 ]
@@ -30,7 +31,7 @@ const MenubarDemo = () => {
 
 	return (
 		<div className={s.root}>
-			<NavigationMenu.Root className={s.nav}>
+			<NavigationMenu.Root className={s.nav} >
 				<NavigationMenu.List className={s.navList}>
 					{PAGES.map((page) => (
 						<NavigationMenu.Item key={page.name}>

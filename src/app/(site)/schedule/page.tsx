@@ -48,6 +48,46 @@ export default function SchedulePage() {
 					))}
 				</ul>
 			</div>
+			<div className={s.shuttles} id="shuttles">
+				<h2 className={s.dayItemHeading}>Shuttle Information</h2>
+				<div className={s.shuttleContent}>
+					<p>Vehicles will depart from these locations at 4:30pm</p>
+					<div>
+						<h3>Addison</h3>
+						<div>
+							<li>539 Main St</li>
+							<li>Hartzell House</li>
+							<li>Petersburg Tollhouse</li>
+						</div>
+					</div>
+					<div>
+						<h3>Confluence</h3>
+						<div>
+							<li>Casselman Cabin</li>
+							<li>Smith House Inn</li>
+						</div>
+					</div>
+					<div>
+						<h3>Farmington</h3>
+						<div>
+							<li>Historic Summit Inn</li>
+						</div>
+					</div>
+					<div>
+						<h3>Mill Run</h3>
+						<i>
+							*Vehicle will depart at <strong>5pm</strong>
+						</i>
+						<div>
+							<li>201 N First St</li>
+						</div>
+					</div>
+					<p>
+						At the end of the night, shuttles will leave the Barn at 10pm and
+						11pm
+					</p>
+				</div>
+			</div>
 		</>
 	)
 }
@@ -69,8 +109,15 @@ const data: Array<DateItem> = [
 		items: [
 			{
 				heading: 'Welcome event',
-				description:
-					<div><p>Join us for a welcome event to kick off the weekend. We will have beer, wine, and excellent food.</p><p>Casual attire.</p></div>,
+				description: (
+					<div>
+						<p>
+							Join us for a welcome event to kick off the weekend. We will have
+							beer, wine, and excellent food.
+						</p>
+						<p>Casual attire.</p>
+					</div>
+				),
 				time: '6pm - 8pm',
 				location: 'Hopwood House',
 				addressLink: 'https://maps.app.goo.gl/bWRLD8xj4RukkjEx9',
@@ -80,40 +127,19 @@ const data: Array<DateItem> = [
 	{
 		date: 'Saturday, May 31',
 		items: [
-			// {
-			// 	heading: 'Fallingwater Tours',
-			// 	description: '',
-			// 	time: '10am-12pm',
-			// 	location: 'Fallingwater',
-			// 	addressLink: 'https://maps.app.goo.gl/Zut1RfyGQH1Yvoc2A',
-			// },
 			{
 				heading: 'Ceremony & Reception',
-				description:
-					<p>We are so excited to celebrate with you!<br />Semi-formal/Cocktail attire (see <a href="/faq">faq</a> for more details).</p>,
+				description: (
+					<p>
+						We are so excited to celebrate with you!
+						<br />
+						Semi-formal/Cocktail attire (see <a href="/faq">faq</a> for more
+						details).
+					</p>
+				),
 				time: '5pm - 11pm',
 				location: 'The Barn at Fallingwater',
 				addressLink: 'https://maps.app.goo.gl/nvxHYZxzrYAhgkjc7',
-			},
-			// {
-			// 	heading: 'After Party',
-			// 	time: '10pm - 11pm',
-			// 	description:
-			// 		'Continue partying at The Barn at Fallingwater with a DJ, dancing, and late-night snacks',
-			// },
-			
-		],
-	},
-	{
-		date: 'Sunday, June 1',
-		items: [
-			{
-				heading: 'The ',
-				description:
-					<div>
-<p>Due to varying travel schedules, we will not be hosting a formal brunch. But stay tuned for recommendations in your welcome bag and on this site!</p>
-
-</div>
 			},
 		],
 	},

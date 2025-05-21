@@ -17,6 +17,27 @@
 	justify-content: center;
 }
 
+.shuttles {
+	padding-top: var(--spacing-10);
+	composes: container from global;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.shuttleContent {
+	margin-top: var(--spacing-03);
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	gap: var(--spacing-03);
+	padding: 0;
+}
+
 .scheduleList {
 	display: flex;
 	flex-direction: column;
