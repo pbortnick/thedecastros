@@ -21,7 +21,7 @@ const TRAVEL_PAGES = [
 ]
 
 const DROPDOWN_PAGES = [
-	{ name: 'RSVP', href: '/rsvp' },
+	// { name: 'RSVP', href: '/rsvp' },
 	{ name: 'Gallery', href: '/gallery' },
 	{ name: 'FAQ', href: '/faq' },
 ]
