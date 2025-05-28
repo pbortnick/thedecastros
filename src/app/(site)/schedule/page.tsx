@@ -79,7 +79,7 @@ export default function SchedulePage() {
 							*Vehicle will depart at <strong>5pm</strong>
 						</i>
 						<div>
-							<li>201 N First St</li>
+							<li>53 Miller Rd</li>
 						</div>
 					</div>
 					<p>
