@@ -22,6 +22,10 @@
 				filter: unset;
 			}
 		}
+
+    .font-bold {
+      font-weight: inherit;
+    }
 	}
 
 	input {

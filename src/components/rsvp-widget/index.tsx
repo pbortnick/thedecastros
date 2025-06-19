@@ -59,7 +59,7 @@ const RsvpWidget = ({ eventId }: { eventId: string }) => {
 		<>
 			<Widget eventId={eventId} loaded={loaded} />
 			<div id="rsvp-widget"></div>
-			<div
+			{/* <div
 				className="container"
 				style={{
 					paddingTop: 'var(--spacing-03)',
@@ -68,7 +68,7 @@ const RsvpWidget = ({ eventId }: { eventId: string }) => {
 				<p className="centered-text">
 					If the form doesn't load, please refresh the page.
 				</p>
-			</div>
+			</div> */}
 		</>
 	)
 }
