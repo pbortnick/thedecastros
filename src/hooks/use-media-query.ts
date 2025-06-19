@@ -18,7 +18,6 @@ function useMediaQuery(query: string) {
 	return matches
 }
 
-// ref: https://github.com/hashicorp/mktg-global-styles/blob/main/custom-media.css
 const useSmall = () => useMediaQuery('(max-width: 768px)')
 const useMedium = () =>
 	useMediaQuery('(min-width: 768px) and (max-width: 999px)')
